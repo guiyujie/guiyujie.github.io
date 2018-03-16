@@ -1,0 +1,724 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>BeeUI 示例文档</title>
+    <link rel="stylesheet" href="../../dest/css/doc_demo.css"/>
+    <link rel="stylesheet" href="../../dest/css/prism.css"/>
+    <link rel="stylesheet" href="../../dest/css/beeui.min.css"/>
+</head>
+<body>
+
+<div class="doc-header">
+    <div class="doc-inner">
+        <h1 class="doc-logo"><a href="#">BeeUI（1.0.0）</a></h1>
+        <div class="doc-navbar">
+    <ul class="doc-nav">
+        <li class="active"><a href="../element/element.html">元件</a></li>
+        <li class=""><a href="../component/component.html">组件</a></li>
+        <li class=""><a href="../layout/index.html" target="_blank">布局</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+<!--header-->
+
+<div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-sticker">
+            <div class="doc-toc"></div>
+        </div>
+    </div>
+    <!--sidebar-->
+    <div class="doc-content">
+        
+<div class="doc-section">
+    <h2>btn（按钮）</h2>
+<p>按钮样式。</p>
+<h3>标签</h3>
+<p>常规下，作为按钮的 HTML 标签有：</p>
+<pre><code class="language-markup">&lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;input class=&quot;btn&quot; type=&quot;button&quot; value=&quot;button&quot;/&gt;
+&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;button&lt;/a&gt;</code></pre>
+<p><button class="btn" type="button">button</button></p>
+<p><input class="btn" type="button" value="button"/>
+<a class="btn" href="javascript:;">button</a></p>
+<h3>形态</h3>
+<p>按钮展现形态。beeui 提供三种不同形态的按钮：</p>
+<pre><code class="language-markup">&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;button&lt;/a&gt;
+&lt;a class=&quot;btn btn-unbent&quot; href=&quot;javascript:;&quot;&gt;unbent button&lt;/a&gt;
+&lt;a class=&quot;btn btn-block&quot; href=&quot;javascript:;&quot;&gt;block button&lt;/a&gt;</code></pre>
+<p><a class="btn" href="javascript:;">button</a>
+<a class="btn btn-unbent" href="javascript:;">unbent button</a></p>
+<p><a class="btn btn-block" href="javascript:;">block button</a></p>
+<h3>皮肤</h3>
+<p>按钮皮肤。beeui 中按钮皮肤可选值有：</p>
+<ul>
+<li>btn 默认（橙色）</li>
+<li>btn-blue 蓝色</li>
+<li>btn-green 绿色</li>
+<li>btn-gray 灰色</li>
+<li>btn-white 白色</li>
+</ul>
+<pre><code class="language-markup">&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;default button&lt;/a&gt;
+&lt;a class=&quot;btn btn-blue&quot; href=&quot;javascript:;&quot;&gt;blue button&lt;/a&gt;
+&lt;a class=&quot;btn btn-green&quot; href=&quot;javascript:;&quot;&gt;green button&lt;/a&gt;
+&lt;a class=&quot;btn btn-gray&quot; href=&quot;javascript:;&quot;&gt;gray button&lt;/a&gt;
+&lt;a class=&quot;btn btn-white&quot; href=&quot;javascript:;&quot;&gt;white button&lt;/a&gt;</code></pre>
+<p><a class="btn" href="javascript:;">default button</a>
+<a class="btn btn-blue" href="javascript:;">blue button</a>
+<a class="btn btn-green" href="javascript:;">green button</a>
+<a class="btn btn-gray" href="javascript:;">gray button</a>
+<a class="btn btn-white" href="javascript:;">white button</a></p>
+<h3>状态</h3>
+<p>按钮状态。常用状态有： default（默认）、hover、active、disabled</p>
+<pre><code class="language-markup">&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;default button&lt;/a&gt;
+&lt;a class=&quot;btn hover&quot; href=&quot;javascript:;&quot;&gt;blue button&lt;/a&gt;
+&lt;a class=&quot;btn active&quot; href=&quot;javascript:;&quot;&gt;green button&lt;/a&gt;
+&lt;a class=&quot;btn disabled&quot; href=&quot;javascript:;&quot;&gt;gray button&lt;/a&gt;
+...</code></pre>
+<p><a class="btn" href="javascript:;">btn</a>
+<a class="btn hover" href="javascript:;">hover</a>
+<a class="btn active" href="javascript:;">active</a>
+<a class="btn disabled" href="javascript:;">disabled</a></p>
+<p><a class="btn btn-blue" href="javascript:;">btn</a>
+<a class="btn btn-blue hover" href="javascript:;">hover</a>
+<a class="btn btn-blue active" href="javascript:;">active</a>
+<a class="btn btn-blue disabled" href="javascript:;">disabled</a></p>
+<p><a class="btn btn-green" href="javascript:;">btn</a>
+<a class="btn btn-green hover" href="javascript:;">hover</a>
+<a class="btn btn-green active" href="javascript:;">active</a>
+<a class="btn btn-green disabled" href="javascript:;">disabled</a></p>
+<p><a class="btn btn-gray" href="javascript:;">btn</a>
+<a class="btn btn-gray hover" href="javascript:;">hover</a>
+<a class="btn btn-gray active" href="javascript:;">active</a>
+<a class="btn btn-gray disabled" href="javascript:;">disabled</a></p>
+<p><a class="btn btn-white" href="javascript:;">btn</a>
+<a class="btn btn-white hover" href="javascript:;">hover</a>
+<a class="btn btn-white active" href="javascript:;">active</a>
+<a class="btn btn-white disabled" href="javascript:;">disabled</a></p>
+<h3>大小</h3>
+<p>按钮大小。beeui 为按钮提供 6 种不同的大小值：</p>
+<ul>
+<li>btn-mn  微型的</li>
+<li>btn-smt  最小的</li>
+<li>btn-sm 小的</li>
+<li>btn  默认</li>
+<li>btn-lg 大的</li>
+<li>btn-lgt   最大的</li>
+</ul>
+<pre><code class="language-markup">&lt;a class=&quot;btn btn-mn&quot; href=&quot;javascript:;&quot;&gt;mini button&lt;/a&gt;
+&lt;a class=&quot;btn btn-smt&quot; href=&quot;javascript:;&quot;&gt;smallest button&lt;/a&gt;
+&lt;a class=&quot;btn btn-sm&quot; href=&quot;javascript:;&quot;&gt;small button&lt;/a&gt;
+&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;button&lt;/a&gt;
+&lt;a class=&quot;btn btn-lg&quot; href=&quot;javascript:;&quot;&gt;large button&lt;/a&gt;
+&lt;a class=&quot;btn btn-lgt&quot; href=&quot;javascript:;&quot;&gt;largest button&lt;/a&gt;</code></pre>
+<p><a class="btn btn-mn" href="javascript:;">mini button</a>
+<a class="btn btn-smt" href="javascript:;">smallest button</a>
+<a class="btn btn-sm" href="javascript:;">small button</a>
+<a class="btn" href="javascript:;">button</a>
+<a class="btn btn-lg" href="javascript:;">large button</a>
+<a class="btn btn-lgt" href="javascript:;">largest button</a></p>
+
+</div>
+
+<div class="doc-section">
+    <h2>input（输入）</h2>
+<p>输入控件样式。</p>
+<h3>标签</h3>
+<pre><code class="language-markup">&lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;textarea class=&quot;input&quot; rows=&quot;5&quot; placeholder=&quot;placeholder&quot;&gt;&lt;/textarea&gt;</code></pre>
+<p><input class="input" type="text" placeholder="placeholder"/></p>
+<textarea class="input" rows="5" placeholder="placeholder"></textarea>
+
+<h3>形态</h3>
+<pre><code class="language-markup">&lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-login&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;</code></pre>
+<p><input class="input" type="text" placeholder="默认"/></p>
+<input class="input input-login" type="text" placeholder="获取焦点时变蓝色"/>
+
+<h3>大小</h3>
+<p>输入控件大小。beeui 为输入控件定义了几种不同的长度值：</p>
+<ul>
+<li>input-mn</li>
+<li>input-smt</li>
+<li>input-sm</li>
+<li>input</li>
+<li>input-lg</li>
+<li>input-lgt</li>
+<li>input-block</li>
+</ul>
+<pre><code class="language-markup">&lt;input class=&quot;input input-mn&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-smt&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-sm&quot; type=&quot;sm&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-lg&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-lgt&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-block&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;</code></pre>
+<p><input class="input input-mn" type="text" placeholder="placeholder"/></p>
+<p><input class="input input-smt" type="text" placeholder="placeholder"/></p>
+<p><input class="input input-sm" type="sm" placeholder="placeholder"/></p>
+<p><input class="input" type="text" placeholder="placeholder"/></p>
+<p><input class="input input-lg" type="text" placeholder="placeholder"/></p>
+<p><input class="input input-lgt" type="text" placeholder="placeholder"/></p>
+<input class="input input-block" type="text" placeholder="placeholder"/>
+
+</div>
+
+<div class="doc-section">
+    <h2>radio（选择）</h2>
+<p>选择（单选、复选）控件样式。</p>
+<h3>radio</h3>
+<p>单选控件样式。</p>
+<pre><code class="language-markup">&lt;label class=&quot;radio&quot; for=&quot;r1&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;r&quot; id=&quot;r1&quot; checked=&quot;checked&quot;/&gt;
+    radio 01
+&lt;/label&gt;
+&lt;label class=&quot;radio&quot; for=&quot;r2&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;r&quot; id=&quot;r2&quot;/&gt;
+    radio 02
+&lt;/label&gt;</code></pre>
+<label class="radio" for="r1">
+    <input type="radio" name="r" id="r1" checked="checked"/>
+    radio 01
+</label>
+<label class="radio" for="r2">
+    <input type="radio" name="r" id="r2"/>
+    radio 02
+</label>
+
+<h3>checkbox</h3>
+<p>复选控件样式。</p>
+<pre><code class="language-markup">&lt;label class=&quot;checkbox&quot; for=&quot;c1&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;c&quot; id=&quot;c1&quot; checked=&quot;checked&quot;/&gt;
+    checkbox 01
+&lt;/label&gt;
+&lt;label class=&quot;checkbox&quot; for=&quot;c2&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;c&quot; id=&quot;c2&quot;/&gt;
+    checkbox 02
+&lt;/label&gt;</code></pre>
+<label class="checkbox" for="c1">
+    <input type="checkbox" name="c" id="c1" checked="checked"/>
+    checkbox 01
+</label>
+<label class="checkbox" for="c2">
+    <input type="checkbox" name="c" id="c2"/>
+    checkbox 02
+</label>
+
+</div>
+
+<div class="doc-section">
+    <h2>file（文件）</h2>
+<p>文件上传控件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;file&quot;&gt;
+    &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+    &lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;浏览&lt;/button&gt;
+    &lt;input class=&quot;file-mask&quot; type=&quot;file&quot;/&gt;
+&lt;/div&gt;</code></pre>
+<div class="file">
+    <input class="input" type="text"/>
+    <button class="btn" type="button">浏览</button>
+    <input class="file-mask" type="file"/>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>form（表单）</h2>
+<p>表单样式。</p>
+<h3>form-inline</h3>
+<p>内联表单样式。</p>
+<pre><code class="language-markup">&lt;form class=&quot;form-inline&quot; action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;label for=&quot;n1&quot;&gt;name&lt;/label&gt;
+    &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;n1&quot;/&gt;
+
+    &lt;label for=&quot;p1&quot;&gt;password&lt;/label&gt;
+    &lt;input class=&quot;input&quot; type=&quot;password&quot; id=&quot;p1&quot;/&gt;
+
+    &lt;label class=&quot;checkbox&quot; for=&quot;cb1&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;cb1&quot;/&gt;
+        remember?
+    &lt;/label&gt;
+
+    &lt;button class=&quot;btn&quot; type=&quot;submit&quot;&gt;submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<form class="form-inline" action="" method="">
+    <label for="n1">name</label>
+    <input class="input" type="text" id="n1"/>
+
+    <label for="p1">password</label>
+    <input class="input" type="password" id="p1"/>
+
+    <label class="checkbox" for="cb1">
+        <input type="checkbox" id="cb1"/>
+        remember?
+    </label>
+
+    <button class="btn" type="submit">submit</button>
+</form>
+
+<h3>form-v</h3>
+<p>垂直布局表单样式。</p>
+<pre><code class="language-markup">&lt;form class=&quot;form-v&quot; action=&quot;&quot; method=&quot;&quot;&gt;
+
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;label class=&quot;item&quot; for=&quot;n2&quot;&gt;&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt;name&lt;/label&gt;
+
+        &lt;div class=&quot;span&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot; id=&quot;n2&quot;/&gt;
+            &lt;div class=&quot;help-block&quot;&gt;help-block&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;label class=&quot;item&quot; for=&quot;p2&quot;&gt;password&lt;/label&gt;
+
+        &lt;div class=&quot;span&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;password&quot; id=&quot;p2&quot;/&gt;
+            &lt;div class=&quot;help-inline&quot;&gt;help-inline&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;row form-actions&quot;&gt;
+        &lt;div class=&quot;span&quot;&gt;
+            &lt;button class=&quot;btn&quot; type=&quot;submit&quot;&gt;提交&lt;/button&gt;
+            &lt;button class=&quot;btn btn-gray&quot; type=&quot;button&quot;&gt;取消&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;</code></pre>
+<form class="form-v" action="" method="">
+
+    <div class="row">
+        <label class="item" for="n2"><span class="required">*</span>name</label>
+
+        <div class="span">
+            <input class="input" type="text" id="n2"/>
+            <div class="help-block">help-block</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <label class="item" for="p2">password</label>
+
+        <div class="span">
+            <input class="input" type="password" id="p2"/>
+            <div class="help-inline">help-inline</div>
+        </div>
+    </div>
+
+    <div class="row form-actions">
+        <div class="span">
+            <button class="btn" type="submit">提交</button>
+            <button class="btn btn-gray" type="button">取消</button>
+        </div>
+    </div>
+
+</form>
+
+<p>垂直表单提供定制大小，只需添加 form-v-lg 类即可。</p>
+<h3>form-search</h3>
+<p>搜索表单样式。</p>
+<pre><code class="language-markup">&lt;form class=&quot;form-search&quot; action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+    &lt;button class=&quot;btn&quot; type=&quot;submit&quot;&gt;搜索&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<form class="form-search" action="" method="">
+    <input class="input" type="text"/>
+    <button class="btn" type="submit">搜索</button>
+</form>
+
+</div>
+
+<div class="doc-section">
+    <h2>table（表格）</h2>
+<p>表格样式。</p>
+<h3>标签</h3>
+<p>表格标签嵌套规则。</p>
+<pre><code class="language-markup">&lt;table&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<h3>table-default</h3>
+<p>beeui 默认表格样式。</p>
+<pre><code class="language-markup">&lt;table class=&quot;table table-default&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+     &lt;tr&gt;
+         &lt;td&gt;td&lt;/td&gt;
+         &lt;td&gt;td&lt;/td&gt;
+         &lt;td&gt;td&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<table class="table table-default">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+     <tr>
+         <td>td</td>
+         <td>td</td>
+         <td>td</td>
+     </tr>
+   </tbody>
+</table>
+
+<h3>table-striped</h3>
+<p>隔行换色的表格样式。</p>
+<table class="table table-default table-striped">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>table-hovered</h3>
+<p>有 hover 状态的表格。</p>
+<table class="table table-default table-hovered">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>table-embedded</h3>
+<p>嵌入其他组件内的表格（noborder），可配置的表格边框样式：</p>
+<ul>
+<li>table-border-t</li>
+<li>table-border-b</li>
+<li>table-border-l</li>
+<li>table-border-r</li>
+</ul>
+<div class="tab">
+    <div class="tab-nav">
+        <ul class="nav nav-tabs nav-sm">
+            <li class="active"><a href="#">item 01</a></li>
+            <li><a href="#">item 02</a></li>
+        </ul>
+        <div class="tab-more">
+            <span>如有疑问，请联系高务人员</span>
+        </div>
+    </div>
+    <div class="tab-main">
+        <div class="p10"></div>
+        <div class="tab-panel tab-current">
+            <table class="table table-default table-embedded table-border-t">
+                <thead>
+                <tr>
+                    <th>th</th>
+                    <th>th</th>
+                    <th>th</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-panel">panel 02</div>
+    </div>
+</div>
+
+
+<h3>皮肤</h3>
+<p>beeui 提供支持表格换肤功能。内置可选值有：</p>
+<ul>
+<li>table-default 默认（灰色）</li>
+<li>table-blue 蓝色</li>
+</ul>
+<table class="table table-default table-blue">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+</div>
+
+<div class="doc-section">
+    <h2>grid（栅格）</h2>
+<p>栅格系统样式。</p>
+<h3>标签嵌套规则</h3>
+<pre><code class="language-markup">&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-1&quot;&gt;span-1&lt;/div&gt;
+        &lt;div class=&quot;span span-2&quot;&gt;span-2&lt;/div&gt;
+        &lt;div class=&quot;span span-3&quot;&gt;span-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-3&quot;&gt;span-3&lt;/div&gt;
+        &lt;div class=&quot;span span-2&quot;&gt;span-2&lt;/div&gt;
+        &lt;div class=&quot;span span-1&quot;&gt;span-1&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="grid">
+    <div class="row">
+        <div class="span span-1 bg-black-10">span-1</div>
+        <div class="span span-2 bg-black-10">span-2</div>
+        <div class="span span-3 bg-black-10">span-3</div>
+    </div>
+    <div class="row">
+        <div class="span span-3 bg-black-10">span-3</div>
+        <div class="span span-2 bg-black-10">span-2</div>
+        <div class="span span-1 bg-black-10">span-1</div>
+    </div>
+</div>
+
+<h3>grid-form</h3>
+<p>表单布局栅格样式。</p>
+<pre><code class="language-markup">&lt;form class=&quot;grid grid-form&quot; action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-label&quot;&gt;字段一&lt;/div&gt;
+        &lt;div class=&quot;span span-3&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;span span-label&quot;&gt;字段二&lt;/div&gt;
+        &lt;div class=&quot;span span-3&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-label&quot;&gt;字段三&lt;/div&gt;
+        &lt;div class=&quot;span span-full&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-label&quot;&gt;字段四&lt;/div&gt;
+        &lt;div class=&quot;span span-2 span-h&quot;&gt;
+            name
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-full&quot;&gt;
+            &lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;提交&lt;/button&gt;
+            &lt;button class=&quot;btn btn-gray&quot; type=&quot;button&quot;&gt;取消&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<form class="grid grid-form" action="" method="">
+    <div class="row">
+        <div class="span span-label">字段一</div>
+        <div class="span span-3">
+            <input class="input" type="text"/>
+        </div>
+        <div class="span span-label">字段二</div>
+        <div class="span span-3">
+            <input class="input" type="text"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span span-label">字段三</div>
+        <div class="span span-full">
+            <input class="input" type="text"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span span-label">字段四</div>
+        <div class="span span-2 span-h">
+            name
+        </div>
+    </div>
+    <div class="row">
+        <div class="span span-full">
+            <button class="btn" type="button">提交</button>
+            <button class="btn btn-gray" type="button">取消</button>
+        </div>
+    </div>
+</form>
+
+</div>
+
+<div class="doc-section">
+    <h2>icon（图标）</h2>
+<p>图标样式。</p>
+<p><i class="icon icon-user"></i>
+<i class="icon icon-password"></i>
+<i class="icon icon-authcode"></i></p>
+<p><i class="icon icon-local"></i>
+<i class="icon icon-principal"></i>
+<i class="icon icon-qq"></i>
+<i class="icon icon-question"></i></p>
+<p><i class="icon icon-clock"></i>
+<i class="icon icon-edit"></i>
+<i class="icon icon-exit"></i>
+<i class="icon icon-lock-gray"></i></p>
+<p><i class="icon icon-prev"></i>
+<i class="icon icon-next"></i></p>
+<p><i class="icon icon-no1"></i>
+<i class="icon icon-no2"></i>
+<i class="icon icon-no3"></i></p>
+<pre><code class="language-markup">&lt;i class=&quot;icon icon-user&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-password&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-authcode&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;icon icon-local&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-principal&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-qq&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-question&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;icon icon-clock&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-edit&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-exit&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-lock-gray&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;icon icon-prev&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-next&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;icon icon-no1&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-no2&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon icon-no3&quot;&gt;&lt;/i&gt;</code></pre>
+
+</div>
+
+<div class="doc-section">
+    <h2>label（标记）</h2>
+<p>标记样式。</p>
+<pre><code class="language-markup">&lt;span class=&quot;label&quot;&gt;19&lt;/span&gt;
+&lt;span class=&quot;label label-gray&quot;&gt;19&lt;/span&gt;</code></pre>
+<p><span class="label">19</span>
+<span class="label label-gray">19</span></p>
+
+</div>
+
+    </div>
+    <!--content-->
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <div class="doc-inner"></div>
+</div>
+<!--footer-->
+
+<script src="../../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../../dest/js/jquery.toc.min.js"></script>
+<script src="../../dest/js/jquery.sticky.js"></script>
+<script src="../../dest/js/prism.js"></script>
+<script src="../../dest/js/doc_demo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lottery</title>
+<script type="text/javascript" src="../public/js/jquery-min.js"></script>
+<script src="../public/js/ST.Config.js"></script>
+  <link rel="stylesheet" href="../public/css/lottery.css"/>
+<style>
+/*.lottery-turnplate .lottery-pointer{transition: all 0s ease-out 0s;}*/
+</style>
+  <link href="../public/css/ST_flop.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="lottery-turnplate" id="turntable">
+  <!--转动指针-->
+  <div class="lottery-pointer rotate"></div>  <!-- lottery-pointer-rotate -->
+  <!--奖品项-->
+  <div class="lottery-awards"></div>
+  <!--触发按钮-->
+  <a class="lottery-btn" href="javascript:;" data-cmd="start">Start</a>
+</div>
+<!--lottery-turnplate-->
+
+
+<div class="lottery-card">
+  <div class="lottery-inner">
+    <div class="lottery-front">1</div>
+    <div class="lottery-back">2</div>
+  </div>
+</div>
+<!--lottery-card-->
+
+
+<div class="lottery-egg">
+  <div class="lottery-front">彩蛋</div>
+  <div class="lottery-back">奔驰一辆</div>
+</div>
+<!--lottery-egg-->
+
+
+<!--Flop-->
+<!--Flop1-->
+<div class="wp">
+    <ul class="thumb-game">
+        <li class="thumb-game-block">
+            <div class="thumb-image"><img class="ini_floap" title="翻牌抽大奖" src="../public/images/game/ini_board.png"><img class="had_floap" title="翻牌抽大奖" src="../public/images/game/had_board.png"></div>
+            <div class="thumb-title"><a href="javascript:;" class="btn btn-blue btn-largest" >翻牌</a></div>
+        </li>
+        <li class="thumb-game-block">
+            <div class="thumb-image"><img class="ini_floap" title="翻牌抽大奖" src="../public/images/game/ini_board.png"><img class="had_floap" title="翻牌抽大奖" src="../public/images/game/had_board.png"></div>
+            <div class="thumb-title"><a href="javascript:;" class="btn btn-blue btn-largest">翻牌</a></div>
+        </li>
+        <li class="thumb-game-block">
+            <div class="thumb-image"><img class="ini_floap" title="翻牌抽大奖" src="../public/images/game/ini_board.png"><img class="had_floap" title="翻牌抽大奖" src="../public/images/game/had_board.png"></div>
+            <div class="thumb-title"><a href="javascript:;" class="btn btn-blue btn-largest">翻牌</a></div>
+        </li>
+        <li class="thumb-game-block">
+            <div class="thumb-image"><img class="ini_floap" title="翻牌抽大奖" src="../public/images/game/ini_board.png"><img class="had_floap" title="翻牌抽大奖" src="../public/images/game/had_board.png"></div>
+            <div class="thumb-title"><a href="javascript:;" class="btn btn-blue btn-largest">翻牌</a></div>
+        </li>
+        <li class="thumb-game-block">
+            <div class="thumb-image"><img class="ini_floap" title="翻牌抽大奖" src="../public/images/game/ini_board.png"><img class="had_floap" title="翻牌抽大奖" src="../public/images/game/had_board.png"></div>
+            <div class="thumb-title"><a href="javascript:;" class="btn btn-blue btn-largest">翻牌</a></div>
+        </li>
+        <li class="thumb-game-block">
+            <div class="thumb-image"><img class="ini_floap" title="翻牌抽大奖" src="../public/images/game/ini_board.png"><img class="had_floap" title="翻牌抽大奖" src="../public/images/game/had_board.png"></div>
+            <div class="thumb-title"><a href="javascript:;" class="btn btn-blue btn-largest">翻牌</a></div>
+        </li>
+        <li class="thumb-game-block">
+            <div class="thumb-image"><img class="ini_floap" title="翻牌抽大奖" src="../public/images/game/ini_board.png"><img class="had_floap" title="翻牌抽大奖" src="../public/images/game/had_board.png"></div>
+            <div class="thumb-title"><a href="javascript:;" class="btn btn-blue btn-largest">翻牌</a></div>
+        </li>
+        <li class="thumb-game-block">
+            <div class="thumb-image"><img class="ini_floap" title="翻牌抽大奖" src="../public/images/game/ini_board.png"><img class="had_floap" title="翻牌抽大奖" src="../public/images/game/had_board.png"></div>
+            <div class="thumb-title"><a href="javascript:;" class="btn btn-blue btn-largest">翻牌</a></div>
+        </li>
+    </ul>
+</div>
+<!--Flop1-->
+<!--Flop2-->
+<div class="container">
+    <div class="flipped" id="card">
+        <img class="front common" title="翻牌抽大奖" src="../public/images/game/had_board.png">
+        <img class="back common" title="翻牌抽大奖" src="../public/images/game/ini_board.png">
+    </div>
+</div>
+<div class="options"><button id="flip" class="btn btn-blue btn-largest">翻牌</button></div>
+<!--Flop2-->
+<!--Flop-->
+
+
+
+</body>
+</html>
+<script src="../public/js/ST_dev.js"></script>
+<script src="../public/js/ST.Turntable.js"></script>
+<script src="../public/js/doc/utils.js"></script>
+<script src="../public/js/doc/flip-card.js"></script>
+<script>
+$.extend(ST,{
+    jsTemplates:["common"],
+    todoList:function(){
+       ST.tt=new ST.Truntable("turntable",{
+             name:"我是转盘",
+             Action:{
+               start:"lottery.php",               //用于服务端开始抽奖动作通知
+               stop:"random.php"               //用于随即型抽奖动作
+             },
+             speed:200
+       });
+    }
+});
+ST.init();
+$(".thumb-title .btn").click(function(){
+    $(this).parent().siblings().find(".ini_floap").addClass("ini_floap_hover");
+    $(this).parent().siblings().find(".had_floap").addClass("had_floap_hover");
+});
+</script>

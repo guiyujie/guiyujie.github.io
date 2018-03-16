@@ -1,0 +1,1339 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>BeeUI 示例文档</title>
+    <link rel="stylesheet" href="../../dest/css/doc_demo.css"/>
+    <link rel="stylesheet" href="../../dest/css/prism.css"/>
+    <link rel="stylesheet" href="../../dest/css/beeui.min.css"/>
+</head>
+<body>
+
+<div class="doc-header">
+    <div class="doc-inner">
+        <h1 class="doc-logo"><a href="#">BeeUI（1.0.0）</a></h1>
+        <div class="doc-navbar">
+    <ul class="doc-nav">
+        <li class=""><a href="../element/element.html">元件</a></li>
+        <li class="active"><a href="../component/component.html">组件</a></li>
+        <li class=""><a href="../layout/index.html" target="_blank">布局</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+<!--header-->
+
+<div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-sticker">
+            <div class="doc-toc"></div>
+        </div>
+    </div>
+    <!--sidebar-->
+    <div class="doc-content">
+        
+<div class="doc-section">
+    <h2>dialog（弹窗）</h2>
+<p>弹窗组件样式。</p>
+<h3>结构</h3>
+<pre><code class="language-markup">&lt;div class=&quot;dialog&quot;&gt;
+    &lt;div class=&quot;dialog-inner&quot;&gt;
+        &lt;div class=&quot;dialog-hd&quot;&gt;
+            &lt;div class=&quot;dialog-title&quot;&gt;title&lt;/div&gt;
+            &lt;a class=&quot;dialog-close&quot; href=&quot;javascript:;&quot;&gt;&amp;times;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dialog-bd&quot;&gt;
+            &lt;div class=&quot;dialog-container&quot;&gt;
+                内容
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dialog-ft&quot;&gt;
+            &lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;确定&lt;/a&gt;
+            &lt;a class=&quot;btn btn-gray&quot; href=&quot;javascript:;&quot;&gt;取消&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="dialog">
+    <div class="dialog-inner">
+        <div class="dialog-hd">
+            <div class="dialog-title">title</div>
+            <a class="dialog-close" href="javascript:;">&times;</a>
+        </div>
+        <div class="dialog-bd">
+            <div class="dialog-container">
+                内容
+            </div>
+        </div>
+        <div class="dialog-ft">
+            <a class="btn" href="javascript:;">确定</a>
+            <a class="btn btn-gray" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+
+<h3>形态</h3>
+<p>默认的弹窗样式。</p>
+<div class="dialog">
+    <div class="dialog-inner">
+        <div class="dialog-hd">
+            <div class="dialog-title">title</div>
+            <a class="dialog-close" href="javascript:;">&times;</a>
+        </div>
+        <div class="dialog-bd">
+            <div class="dialog-container">
+                内容
+            </div>
+        </div>
+        <div class="dialog-ft">
+            <a class="btn" href="javascript:;">确定</a>
+            <a class="btn btn-gray" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+
+<p>无标题的弹窗样式。</p>
+<div class="dialog dialog-mn dialog-notitle">
+    <div class="dialog-inner">
+        <a class="dialog-close" href="javascript:;">&times;</a>
+        <div class="dialog-bd">
+            <div class="dialog-container">
+                宽度：380px，高度：自适应，外边距：20px，标题：无
+            </div>
+        </div>
+        <div class="dialog-ft">
+            <a class="btn" href="javascript:;">确定</a>
+            <a class="btn btn-gray" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+
+<h3>大小</h3>
+<ul>
+<li>dialog-mn</li>
+<li>dialog-sm</li>
+<li>dialog</li>
+<li>dialog-lg</li>
+<li>dialog-lgt</li>
+</ul>
+<h3>皮肤</h3>
+<ul>
+<li>dialog 默认</li>
+<li>dialog-white 白色</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;dialog dialog-mn dialog-notitle&quot;&gt;
+    &lt;div class=&quot;dialog-inner&quot;&gt;
+        &lt;a class=&quot;dialog-close&quot; href=&quot;javascript:;&quot;&gt;&amp;times;&lt;/a&gt;
+        &lt;div class=&quot;dialog-bd&quot;&gt;
+            &lt;div class=&quot;dialog-container&quot;&gt;
+                宽度：380px，高度：自适应，外边距：20px，标题：无
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dialog-ft&quot;&gt;
+            &lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;确定&lt;/a&gt;
+            &lt;a class=&quot;btn btn-gray&quot; href=&quot;javascript:;&quot;&gt;取消&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="dialog dialog-mn dialog-notitle">
+    <div class="dialog-inner">
+        <a class="dialog-close" href="javascript:;">&times;</a>
+        <div class="dialog-bd">
+            <div class="dialog-container">
+                宽度：380px，高度：自适应，外边距：20px，标题：无
+            </div>
+        </div>
+        <div class="dialog-ft">
+            <a class="btn" href="javascript:;">确定</a>
+            <a class="btn btn-gray" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="doc-section">
+    <h2>prompt（提示）</h2>
+<p>提示组件样式。主要包含 alert、notice。</p>
+<h3>形态</h3>
+<h4>prompt-alert</h4>
+<div class="prompt-alert">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        alert
+    </div>
+</div>
+
+<p>full 模式的 alert 组件样式。</p>
+<div class="prompt-alert prompt-full">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        full model full model full model full model full model full model full model full model full model full model
+        full model full model full model full model full model full model full model full model full model full model
+        full model full model full model full model full model full model full model full model full model full model
+    </div>
+</div>
+
+<p>可关闭的 alert 组件样式。</p>
+<div class="prompt-alert prompt-closable">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        closable model
+    </div>
+    <a class="close" href="javascript:;">&times;</a>
+</div>
+
+<h4>prompt-notice</h4>
+<div class="prompt-notice">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        notice
+    </div>
+</div>
+
+
+<h3>状态</h3>
+<h4>prompt-alert</h4>
+<div class="prompt-alert prompt-alert-info">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        info state
+    </div>
+</div>
+
+<div class="prompt-alert prompt-alert-warning">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        wraning state
+    </div>
+</div>
+
+<div class="prompt-alert prompt-alert-error">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        error state
+    </div>
+</div>
+
+<div class="prompt-alert prompt-alert-success">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        success state
+    </div>
+</div>
+
+<h4>prompt-notice</h4>
+<div class="prompt-notice prompt-notice-info">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        info state
+    </div>
+</div>
+
+<div class="prompt-notice prompt-notice-warning">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        warning state
+    </div>
+</div>
+
+<div class="prompt-notice prompt-notice-error">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        error state
+    </div>
+</div>
+
+<div class="prompt-notice prompt-notice-success">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        success state
+    </div>
+</div>
+
+<div class="prompt-notice prompt-notice-loading">
+    <i class="prompt-icon"></i>
+    <div class="prompt-main">
+        loading state
+    </div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>tooltip（工具提示）</h2>
+<p>工具组件样式。</p>
+<h3>方向</h3>
+<p>beeui 为 tooltip 组件定义了 8 个可配置的方向：</p>
+<ul>
+<li>tooltip-nw    —— NorthWest tooltip</li>
+<li>tooltip-n    —— North tooltip</li>
+<li>tooltip-ne    —— NorthEast tooltip</li>
+<li>tooltip-w    —— West tooltip</li>
+<li>tooltip-e    —— East tooltip</li>
+<li>tooltip-sw    —— SouthWest tooltip</li>
+<li>tooltip-s    —— South tooltip</li>
+<li>tooltip-se    —— SouthEast tooltip</li>
+</ul>
+<div class="tooltip tooltip-n">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        North tooltip
+    </div>
+</div>
+
+<div class="tooltip tooltip-w">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        NorthEast tooltip
+    </div>
+</div>
+
+<div class="tooltip tooltip-e">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        West tooltip
+    </div>
+</div>
+
+<div class="tooltip tooltip-s">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        West tooltip
+    </div>
+</div>
+
+<h3>皮肤</h3>
+<p>beeui 为 tooltip 提供了 6 种可配置的皮肤样式：</p>
+<ul>
+<li>tooltip</li>
+<li>tooltip-black</li>
+<li>tooltip-blue</li>
+<li>tooltip-green</li>
+<li>tooltip-yellow</li>
+<li>tooltip-darkyellow</li>
+</ul>
+<div class="tooltip tooltip-n">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        black skin
+    </div>
+</div>
+
+<div class="tooltip tooltip-n tooltip-black">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        black skin
+    </div>
+</div>
+
+<div class="tooltip tooltip-n tooltip-blue">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        blue skin
+    </div>
+</div>
+
+<div class="tooltip tooltip-n tooltip-green">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        green skin
+    </div>
+</div>
+
+<div class="tooltip tooltip-n tooltip-yellow">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        yellow skin
+    </div>
+</div>
+
+<div class="tooltip tooltip-n tooltip-darkyellow">
+    <div class="tooltip-arrow">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-main">
+        derk yellow skin
+    </div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>calendar（日历）</h2>
+<p>日历组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;calendar&quot;&gt;
+    &lt;div class=&quot;calendar-hd&quot;&gt;
+        &lt;a class=&quot;calendar-prev&quot; href=&quot;javascript:;&quot;&gt;prev&lt;/a&gt;
+        &lt;a class=&quot;calendar-title&quot; href=&quot;javascript:;&quot;&gt;2014年06月&lt;/a&gt;
+        &lt;a class=&quot;calendar-next&quot; href=&quot;javascript:;&quot;&gt;next&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;calendar-bd&quot;&gt;
+        &lt;div class=&quot;calendar-day show&quot;&gt;
+            &lt;table&gt;
+                &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;日&lt;/th&gt;
+                    &lt;th&gt;一&lt;/th&gt;
+                    &lt;th&gt;二&lt;/th&gt;
+                    &lt;th&gt;三&lt;/th&gt;
+                    &lt;th&gt;四&lt;/th&gt;
+                    &lt;th&gt;五&lt;/th&gt;
+                    &lt;th&gt;六&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;25&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;26&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;27&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;28&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;29&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;30&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;31&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;6&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;7&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;8&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;9&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;10&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;11&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;12&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;13&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;14&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;15&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;16&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;17&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;18&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;19&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;20&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;21&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;22&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;23&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;24&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;25&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;26&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;27&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;28&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;29&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;30&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/td&gt;
+                    &lt;td class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;calendar-year&quot;&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2010&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2011&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2012&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2013&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2014&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2015&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2016&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2017&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2018&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2019&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2020&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2021&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;calendar-month&quot;&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;1月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;2月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;3月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;4月&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;5月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;6月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;7月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;8月&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;9月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;10月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;11月&lt;/a&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=&quot;#&quot;&gt;12月&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="calendar">
+    <div class="calendar-hd">
+        <a class="calendar-prev" href="javascript:;">prev</a>
+        <a class="calendar-title" href="javascript:;">2014年06月</a>
+        <a class="calendar-next" href="javascript:;">next</a>
+    </div>
+    <div class="calendar-bd">
+        <div class="calendar-day show">
+            <table>
+                <thead>
+                <tr>
+                    <th>日</th>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="disabled"><a href="#">25</a></td>
+                    <td class="disabled"><a href="#">26</a></td>
+                    <td class="disabled"><a href="#">27</a></td>
+                    <td class="disabled"><a href="#">28</a></td>
+                    <td class="disabled"><a href="#">29</a></td>
+                    <td class="disabled"><a href="#">30</a></td>
+                    <td class="disabled"><a href="#">31</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">1</a></td>
+                    <td><a href="#">2</a></td>
+                    <td><a href="#">3</a></td>
+                    <td><a href="#">4</a></td>
+                    <td><a href="#">5</a></td>
+                    <td><a href="#">6</a></td>
+                    <td><a href="#">7</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">8</a></td>
+                    <td><a href="#">9</a></td>
+                    <td><a href="#">10</a></td>
+                    <td class="active"><a href="#">11</a></td>
+                    <td><a href="#">12</a></td>
+                    <td><a href="#">13</a></td>
+                    <td><a href="#">14</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">15</a></td>
+                    <td><a href="#">16</a></td>
+                    <td><a href="#">17</a></td>
+                    <td><a href="#">18</a></td>
+                    <td><a href="#">19</a></td>
+                    <td><a href="#">20</a></td>
+                    <td><a href="#">21</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">22</a></td>
+                    <td><a href="#">23</a></td>
+                    <td><a href="#">24</a></td>
+                    <td><a href="#">25</a></td>
+                    <td><a href="#">26</a></td>
+                    <td><a href="#">27</a></td>
+                    <td><a href="#">28</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">29</a></td>
+                    <td><a href="#">30</a></td>
+                    <td class="disabled"><a href="#">1</a></td>
+                    <td class="disabled"><a href="#">2</a></td>
+                    <td class="disabled"><a href="#">3</a></td>
+                    <td class="disabled"><a href="#">4</a></td>
+                    <td class="disabled"><a href="#">5</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="calendar-year">
+            <table>
+                <tr>
+                    <td><a href="#">2010</a></td>
+                    <td><a href="#">2011</a></td>
+                    <td><a href="#">2012</a></td>
+                    <td><a href="#">2013</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">2014</a></td>
+                    <td><a href="#">2015</a></td>
+                    <td><a href="#">2016</a></td>
+                    <td><a href="#">2017</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">2018</a></td>
+                    <td><a href="#">2019</a></td>
+                    <td><a href="#">2020</a></td>
+                    <td><a href="#">2021</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="calendar-month">
+            <table>
+                <tr>
+                    <td><a href="#">1月</a></td>
+                    <td><a href="#">2月</a></td>
+                    <td><a href="#">3月</a></td>
+                    <td><a href="#">4月</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">5月</a></td>
+                    <td><a href="#">6月</a></td>
+                    <td><a href="#">7月</a></td>
+                    <td><a href="#">8月</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">9月</a></td>
+                    <td><a href="#">10月</a></td>
+                    <td><a href="#">11月</a></td>
+                    <td><a href="#">12月</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<h3>calendar-group</h3>
+<p>日历组组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;calendar-group&quot;&gt;
+    &lt;div class=&quot;calendar&quot;&gt;
+    ...
+    &lt;/div&gt;
+    &lt;div class=&quot;calendar&quot;&gt;
+    ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="calendar-group">
+    <div class="calendar">
+        <div class="calendar-hd">
+            <a class="calendar-prev" href="javascript:;">prev</a>
+            <a class="calendar-title" href="javascript:;">2014年06月</a>
+            <a class="calendar-next" href="javascript:;">next</a>
+        </div>
+        <div class="calendar-bd">
+            <div class="calendar-day show">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>日</th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="disabled"><a href="#">25</a></td>
+                        <td class="disabled"><a href="#">26</a></td>
+                        <td class="disabled"><a href="#">27</a></td>
+                        <td class="disabled"><a href="#">28</a></td>
+                        <td class="disabled"><a href="#">29</a></td>
+                        <td class="disabled"><a href="#">30</a></td>
+                        <td class="disabled"><a href="#">31</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">1</a></td>
+                        <td><a href="#">2</a></td>
+                        <td><a href="#">3</a></td>
+                        <td><a href="#">4</a></td>
+                        <td><a href="#">5</a></td>
+                        <td><a href="#">6</a></td>
+                        <td><a href="#">7</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">8</a></td>
+                        <td><a href="#">9</a></td>
+                        <td><a href="#">10</a></td>
+                        <td class="active"><a href="#">11</a></td>
+                        <td><a href="#">12</a></td>
+                        <td><a href="#">13</a></td>
+                        <td><a href="#">14</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">15</a></td>
+                        <td><a href="#">16</a></td>
+                        <td><a href="#">17</a></td>
+                        <td><a href="#">18</a></td>
+                        <td><a href="#">19</a></td>
+                        <td><a href="#">20</a></td>
+                        <td><a href="#">21</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">22</a></td>
+                        <td><a href="#">23</a></td>
+                        <td><a href="#">24</a></td>
+                        <td><a href="#">25</a></td>
+                        <td><a href="#">26</a></td>
+                        <td><a href="#">27</a></td>
+                        <td><a href="#">28</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">29</a></td>
+                        <td><a href="#">30</a></td>
+                        <td class="disabled"><a href="#">1</a></td>
+                        <td class="disabled"><a href="#">2</a></td>
+                        <td class="disabled"><a href="#">3</a></td>
+                        <td class="disabled"><a href="#">4</a></td>
+                        <td class="disabled"><a href="#">5</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="calendar-year">
+                <table>
+                    <tr>
+                        <td><a href="#">2010</a></td>
+                        <td><a href="#">2011</a></td>
+                        <td><a href="#">2012</a></td>
+                        <td><a href="#">2013</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">2014</a></td>
+                        <td><a href="#">2015</a></td>
+                        <td><a href="#">2016</a></td>
+                        <td><a href="#">2017</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">2018</a></td>
+                        <td><a href="#">2019</a></td>
+                        <td><a href="#">2020</a></td>
+                        <td><a href="#">2021</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="calendar-month">
+                <table>
+                    <tr>
+                        <td><a href="#">1月</a></td>
+                        <td><a href="#">2月</a></td>
+                        <td><a href="#">3月</a></td>
+                        <td><a href="#">4月</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">5月</a></td>
+                        <td><a href="#">6月</a></td>
+                        <td><a href="#">7月</a></td>
+                        <td><a href="#">8月</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">9月</a></td>
+                        <td><a href="#">10月</a></td>
+                        <td><a href="#">11月</a></td>
+                        <td><a href="#">12月</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="calendar">
+        <div class="calendar-hd">
+            <a class="calendar-prev" href="javascript:;">prev</a>
+            <a class="calendar-title" href="javascript:;">2014年06月</a>
+            <a class="calendar-next" href="javascript:;">next</a>
+        </div>
+        <div class="calendar-bd">
+            <div class="calendar-day show">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>日</th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="disabled"><a href="#">25</a></td>
+                        <td class="disabled"><a href="#">26</a></td>
+                        <td class="disabled"><a href="#">27</a></td>
+                        <td class="disabled"><a href="#">28</a></td>
+                        <td class="disabled"><a href="#">29</a></td>
+                        <td class="disabled"><a href="#">30</a></td>
+                        <td class="disabled"><a href="#">31</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">1</a></td>
+                        <td><a href="#">2</a></td>
+                        <td><a href="#">3</a></td>
+                        <td><a href="#">4</a></td>
+                        <td><a href="#">5</a></td>
+                        <td><a href="#">6</a></td>
+                        <td><a href="#">7</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">8</a></td>
+                        <td><a href="#">9</a></td>
+                        <td><a href="#">10</a></td>
+                        <td class="active"><a href="#">11</a></td>
+                        <td><a href="#">12</a></td>
+                        <td><a href="#">13</a></td>
+                        <td><a href="#">14</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">15</a></td>
+                        <td><a href="#">16</a></td>
+                        <td><a href="#">17</a></td>
+                        <td><a href="#">18</a></td>
+                        <td><a href="#">19</a></td>
+                        <td><a href="#">20</a></td>
+                        <td><a href="#">21</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">22</a></td>
+                        <td><a href="#">23</a></td>
+                        <td><a href="#">24</a></td>
+                        <td><a href="#">25</a></td>
+                        <td><a href="#">26</a></td>
+                        <td><a href="#">27</a></td>
+                        <td><a href="#">28</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">29</a></td>
+                        <td><a href="#">30</a></td>
+                        <td class="disabled"><a href="#">1</a></td>
+                        <td class="disabled"><a href="#">2</a></td>
+                        <td class="disabled"><a href="#">3</a></td>
+                        <td class="disabled"><a href="#">4</a></td>
+                        <td class="disabled"><a href="#">5</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="calendar-year">
+                <table>
+                    <tr>
+                        <td><a href="#">2010</a></td>
+                        <td><a href="#">2011</a></td>
+                        <td><a href="#">2012</a></td>
+                        <td><a href="#">2013</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">2014</a></td>
+                        <td><a href="#">2015</a></td>
+                        <td><a href="#">2016</a></td>
+                        <td><a href="#">2017</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">2018</a></td>
+                        <td><a href="#">2019</a></td>
+                        <td><a href="#">2020</a></td>
+                        <td><a href="#">2021</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="calendar-month">
+                <table>
+                    <tr>
+                        <td><a href="#">1月</a></td>
+                        <td><a href="#">2月</a></td>
+                        <td><a href="#">3月</a></td>
+                        <td><a href="#">4月</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">5月</a></td>
+                        <td><a href="#">6月</a></td>
+                        <td><a href="#">7月</a></td>
+                        <td><a href="#">8月</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">9月</a></td>
+                        <td><a href="#">10月</a></td>
+                        <td><a href="#">11月</a></td>
+                        <td><a href="#">12月</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>selectbox（下拉选项）</h2>
+<p>下拉选项组件样式。</p>
+<h3>形态</h3>
+<p>selectbox-tags</p>
+<div class="selectbox selectbox-tags">
+    <div class="selectbox-toggle">
+    <span class="selectbox-label">
+      <ul>
+          <li>
+              <span>AA</span>
+              <a class="close" href="javascript:;">&times;</a>
+          </li>
+          <li>
+              <span>BB</span>
+              <a class="close" href="javascript:;">&times;</a>
+          </li>
+          <li>
+              <span>CB</span>
+              <a class="close" href="javascript:;">&times;</a>
+          </li>
+      </ul>
+    </span>
+    <span class="selectbox-icon">
+      <i class="icon"></i>
+    </span>
+    </div>
+    <div class="selectbox-panel hide">
+        <div class="selectbox-search">
+            <input type="text" placeholder="查找"/>
+            <button type="button">search</button>
+        </div>
+        <div class="selectbox-menu">
+            <ul>
+                <li class="only"><a href="#">00</a></li>
+                <li class="caption"><a href="#">A</a></li>
+                <li><a href="#">AA</a></li>
+                <li><a href="#">AB</a></li>
+                <li class="caption"><a href="#">B</a></li>
+                <li class="active"><a href="#">BA</a></li>
+                <li><a href="#">BB</a></li>
+                <li class="caption"><a href="#">C</a></li>
+                <li class="focus"><a href="#">CA</a></li>
+                <li class="disabled"><a href="#">CB</a></li>
+            </ul>
+        </div>
+        <div class="selectbox-text">搜索无结果</div>
+    </div>
+</div>
+
+<p>selectbox-dropdown</p>
+<div class="selectbox selectbox-dropdown">
+    <div class="selectbox-toggle">
+        <span class="selectbox-label">---请选择---</span>
+    <span class="selectbox-icon">
+      <i class="icon"></i>
+    </span>
+    </div>
+    <div class="selectbox-panel hide">
+        <div class="selectbox-menu">
+            <ul>
+                <li class="caption"><a href="#">A</a></li>
+                <li><a href="#">AA</a></li>
+                <li><a href="#">AB</a></li>
+                <li class="caption"><a href="#">B</a></li>
+                <li class="active"><a href="#">BA</a></li>
+                <li><a href="#">BB</a></li>
+                <li class="caption"><a href="#">C</a></li>
+                <li class="focus"><a href="#">CA</a></li>
+                <li class="disabled"><a href="#">CB</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>nav（导航）</h2>
+<p>导航组件样式。</p>
+<h3>形态</h3>
+<p>beeui 提供两种形态的导航样式：</p>
+<ul>
+<li>nav-tabs</li>
+<li>nav-inline</li>
+</ul>
+<pre><code class="language-markup">&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 01&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;item 02&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul class="nav nav-tabs">
+    <li><a href="#">item 01</a></li>
+    <li class="active"><a href="#">item 02</a></li>
+</ul>
+
+<pre><code class="language-markup">&lt;ul class=&quot;nav nav-inline&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 01&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 02&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 03&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul class="nav nav-inline">
+    <li><a href="#">item 01</a></li>
+    <li class="divider"></li>
+    <li><a href="#">item 02</a></li>
+    <li class="divider"></li>
+    <li><a href="#">item 03</a></li>
+</ul>
+
+<h3>大小</h3>
+<p>beeui 提供可配置的导航大小样式：</p>
+<pre><code class="language-markup">&lt;ul class=&quot;nav nav-tabs nav-lg&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 01&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;item 02&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul class="nav nav-tabs">
+    <li><a href="#">item 01</a></li>
+    <li class="active"><a href="#">item 02</a></li>
+</ul>
+
+<ul class="nav nav-tabs nav-lg">
+    <li><a href="#">item 01</a></li>
+    <li class="active"><a href="#">item 02</a></li>
+</ul>
+
+<h3>皮肤</h3>
+<p>beeui 默认提供两种可选的皮肤样式：</p>
+<ul>
+<li>nav</li>
+<li>nav-black</li>
+</ul>
+<pre><code class="language-markup">&lt;ul class=&quot;nav nav-tabs nav-black&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 01&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;item 02&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul class="nav nav-tabs">
+    <li><a href="#">item 01</a></li>
+    <li class="active"><a href="#">item 02</a></li>
+</ul>
+
+<ul class="nav nav-tabs nav-black">
+    <li><a href="#">item 01</a></li>
+    <li class="active"><a href="#">item 02</a></li>
+</ul>
+
+</div>
+
+<div class="doc-section">
+    <h2>menu（菜单）</h2>
+<p>菜单组件样式。</p>
+<ul class="menu menu-tabs">
+    <li><a href="#">首页</a></li>
+    <li class="active">
+        <a href="#">广告</a>
+        <div class="submenu">
+            <ul>
+                <li class="active"><a href="#">广告管理</a></li>
+                <li><a href="#">广告排期</a></li>
+                <li><a href="#">广告报告</a></li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="#">商家</a></li>
+    <li><a href="#">连乐</a></li>
+    <li><a href="#">顾客</a></li>
+    <li>
+        <a href="#">数据报告</a>
+        <div class="submenu">
+            <ul>
+                <li><a href="#">活跃商家报告</a></li>
+                <li><a href="#">连乐在线报告</a></li>
+                <li><a href="#">认证报告</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="#">设置</a>
+        <div class="submenu">
+            <ul>
+                <li><a href="#">代理商资料</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="#">团队管理</a></li>
+                <li><a href="#">用户管理</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+
+</div>
+
+<div class="doc-section">
+    <h2>tab（选项卡）</h2>
+<p>选项卡组件样式。</p>
+<h3>形态</h3>
+<pre><code class="language-markup">&lt;div class=&quot;tab&quot;&gt;
+    &lt;div class=&quot;tab-nav&quot;&gt;
+        &lt;ul class=&quot;nav nav-tabs nav-sm&quot;&gt;
+            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;item 01&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 02&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;tab-more&quot;&gt;
+            &lt;span&gt;如有疑问，请联系高务人员&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-main p10&quot;&gt;
+        &lt;div class=&quot;tab-panel tab-current&quot;&gt;panel 01&lt;/div&gt;
+        &lt;div class=&quot;tab-panel&quot;&gt;panel 02&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="tab">
+    <div class="tab-nav">
+        <ul class="nav nav-tabs nav-sm">
+            <li class="active"><a href="#">item 01</a></li>
+            <li><a href="#">item 02</a></li>
+        </ul>
+        <div class="tab-more">
+            <span>如有疑问，请联系高务人员</span>
+        </div>
+    </div>
+    <div class="tab-main p10">
+        <div class="tab-panel tab-current">panel 01</div>
+        <div class="tab-panel">panel 02</div>
+    </div>
+</div>
+
+<h3>tab-noborder</h3>
+<div class="panel">
+    <div class="panel-hd">
+        <div class="panel-title">
+            <i class="icon icon-data"></i>
+            <h3>昨日数据</h3>
+        </div>
+        <div class="panel-explain"></div>
+        <div class="panel-more">
+            <a href="#">详细报告</a>
+        </div>
+    </div>
+    <div class="panel-bd">
+        <div class="tab tab-noborder">
+            <div class="tab-nav">
+                <ul class="nav nav-tabs nav-sm">
+                    <li class="active"><a href="#">item 01</a></li>
+                    <li><a href="#">item 02</a></li>
+                </ul>
+                <div class="tab-more">
+                    <span>如有疑问，请联系高务人员</span>
+                </div>
+            </div>
+            <div class="tab-main p10">
+                <div class="tab-panel tab-current">panel 01</div>
+                <div class="tab-panel">panel 02</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>paging（分页）</h2>
+<p>分页组件样式。</p>
+<h3>结构</h3>
+<pre><code class="language-markup">&lt;div class=&quot;paging&quot;&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;prev&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon icon-prev&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon icon-next&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+<div class="paging">
+    <ul>
+        <li class="prev"><a href="#"><i class="icon icon-prev"></i></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li class="next"><a href="#"><i class="icon icon-next"></i></a></li>
+    </ul>
+</div>
+
+<h3>大小</h3>
+<p>beeui 提供三种不同大小的分页组件：</p>
+<ul>
+<li>paging-smt</li>
+<li>paging-sm</li>
+<li>paging</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;paging paging-smt&quot;&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;prev&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon icon-prev&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon icon-next&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+<div class="paging paging-smt">
+    <ul>
+        <li class="prev"><a href="#"><i class="icon icon-prev"></i></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li class="next"><a href="#"><i class="icon icon-next"></i></a></li>
+    </ul>
+</div>
+
+
+<h3>对齐</h3>
+<p>beeui 提供不同的对齐方式支持。</p>
+<ul>
+<li>paging</li>
+<li>paging-centered</li>
+<li>paging-right</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;paging paging-centered&quot;&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;prev&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon icon-prev&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon icon-next&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+<div class="paging paging-centered">
+    <ul>
+        <li class="prev"><a href="#"><i class="icon icon-prev"></i></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li class="next"><a href="#"><i class="icon icon-next"></i></a></li>
+    </ul>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>panel（面板）</h2>
+<p>面板组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;panel-hd&quot;&gt;
+
+        &lt;div class=&quot;panel-title&quot;&gt;
+            &lt;i class=&quot;icon icon-data&quot;&gt;&lt;/i&gt;
+            &lt;h3&gt;昨日数据&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;panel-explain&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;panel-more&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;详细报告&lt;/a&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-bd&quot;&gt;
+        内容
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="panel">
+    <div class="panel-hd">
+        <div class="panel-title">
+            <i class="icon icon-data"></i>
+            <h3>昨日数据</h3>
+        </div>
+        <div class="panel-explain"></div>
+        <div class="panel-more">
+            <a href="#">详细报告</a>
+        </div>
+    </div>
+    <div class="panel-bd">
+        内容
+    </div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>input-group（输入组）</h2>
+<p>输入控件组组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;input-group&quot;&gt;
+    &lt;i class=&quot;icon icon-user&quot;&gt;&lt;/i&gt;
+    &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;name&quot;/&gt;
+&lt;/div&gt;</code></pre>
+<div class="input-group">
+    <i class="icon icon-user"></i>
+    <input class="input" type="text" placeholder="name"/>
+</div>
+</div>
+
+<div class="doc-section">
+    <h2>authcode（验证码）</h2>
+<p>验证码组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;authcode&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;#&quot; alt=&quot;&quot;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<div class="authcode">
+    <a href="#">
+        <img src="#" alt=""/>
+    </a>
+</div>
+</div>
+
+<div class="doc-section">
+    <h2>placeholder（占位符）</h2>
+<p>占位符组件样式。</p>
+<div class="placeholder placeholder-default">
+    <div class="placeholder-inner">
+        <div class="placeholder-icon"></div>
+        <div class="placeholder-main">
+            <h3>抱歉，您还没有添加任何广告信息！</h3>
+            <p>快来添加第一条广告吧</p>
+            <a class="btn btn-sm" href="#">添加广告</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+    </div>
+    <!--content-->
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <div class="doc-inner"></div>
+</div>
+<!--footer-->
+
+<script src="../../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../../dest/js/jquery.toc.min.js"></script>
+<script src="../../dest/js/jquery.sticky.js"></script>
+<script src="../../dest/js/prism.js"></script>
+<script src="../../dest/js/doc_demo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>简单树形菜单DEMO</title>
+  <link rel="stylesheet" href="../public/css/ST_admin.css"/>
+  <style type="text/css">
+    pre {
+      background-color: #fff
+    }
+  </style>
+  <script src="../public/js/jquery-min.js"></script>
+  <script src="../public/js/ZeroClipboard/jquery.zclip.min.js"></script>
+  <script src="../public/js/ST.Config.js"></script>
+</head>
+<body class="admin-frame">
+<div id="_demo" class="m50">
+  <div class="alert alert-info mb20">
+    <i class="icon"></i>
+    简单树形菜单 <a class="fn_trigger" data-source="_code0" data-cmd="showCode" href="" title="查看代码">[code]</a>
+    <pre id="_code0" data-title="" style="display:none">
+&lt;!--HTML部分--&gt;
+&lt;div id="aside"&gt;
+  &lt;ul class="nav nav-menu"&gt;
+    &lt;li class="menu-on"&gt;
+      &lt;a class="dropdown-toggle" href="#" data-cmd="slideNav"&gt;&lt;i class="icon i-off"&gt;&lt;/i&gt;一级菜单1&gt;
+      &lt;ul class="dropdown-menu"&gt;
+        &lt;li class="menu-on"&gt;
+          &lt;a class="dropdown-toggle" href="#" data-cmd="slideNav"&gt;&lt;i class="icon i-arrow-right"&gt;&lt;/i&gt;二级菜单1_1&lt;/a&gt;
+          &lt;ul class="dropdown-submenu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;三级菜单1_1_1&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="#"&gt;三级菜单1_1_2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;三级菜单1_1_3&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="dropdown-toggle" href="#" data-cmd="slideNav"&gt;&lt;i class="icon i-arrow-right"&gt;&lt;/i&gt;二级菜单1_1&lt;/a&gt;
+          &lt;ul class="dropdown-submenu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;三级菜单1_2_1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;三级菜单1_2_2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;三级菜单1_2_3&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a class="dropdown-toggle" href="#" data-cmd="slideNav"&gt;&lt;i class="icon i-off"&gt;&lt;/i&gt;一级菜单2&lt;/a&gt;
+      &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;
+          &lt;a class="dropdown-toggle" href="#" data-cmd="slideNav"&gt;&lt;i class="icon i-arrow-right"&gt;&lt;/i&gt;二级菜单2_1&lt;/a&gt;
+          &lt;ul class="dropdown-submenu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;三级菜单2_1_1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;三级菜单2_1_2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;三级菜单2_1_3&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class="menu-on"&gt;
+      &lt;a class="dropdown-toggle" href="#" data-cmd="slideNav"&gt;&lt;i class="icon i-off"&gt;&lt;/i&gt;三级菜单3&lt;/a&gt;
+      &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;二级菜单3-1（无子菜单）&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--JS部分--&gt;
+&lt;script src="__YOURPATH__/js/ST.SlideNav.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+ST.initSlideNav = function(){
+  /*
+    默认配置
+    {
+      onlyOneNav:false //是否一次只允许展开一个
+    }
+    接口
+    onSlide 菜单切换时触发
+  */
+  new ST.SlideNav('aside');
+}
+//ST初始化后立即执行
+ST.TODOLIST.push({method: "initSideNav", pars: {}});
+&lt;/script&gt;
+</pre>
+  </div>
+  <div id="aside">
+    <ul class="nav nav-menu">
+      <li class="menu-on">
+        <a class="dropdown-toggle" href="#" data-cmd="slideNav"><i class="icon i-off"></i>一级菜单1</a>
+        <ul class="dropdown-menu">
+          <li class="menu-on">
+            <a class="dropdown-toggle" href="#" data-cmd="slideNav"><i class="icon i-arrow-right"></i>二级菜单1_1</a>
+            <ul class="dropdown-submenu">
+              <li><a href="#">三级菜单1_1_1</a></li>
+              <li class="active"><a href="#">三级菜单1_1_2</a></li>
+              <li><a href="#">三级菜单1_1_3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="dropdown-toggle" href="#" data-cmd="slideNav"><i class="icon i-arrow-right"></i>二级菜单1_2</a>
+            <ul class="dropdown-submenu">
+              <li><a href="#">三级菜单1_2_1</a></li>
+              <li><a href="#">三级菜单1_2_2</a></li>
+              <li><a href="#">三级菜单1_2_3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="dropdown-toggle" href="#" data-cmd="slideNav"><i class="icon i-off"></i>一级菜单2</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-toggle" href="#" data-cmd="slideNav"><i class="icon i-arrow-right"></i>二级菜单2_1</a>
+            <ul class="dropdown-submenu">
+              <li><a href="#">三级菜单2_1_1</a></li>
+              <li><a href="#">三级菜单2_1_2</a></li>
+              <li><a href="#">三级菜单2_1_3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-on">
+        <a class="dropdown-toggle" href="#" data-cmd="slideNav"><i class="icon i-off"></i>一级菜单3</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">二级菜单3-1（无子菜单）</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<script src="../public/js/doc/prettify.js"></script>
+<script src="../public/js/ST_dev.js"></script>
+<script src="../public/js/ST.SlideNav.js"></script>
+<script src="../public/js/demo/demo.js"></script>
+<script type="text/javascript">
+  ST.jsTemplates.push('common');
+  $.extend(ST, {
+    todoList: function () {
+      new ST.SlideNav('aside');
+    }
+  });
+  ST.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>BeeUI 示例文档</title>
+    <link rel="stylesheet" href="../../dest/css/doc_demo.css"/>
+    <link rel="stylesheet" href="../../dest/css/prism.css"/>
+    <link rel="stylesheet" href="../../dest/css/beeui.min.css"/>
+</head>
+<body>
+
+<div class="doc-header">
+    <div class="doc-inner">
+        <h1 class="doc-logo"><a href="#">BeeUI（1.0.0）</a></h1>
+        <div class="doc-navbar">
+    <ul class="doc-nav">
+        <li class=""><a href="../element/element.html">元件</a></li>
+        <li class=""><a href="../component/component.html">组件</a></li>
+        <li class=""><a href="../layout/index.html" target="_blank">布局</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+<!--header-->
+
+<div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-sticker">
+            <div class="doc-toc"></div>
+        </div>
+    </div>
+    <!--sidebar-->
+    <div class="doc-content">
+        <h2>grid（栅格）</h2>
+<p>栅格系统样式。</p>
+<h3>标签嵌套规则</h3>
+<pre><code class="language-markup">&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-1&quot;&gt;span-1&lt;/div&gt;
+        &lt;div class=&quot;span span-2&quot;&gt;span-2&lt;/div&gt;
+        &lt;div class=&quot;span span-3&quot;&gt;span-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-3&quot;&gt;span-3&lt;/div&gt;
+        &lt;div class=&quot;span span-2&quot;&gt;span-2&lt;/div&gt;
+        &lt;div class=&quot;span span-1&quot;&gt;span-1&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="grid">
+    <div class="row">
+        <div class="span span-1 bg-black-10">span-1</div>
+        <div class="span span-2 bg-black-10">span-2</div>
+        <div class="span span-3 bg-black-10">span-3</div>
+    </div>
+    <div class="row">
+        <div class="span span-3 bg-black-10">span-3</div>
+        <div class="span span-2 bg-black-10">span-2</div>
+        <div class="span span-1 bg-black-10">span-1</div>
+    </div>
+</div>
+
+<h3>grid-form</h3>
+<p>表单布局栅格样式。</p>
+<pre><code class="language-markup">&lt;form class=&quot;grid grid-form&quot; action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-label&quot;&gt;字段一&lt;/div&gt;
+        &lt;div class=&quot;span span-3&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;span span-label&quot;&gt;字段二&lt;/div&gt;
+        &lt;div class=&quot;span span-3&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-label&quot;&gt;字段三&lt;/div&gt;
+        &lt;div class=&quot;span span-full&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-label&quot;&gt;字段四&lt;/div&gt;
+        &lt;div class=&quot;span span-2 span-h&quot;&gt;
+            name
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span span-full&quot;&gt;
+            &lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;提交&lt;/button&gt;
+            &lt;button class=&quot;btn btn-gray&quot; type=&quot;button&quot;&gt;取消&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<form class="grid grid-form" action="" method="">
+    <div class="row">
+        <div class="span span-label">字段一</div>
+        <div class="span span-3">
+            <input class="input" type="text"/>
+        </div>
+        <div class="span span-label">字段二</div>
+        <div class="span span-3">
+            <input class="input" type="text"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span span-label">字段三</div>
+        <div class="span span-full">
+            <input class="input" type="text"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span span-label">字段四</div>
+        <div class="span span-2 span-h">
+            name
+        </div>
+    </div>
+    <div class="row">
+        <div class="span span-full">
+            <button class="btn" type="button">提交</button>
+            <button class="btn btn-gray" type="button">取消</button>
+        </div>
+    </div>
+</form>
+
+    </div>
+    <!--content-->
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <div class="doc-inner"></div>
+</div>
+<!--footer-->
+
+<script src="../../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../../dest/js/jquery.toc.min.js"></script>
+<script src="../../dest/js/jquery.sticky.js"></script>
+<script src="../../dest/js/prism.js"></script>
+<script src="../../dest/js/doc_demo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1475 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>baseUI：一个基础 UI 库</title>
+    <link rel="stylesheet" href="../_theme/reference/css/reference_dark.css"/>
+    <link rel="stylesheet" href="resource/css/doc_baseUI.css"/>
+</head>
+<body>
+
+<div class="doc-sidebar">
+    <a class="doc-close" href="#"><span>关闭</span></a>
+    <div class="toc"></div>
+</div>
+<!--sidebar-->
+
+<div class="doc-header">
+    <h1>base UI</h1>
+    <p>一个基础 UI 库，一个 UI 命名约定，一个 UI 设计（开发）参考文档</p>
+</div>
+<!--header-->
+
+<div class="doc-navbar hide">
+    <ul class="nav doc-nav">
+        <li><a href="" title="CSS框架">cosyless</a></li>
+        <li>*</li>
+        <li><a href="" title="CSS动画库">magic</a></li>
+        <li>*</li>
+        <li><a href="" title="基础UI库">baseUI</a></li>
+        <li>*</li>
+        <li><a href="" title="对内后台UI库">adminUI</a></li>
+        <li>*</li>
+        <li><a href="" title="对外后台UI库">beeUI</a></li>
+        <li>*</li>
+        <li><a href="" title="WEB前端UI框架">cosyUI</a></li>
+    </ul>
+</div>
+<!--navbar-->
+
+<div class="doc-container">
+
+    <div class="doc-panel">
+        <h4>使用方式</h4>
+        <p>在项目less目录下的 baseUI “桥接模块”中，选择性引入项目需要的基础 UI 文件即可。</p>
+        <pre class="prettyprint hide">
+        // Element
+        // ---------------------------------------
+        @import "../lib/baseUI/element/button";
+        ...
+
+        // Component
+        // ---------------------------------------
+        @import "../lib/baseUI/component/dialog";
+        ...
+        </pre>
+
+        <h4>组成部分</h4>
+        <p>baseUI 主要由以下几个部分组成：命名约定（naming）、基础UI（element、component）。</p>
+
+    </div>
+
+    <div class="doc-caption">
+        <h2>naming</h2>
+        <p>常用 Web 界面构建中类名命名约定</p>
+    </div>
+
+    <div class="doc-panel">
+
+        <p>原则：不混合使用分隔符，不使用无语义的名称。抽象类型按“功能”去命名，抽象形态按“表现形式”去命名。</p>
+
+        <p>CSS类名中的分隔符选择：</p>
+        <ul>
+            <li class="text-red">① -（中横杆） √</li>
+            <li>② _（下划线）</li>
+            <li>③ redBtn（驼峰命名法）</li>
+            <li>④ block__element--modifier（BEM命名法）</li>
+        </ul>
+
+        <p class="mt20">CSS类名中的语义化“关键字”及使用方式：</p>
+        <pre class="prettyprint hide">
+        // 使用拼接方式组成所需要的类名
+
+        .btn {} // 按钮
+        .btn-default {} // 默认主题按钮
+        .btn-green {}   // 绿色按钮
+        .btn-lg {}   // 大的按钮
+        .btn-group {}   // 按钮组
+        </pre>
+
+        <h3>结构类</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>类名关键字</th>
+                <th>全名</th>
+                <th>说明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>wrap</td>
+                <td>wrapper</td>
+                <td>包裹器</td>
+            </tr>
+            <tr>
+                <td>outer</td>
+                <td></td>
+                <td>外面的（外）</td>
+            </tr>
+            <tr>
+                <td>inner</td>
+                <td></td>
+                <td>里面的（内）</td>
+            </tr>
+            <tr>
+                <td>hd</td>
+                <td>head</td>
+                <td>头（上）</td>
+            </tr>
+            <tr>
+                <td>bd</td>
+                <td>body</td>
+                <td>主体（中）</td>
+            </tr>
+            <tr>
+                <td>ft</td>
+                <td>foot</td>
+                <td>脚（下）</td>
+            </tr>
+            <tr>
+                <td>left</td>
+                <td></td>
+                <td>左边</td>
+            </tr>
+            <tr>
+                <td>center</td>
+                <td></td>
+                <td>中间</td>
+            </tr>
+            <tr>
+                <td>right</td>
+                <td></td>
+                <td>右边</td>
+            </tr>
+            <tr>
+                <td>h</td>
+                <td>horizontal</td>
+                <td>水平的</td>
+            </tr>
+            <tr>
+                <td>v</td>
+                <td>vertical</td>
+                <td>垂直的</td>
+            </tr>
+            <tr>
+                <td>before</td>
+                <td></td>
+                <td>在…之前（前）</td>
+            </tr>
+            <tr>
+                <td>after</td>
+                <td></td>
+                <td>在…之后（后）</td>
+            </tr>
+            <tr>
+                <td>up</td>
+                <td></td>
+                <td>向上</td>
+            </tr>
+            <tr>
+                <td>down</td>
+                <td></td>
+                <td>向下</td>
+            </tr>
+            <tr>
+                <td>first</td>
+                <td></td>
+                <td>首先</td>
+            </tr>
+            <tr>
+                <td>last</td>
+                <td></td>
+                <td>最后</td>
+            </tr>
+            <tr>
+                <td>prev</td>
+                <td>previous</td>
+                <td>上一个</td>
+            </tr>
+            <tr>
+                <td>next</td>
+                <td></td>
+                <td>下一个</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>大小类</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>类名关键字</th>
+                <th>全名</th>
+                <th>说明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>mn</td>
+                <td>mini</td>
+                <td>微型的</td>
+            </tr>
+            <tr>
+                <td>smt</td>
+                <td>smallest</td>
+                <td>最小的</td>
+            </tr>
+            <tr>
+                <td>sm</td>
+                <td>small</td>
+                <td>小的</td>
+            </tr>
+            <tr>
+                <td>lg</td>
+                <td>large</td>
+                <td>大的</td>
+            </tr>
+            <tr>
+                <td>lgt</td>
+                <td>largest</td>
+                <td>最大的</td>
+            </tr>
+            <tr>
+                <td>shortest</td>
+                <td></td>
+                <td>最短的</td>
+            </tr>
+            <tr>
+                <td>short</td>
+                <td></td>
+                <td>短的</td>
+            </tr>
+            <tr>
+                <td>long</td>
+                <td></td>
+                <td>长的</td>
+            </tr>
+            <tr>
+                <td>longest</td>
+                <td></td>
+                <td>最长的</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>状态类</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>类名关键字</th>
+                <th>说明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>normal</td>
+                <td>正常</td>
+            </tr>
+            <tr>
+                <td>hover</td>
+                <td>鼠标悬停</td>
+            </tr>
+            <tr>
+                <td>active、current、selected</td>
+                <td>激活、当前的、选择的</td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>禁用</td>
+            </tr>
+            <tr>
+                <td>focus</td>
+                <td>获得焦点（表单元素）</td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>启用（表单元素）</td>
+            </tr>
+            <tr>
+                <td>checked</td>
+                <td>选中（表单元素）</td>
+            </tr>
+            <tr>
+                <td>readonly</td>
+                <td>只读的（表单元素）</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>颜色类（皮肤）</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>类名关键字</th>
+                <th>说明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>white</td>
+                <td>白色</td>
+            </tr>
+            <tr>
+                <td>gray</td>
+                <td>灰色</td>
+            </tr>
+            <tr>
+                <td>black</td>
+                <td>黑色</td>
+            </tr>
+            <tr>
+                <td>red</td>
+                <td>红色</td>
+            </tr>
+            <tr>
+                <td>green</td>
+                <td>绿色</td>
+            </tr>
+            <tr>
+                <td>blue</td>
+                <td>蓝色</td>
+            </tr>
+            <tr>
+                <td>cyan</td>
+                <td>青色</td>
+            </tr>
+            <tr>
+                <td>yellow</td>
+                <td>黄色</td>
+            </tr>
+            <tr>
+                <td>orange</td>
+                <td>橙色</td>
+            </tr>
+            <tr>
+                <td>purple</td>
+                <td>紫色</td>
+            </tr>
+            <tr>
+                <td>pink</td>
+                <td>粉红色</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>类型（主题）</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>类名关键字</th>
+                <th>说明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>default</td>
+                <td>默认、缺省</td>
+            </tr>
+            <tr>
+                <td>info</td>
+                <td>信息</td>
+            </tr>
+            <tr>
+                <td>warning</td>
+                <td>警告</td>
+            </tr>
+            <tr>
+                <td>error、danger、important</td>
+                <td>错误、危险的、重要的</td>
+            </tr>
+            <tr>
+                <td>success</td>
+                <td>成功</td>
+            </tr>
+            <tr>
+                <td>loading</td>
+                <td>加载</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>布局类</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>Class Name</th>
+                <th>说明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>header</td>
+                <td>页眉（顶部）</td>
+            </tr>
+            <tr>
+                <td>container</td>
+                <td>容器（主体容器）</td>
+            </tr>
+            <tr>
+                <td>section</td>
+                <td>截面</td>
+            </tr>
+            <tr>
+                <td>sidebar、aside</td>
+                <td>侧边栏</td>
+            </tr>
+            <tr>
+                <td>main、content</td>
+                <td>主要内容区</td>
+            </tr>
+            <tr>
+                <td>footer</td>
+                <td>页脚（底部）</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>其他</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>类名关键字</th>
+                <th>说明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>group</td>
+                <td>群组</td>
+            </tr>
+            <tr>
+                <td>toggle</td>
+                <td>开关</td>
+            </tr>
+            <tr>
+                <td>caption</td>
+                <td>标题快</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>标题</td>
+            </tr>
+            <tr>
+                <td>sub</td>
+                <td>子</td>
+            </tr>
+            <tr>
+                <td>more</td>
+                <td>更多</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>项目</td>
+            </tr>
+            <tr>
+                <td>odd</td>
+                <td>奇数</td>
+            </tr>
+            <tr>
+                <td>even</td>
+                <td>偶数</td>
+            </tr>
+            <tr>
+                <td>striped</td>
+                <td>有条纹的</td>
+            </tr>
+            <tr>
+                <td>condensed</td>
+                <td>浓缩的</td>
+            </tr>
+            <tr>
+                <td>bordered</td>
+                <td>有边的</td>
+            </tr>
+            <tr>
+                <td>hovered</td>
+                <td>有悬停状态的</td>
+            </tr>
+            <tr>
+                <td>spaced</td>
+                <td>隔开的</td>
+            </tr>
+            <tr>
+                <td>primary</td>
+                <td>主要的</td>
+            </tr>
+            <tr>
+                <td>secondary</td>
+                <td>次要的</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>常用 element 命名</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>Class Name</th>
+                <th>说明</th>
+                <th>标签</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>table</td>
+                <td>表格</td>
+                <td>&lt;table class="table"&gt;</td>
+            </tr>
+            <tr>
+                <td>form</td>
+                <td>表单</td>
+                <td>&lt;form class="form"&gt;</td>
+            </tr>
+            <tr>
+                <td>btn</td>
+                <td>按钮</td>
+                <td>input[type="button"]、button、a</td>
+            </tr>
+            <tr>
+                <td>input</td>
+                <td>输入控件</td>
+                <td>input[type="text"]、textarea</td>
+            </tr>
+            <tr>
+                <td>radio</td>
+                <td>单选控件</td>
+                <td>input[type="radio"]</td>
+            </tr>
+            <tr>
+                <td>checkbox</td>
+                <td>多选控件</td>
+                <td>input[type="checkbox"]</td>
+            </tr>
+            <tr>
+                <td>list</td>
+                <td>列表</td>
+                <td>ul/ol/dl</td>
+            </tr>
+            <tr>
+                <td>prettyprint hide</td>
+                <td>代码</td>
+                <td>pre、code</td>
+            </tr>
+            <tr>
+                <td>icon</td>
+                <td>图标</td>
+                <td>i</td>
+            </tr>
+            <tr>
+                <td>close</td>
+                <td>关闭按钮</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>label</td>
+                <td>标签</td>
+                <td>span</td>
+            </tr>
+            <tr>
+                <td>badge</td>
+                <td>标记</td>
+                <td>span</td>
+            </tr>
+            <tr>
+                <td>divider</td>
+                <td>分割物</td>
+                <td>hr、div</td>
+            </tr>
+            <tr>
+                <td>overlay</td>
+                <td>遮罩层</td>
+                <td>div</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>常用 component 命名</h3>
+        <table class="typo-table">
+            <thead>
+            <tr>
+                <th>Class Name</th>
+                <th>全名</th>
+                <th>说明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>panel、block</td>
+                <td></td>
+                <td>面板、区块</td>
+            </tr>
+            <tr>
+                <td>alert</td>
+                <td></td>
+                <td>警示消息提示</td>
+            </tr>
+            <tr>
+                <td>notice</td>
+                <td></td>
+                <td>通知消息提示</td>
+            </tr>
+            <tr>
+                <td>tooltip</td>
+                <td></td>
+                <td>辅助消息提示</td>
+            </tr>
+            <tr>
+                <td>control</td>
+                <td></td>
+                <td>表单布局</td>
+            </tr>
+            <tr>
+                <td>thumb</td>
+                <td>thumbnail</td>
+                <td>缩略图</td>
+            </tr>
+            <tr>
+                <td>nav</td>
+                <td>navigation</td>
+                <td>导航</td>
+            </tr>
+            <tr>
+                <td>breadcrumb</td>
+                <td></td>
+                <td>面包屑导航</td>
+            </tr>
+            <tr>
+                <td>navbar</td>
+                <td></td>
+                <td>导航条</td>
+            </tr>
+            <tr>
+                <td>menu</td>
+                <td></td>
+                <td>菜单</td>
+            </tr>
+            <tr>
+                <td>dropdown</td>
+                <td></td>
+                <td>下列菜单</td>
+            </tr>
+            <tr>
+                <td>tree</td>
+                <td></td>
+                <td>树形菜单</td>
+            </tr>
+            <tr>
+                <td>page</td>
+                <td>pagination</td>
+                <td>分页</td>
+            </tr>
+            <tr>
+                <td>dialog</td>
+                <td></td>
+                <td>弹窗</td>
+            </tr>
+            <tr>
+                <td>slides</td>
+                <td>slideshow</td>
+                <td>幻灯片</td>
+            </tr>
+            <tr>
+                <td>tab</td>
+                <td></td>
+                <td>选项卡</td>
+            </tr>
+            <tr>
+                <td>btn-group</td>
+                <td></td>
+                <td>按钮组</td>
+            </tr>
+            <tr>
+                <td>input-group</td>
+                <td></td>
+                <td>输入控件组</td>
+            </tr>
+            <tr>
+                <td>list-group</td>
+                <td></td>
+                <td>列表组</td>
+            </tr>
+            <tr>
+                <td>calendar</td>
+                <td></td>
+                <td>日历</td>
+            </tr>
+            <tr>
+                <td>datepicker</td>
+                <td></td>
+                <td>日期选择器</td>
+            </tr>
+            <tr>
+                <td>timepicker</td>
+                <td></td>
+                <td>时间选择器</td>
+            </tr>
+            <tr>
+                <td>colorpicker</td>
+                <td></td>
+                <td>颜色选择器</td>
+            </tr>
+            <tr>
+                <td>datagrid</td>
+                <td></td>
+                <td>数据表格</td>
+            </tr>
+            <tr>
+                <td>dataselect</td>
+                <td></td>
+                <td>数据选择</td>
+            </tr>
+            <tr>
+                <td>form-search</td>
+                <td></td>
+                <td>搜索表单</td>
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td></td>
+                <td>占位符</td>
+            </tr>
+            <tr>
+                <td>progress</td>
+                <td></td>
+                <td>进度条</td>
+            </tr>
+            <tr>
+                <td>scrollbar</td>
+                <td></td>
+                <td>滚动条</td>
+            </tr>
+            <tr>
+                <td>toolbar</td>
+                <td></td>
+                <td>工具条</td>
+            </tr>
+            <tr>
+                <td>rank</td>
+                <td></td>
+                <td>排行</td>
+            </tr>
+            <tr>
+                <td>rating</td>
+                <td></td>
+                <td>等级</td>
+            </tr>
+            <tr>
+                <td>slider</td>
+                <td></td>
+                <td>滑动器</td>
+            </tr>
+            <tr>
+                <td>spinner</td>
+                <td></td>
+                <td>微调器</td>
+            </tr>
+            <tr>
+                <td>switch</td>
+                <td></td>
+                <td>开关</td>
+            </tr>
+            <tr>
+                <td>upload</td>
+                <td></td>
+                <td>上传控件</td>
+            </tr>
+            <tr>
+                <td>authcode</td>
+                <td></td>
+                <td>验证码</td>
+            </tr>
+            <tr>
+                <td>qrcode</td>
+                <td></td>
+                <td>二维码</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p>命名参考：</p>
+        <ul class="type-ul">
+            <li><a href="http://getbootstrap.com/">bootstrap</a></li>
+            <li class="hide"><a href="http://ui-cloud.com/categories/">ui-cloud</a></li>
+            <li class="hide"><a href="http://www.defaulticon.com/">defaulticon</a></li>
+            <li class="hide"><a href="http://www.androidicons.com/">androidicons</a></li>
+            <li class="hide"><a href="http://www.entypo.com/">entypo</a></li>
+        </ul>
+    </div>
+
+    <div class="doc-caption">
+        <h2>element</h2>
+        <p>无法再细拆分的网页结构单元（元素）【14】</p>
+    </div>
+
+    <div class="doc-panel">
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-table"></i>
+            table
+        </h3>
+        <p>表格</p>
+        <pre class="prettyprint hide">
+        &lt;table class=&quot;table&quot;&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+            &lt;tfoot&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tfoot&gt;
+        &lt;/table&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-form"></i>
+            form
+        </h3>
+        <p>表单</p>
+        <pre class="prettyprint hide">
+        &lt;form class=&quot;form&quot; action=&quot;&quot;&gt;
+            &lt;label for=&quot;&quot;&gt;label&lt;/label&gt;
+            &lt;input type=&quot;text&quot;/&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;submit&quot;/&gt;
+        &lt;/form&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-btn"></i>
+            btn
+        </h3>
+        <p>按钮</p>
+        <pre class="prettyprint hide">
+        &lt;input class=&quot;btn&quot; type=&quot;button&quot; value=&quot;button&quot;/&gt;
+        &lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+        &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;button&lt;/a&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-input"></i>
+            input
+        </h3>
+        <p>输入控件</p>
+        <pre class="prettyprint hide">
+        &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+        &lt;textarea class=&quot;input&quot; name=&quot;&quot; id=&quot;&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-radio"></i>
+            radio
+        </h3>
+        <p>单选控件</p>
+        <pre class="prettyprint hide">
+        &lt;input class=&quot;radio&quot; type=&quot;radio&quot;/&gt;
+
+        &lt;label class=&quot;radio&quot; for=&quot;&quot;&gt;
+            &lt;input type=&quot;radio&quot;/&gt;
+        &lt;/label&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-checkbox"></i>
+            checkbox
+        </h3>
+        <p>复选控件</p>
+        <pre class="prettyprint hide">
+        &lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot;/&gt;
+
+        &lt;label class=&quot;checkbox&quot; for=&quot;&quot;&gt;
+            &lt;input type=&quot;checkbox&quot;/&gt;
+        &lt;/label&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-list"></i>
+            list
+        </h3>
+        <p>列表</p>
+        <pre class="prettyprint hide">
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ol class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+
+        &lt;dl class=&quot;list&quot;&gt;
+            &lt;dt&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;/dd&gt;
+        &lt;/dl&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-code"></i>
+            prettyprint hide
+        </h3>
+        <p>代码</p>
+        <pre class="prettyprint hide">
+        &lt;pre class=&quot;prettyprint hide&quot;&gt;&lt;/pre&gt;
+        &lt;code class=&quot;prettyprint hide&quot;&gt;&lt;/code&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-icon"></i>
+            icon
+        </h3>
+        <p>图标</p>
+        <pre class="prettyprint hide">
+        &lt;i class=&quot;icon icon-*&quot;&gt;&lt;/i&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-close"></i>
+            close
+        </h3>
+        <p>关闭按钮</p>
+        <pre class="prettyprint hide">
+        &lt;a class=&quot;close&quot; href=&quot;javascript:;&quot;&gt;&lt;/a&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-label"></i>
+            label
+        </h3>
+        <p>标签</p>
+        <pre class="prettyprint hide">
+        &lt;span class=&quot;label&quot;&gt;&lt;/span&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-badge"></i>
+            badge
+        </h3>
+        <p>标记</p>
+        <pre class="prettyprint hide">
+        &lt;span class=&quot;badge&quot;&gt;&lt;/span&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-divider"></i>
+            divider
+        </h3>
+        <p>分割物</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;divider h&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;divider v&quot;&gt;&lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-overlay"></i>
+            overlay
+        </h3>
+        <p>遮罩层</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+        </pre>
+    </div>
+
+    <div class="doc-caption">
+        <h2>component</h2>
+        <p>组合而成的网页结构单元（组件）【38】</p>
+    </div>
+
+    <div class="doc-panel">
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-panel"></i>
+            panel
+        </h3>
+        <p>面板</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;div class=&quot;panel-hd&quot;&gt;
+                &lt;h3 class=&quot;panel-title&quot;&gt;&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;panel-bd&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-alert"></i>
+            alert
+        </h3>
+        <p>警示消息提示</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;alert alert-default&quot;&gt;
+            &lt;div class=&quot;alert-inner&quot;&gt;&lt;/div&gt;
+            &lt;a class=&quot;close&quot; href=&quot;javascript:;&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-notice"></i>
+            notice
+        </h3>
+        <p>通知消息提示</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;notice notice-default&quot;&gt;
+            &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+            &lt;div class=&quot;notice-inner&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-tooltip"></i>
+            tooltip
+        </h3>
+        <p>辅助消息提示</p>
+        <pre class="prettyprint hide">
+        // 兼容 IE 8+
+        &lt;div class=&quot;tooltip tooltip-default&quot;&gt;
+            &lt;div class=&quot;tooltip-arrow se&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;tooltip-inner&quot;&gt;
+                SouthEast tooltip
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        // 兼容 IE 6+
+        &lt;div class=&quot;tooltip tooltip-default&quot;&gt;
+            &lt;div class=&quot;tooltip-arrow se&quot;&gt;
+                &lt;span class=&quot;tooltip-arrow-before&quot;&gt;◆&lt;/span&gt;
+                &lt;span class=&quot;tooltip-arrow-after&quot;&gt;◆&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;tooltip-inner&quot;&gt;
+                SouthEast tooltip
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-control"></i>
+            control
+        </h3>
+        <p>两列布局</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;control control-default&quot;&gt;
+            &lt;div class=&quot;control-label&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;controls&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-thumb"></i>
+            thumb
+        </h3>
+        <p>缩略图</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;thumb&quot;&gt;
+            &lt;div class=&quot;thumb-image&quot;&gt;
+                &lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;thumb-title&quot;&gt;
+                &lt;h3&gt;&lt;/h3&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-nav"></i>
+            nav
+        </h3>
+        <p>导航</p>
+        <pre class="prettyprint hide">
+        &lt;ul class=&quot;nav&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-breadcrumb"></i>
+            breadcrumb
+        </h3>
+        <p>面包屑导航</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;breadcrumb&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;active&quot;&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-navbar"></i>
+            navbar
+        </h3>
+        <p>导航条</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;navbar&quot;&gt;
+            &lt;div class=&quot;navbar-heading&quot;&gt;&lt;/div&gt;
+            &lt;ul class=&quot;nav&quot;&gt;
+                ...
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-menu"></i>
+            menu
+        </h3>
+        <p>菜单，最多支持三级菜单。</p>
+        <pre class="prettyprint hide">
+        &lt;ul class=&quot;menu menu-default&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;一级菜单&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;active&quot;&gt;
+                &lt;a class=&quot;menu-toggle&quot; href=&quot;#&quot;&gt;一级菜单&lt;/a&gt;
+                &lt;ul class=&quot;menu-item&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;二级菜单&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;active&quot;&gt;
+                        &lt;a class=&quot;menu-toggle&quot; href=&quot;#&quot;&gt;二级菜单&lt;/a&gt;
+                        &lt;ul class=&quot;menu-subitem&quot;&gt;
+                            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;三级菜单&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;一级菜单&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-dropdown"></i>
+            dropdown
+        </h3>
+        <p>下列菜单</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;dropdown dropdown-default&quot;&gt;
+            &lt;a class=&quot;dropdown-toggle&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;dropdown-label&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;dropdown-arrow&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-tree"></i>
+            tree
+        </h3>
+        <p>树形菜单</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-page"></i>
+            page
+        </h3>
+        <p>分页</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;page&quot;&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;first&quot;&gt;&lt;a href=&quot;#&quot;&gt;起始&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;prev&quot;&gt;&lt;a href=&quot;#&quot;&gt;上一页&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+                &lt;li &gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;下一页&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;last&quot;&gt;&lt;a href=&quot;#&quot;&gt;末尾&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-dialog"></i>
+            dialog
+        </h3>
+        <p>弹窗</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;dialog dialog-default&quot;&gt;
+            &lt;div class=&quot;dialog-hd&quot;&gt;
+                &lt;div class=&quot;dialog-title&quot;&gt;&lt;/div&gt;
+                &lt;a class=&quot;close&quot; href=&quot;javascript:;&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;dialog-bd&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;dialog-ft&quot;&gt;
+                &lt;a class=&quot;btn btn-default&quot; href=&quot;javascript:;&quot;&gt;确定&lt;/a&gt;
+                &lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;取消&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-slides"></i>
+            slides
+        </h3>
+        <p>幻灯片</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;slides slides-default&quot;&gt;
+            &lt;div class=&quot;slides-main&quot;&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;slides-page&quot;&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-tab"></i>
+            tab
+        </h3>
+        <p>选项卡</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;tab tab-default&quot;&gt;
+            &lt;div class=&quot;tab-toggle&quot;&gt;
+                &lt;ul&gt;
+                    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;选项一&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;选项二&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;tab-main&quot;&gt;
+                &lt;div class=&quot;tab-content active&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;tab-content&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-btn-group"></i>
+            btn-group
+        </h3>
+        <p>按钮组</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;btn-group&quot;&gt;
+            &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+            &lt;a class=&quot;btn active&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+            &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-input-group"></i>
+            input-group
+        </h3>
+        <p>输入控件组</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;input-group&quot;&gt;
+            &lt;div class=&quot;input-before&quot;&gt;
+                &lt;i class=&quot;icon icon-*&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;input-group&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+             &lt;div class=&quot;input-after&quot;&gt;
+                &lt;i class=&quot;icon icon-*&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+       &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-list-group"></i>
+            list-group
+        </h3>
+        <p>列表组</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;list-group&quot;&gt;
+            &lt;ul class=&quot;list&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class=&quot;list&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-calendar"></i>
+            calendar
+        </h3>
+        <p>日历</p>
+        <pre class="prettyprint hide">
+        &lt;div class=&quot;calendar calendar-default&quot;&gt;
+            &lt;div class=&quot;calendar-hd&quot;&gt;
+                &lt;a class=&quot;prev&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+                &lt;div class=&quot;calendar-title&quot;&gt;&lt;/div&gt;
+                &lt;a class=&quot;prev&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;calendar-bd&quot;&gt;
+                &lt;div class=&quot;calendar-day&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;calendar-month&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;calendar-year&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;calendar-ft&quot;&gt;
+                &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;确定&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-datepicker"></i>
+            datepicker
+        </h3>
+        <p>日期选择器</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-timepicker"></i>
+            timepicker
+        </h3>
+        <p>时间选择器</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-colorpicker"></i>
+            colorpicker
+        </h3>
+        <p>颜色选择器</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-datagrid"></i>
+            datagrid
+        </h3>
+        <p>数据表格</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-dataselect"></i>
+            dataselect
+        </h3>
+        <p>数据选择</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-form-search"></i>
+            form-search
+        </h3>
+        <p>搜索表单</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-placeholder"></i>
+            placeholder
+        </h3>
+        <p>占位符</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-progress"></i>
+            progress
+        </h3>
+        <p>进度条</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-scrollbar"></i>
+            scrollbar
+        </h3>
+        <p>滚动条</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-toolbar"></i>
+            toolbar
+        </h3>
+        <p>工具条</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-rank"></i>
+            rank
+        </h3>
+        <p>排行</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-rating"></i>
+            rating
+        </h3>
+        <p>等级</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-slider"></i>
+            slider
+        </h3>
+        <p>滑动器</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-spinner"></i>
+            spinner
+        </h3>
+        <p>微调器</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-switch"></i>
+            switch
+        </h3>
+        <p>开关</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-upload"></i>
+            upload
+        </h3>
+        <p>上传控件</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-authcode"></i>
+            authcode
+        </h3>
+        <p>验证码</p>
+        <pre class="prettyprint hide"></pre>
+
+        <h3 class="bui-h3">
+            <i class="bui-icon icon-qrcode"></i>
+            qrcode
+        </h3>
+        <p>二维码</p>
+        <pre class="prettyprint hide"></pre>
+    </div>
+
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <ul class="nav doc-nav">
+        <li>当前版本： <span>V1.0.1</span></li>
+        <li>*</li>
+        <li><a href="changelog.html">更新日志</a></li>
+        <li>*</li>
+        <li><a href="mailto:yinchuanwu@stnts.com">问题反馈</a></li>
+    </ul>
+</div>
+<!--footer-->
+
+<script type="text/javascript" src="../_theme/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../_theme/js/easing.js"></script>
+
+<script type="text/javascript" src="../_theme/js/toc/jquery.toc.min.js"></script>
+<script type="text/javascript" src="../_theme/js/totop/jquery.ui.totop.min.js"></script>
+
+<script type="text/javascript" src="../_theme/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="../_theme/reference/js/reference_config.js"></script>
+
+</body>
+</html>

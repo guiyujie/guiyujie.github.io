@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>login</title>
+    <link rel="stylesheet" href="../../dest/css/ST_admin.css"/>
+    <script src="Public/resource/js/jquery-min.js"></script>
+    <script src="Public/resource/js/ST.Config.js"></script>
+</head>
+<body class="admin-enter">
+
+<div class="block--login">
+    <form onsubmit="return false" stverify="true" erroappend="true" ajaxpost="true">
+        <div class="block-head">
+            <h1 class="logo"><a href="javascript:;">后台类项目LOGO</a></h1>
+        </div>
+        <div class="block-body">
+            <div class="control-group">
+                <label class="control-label" for="username">用户名</label>
+                <div class="controls">
+                    <input class="input--login input-small" type="text" id="username" name="username" opt="rq" placeholder="请输入用户名"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="password">密码</label>
+                <div class="controls">
+                    <input class="input--login input-small" type="password" id="password" name="password" opt="rq" placeholder="请输入密码"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="authCode">验证码</label>
+                <div class="controls">
+                    <input class="input--login input-mini" type="text" id="authCode" name="authcode" opt="rq" emsg="请输入验证码" maxlength="4"/>
+                    <div id="authCode_display"></div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="block-foot">
+            <input class="btn--login btn-large" type="submit" value="登录"/>
+        </div>
+    </form>
+</div>
+<!--block--login-->
+
+<div class="footer">
+    <p>© <a href="#">湖北盛天网络技术股份有限公司版权所有</a> 鄂B2-20110110</p>
+</div>
+<!--footer-->
+
+<script src="Public/resource/js/ST.js"></script>
+<script src="Public/resource/js/ST.Verify.js"></script>
+<script src="Public/resource/js/ST.Vcode.js"></script>
+<script>
+    ST.jsTemplates.push('common');
+    $.extend(ST, {
+        todoList: function () {
+            ST.CurVode = new ST.Vcode({controlID: "authCode", displayID: "authCode_display"});
+        }
+    });
+    ST.init();
+</script>
+
+</body>
+</html>

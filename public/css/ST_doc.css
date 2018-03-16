@@ -1,0 +1,3681 @@
+/*
+* 项目名称： ST 帮助文档项目布局样式
+* 项目维护： @yinchuanwu
+* 最后更新： 2013-06-25 17：23
+*/
+/*
+* 模块名称： 基础公共样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 17：24
+*/
+/*
+* 模块名称： CSS3 属性
+* 兼容测试： Chrome 27 、 Firefox 21 、 Internet Explorer 10
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-27 17：30
+*/
+/*
+* 模块名称： 修复
+* 兼容测试： IE
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 14：23
+*/
+.pull-left,
+.pull-right {
+  *display: inline;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+* 模块名称： 重置
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 14：37
+*/
+body,
+form,
+fieldset,
+input,
+select,
+textarea,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+pre,
+blockquote,
+hr {
+  margin: 0;
+}
+fieldset,
+legend,
+button,
+ul,
+ol {
+  padding: 0;
+}
+frame,
+iframe,
+img,
+fieldset {
+  border: none;
+}
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  font-size: 12px;
+  font-family: "Microsoft Yahei", tahoma, arial, Hiragino Sans GB, "\5b8b\4f53", sans-serif;
+  line-height: 20px;
+  color: #333333;
+  background: #ffffff;
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+a:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+input,
+select,
+textarea,
+button {
+  font-family: "Microsoft Yahei", tahoma, arial, Hiragino Sans GB, "\5b8b\4f53", sans-serif;
+  font-size: 12px;
+}
+object {
+  vertical-align: middle;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+dl {
+  margin: 0;
+}
+dd {
+  margin: 0;
+}
+img {
+  background-color: #f5f5f5;
+}
+/*
+* 模块名称： 对齐
+* 兼容测试： chrome、firefox、IE
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 13：59
+*/
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.top {
+  vertical-align: top;
+}
+.middle {
+  vertical-align: middle;
+}
+.bottom {
+  vertical-align: bottom;
+}
+/*
+* 模块名称： 颜色
+* 兼容测试： chrome、firefox、IE
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 14：04
+*/
+.background .tile {
+  position: relative;
+}
+.background .tile span {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.background .white {
+  background-color: #ffffff;
+}
+.background .black-10 {
+  background-color: #e6e6e6;
+}
+.background .black-20 {
+  background-color: #cccccc;
+}
+.background .black-30 {
+  background-color: #b3b3b3;
+}
+.background .black-40 {
+  background-color: #999999;
+}
+.background .black-50 {
+  background-color: #808080;
+}
+.background .black-60 {
+  background-color: #666666;
+}
+.background .black-70 {
+  background-color: #4d4d4d;
+}
+.background .black-80 {
+  background-color: #333333;
+}
+.background .black-90 {
+  background-color: #191919;
+}
+.background .black {
+  background-color: #000000;
+}
+.background .red {
+  background-color: #ff1e00;
+}
+.background .orange {
+  background-color: #ff9e00;
+}
+.background .yellow {
+  background-color: #e0ff00;
+}
+.background .green {
+  background-color: #00ff1e;
+}
+.background .cyan {
+  background-color: #00ff9e;
+}
+.background .blue {
+  background-color: #0061ff;
+}
+.background .purple {
+  background-color: #9e00ff;
+}
+.background .pink {
+  background-color: #ff0061;
+}
+.text-white {
+  color: #ffffff;
+}
+.text-gray,
+.muted {
+  color: #999999;
+}
+.text-black {
+  color: #000000;
+}
+.text-red {
+  color: #ff1e00;
+}
+.text-orange {
+  color: #ff9e00;
+}
+.text-yellow {
+  color: #e0ff00;
+}
+.text-green {
+  color: #00ff1e;
+}
+.text-cyan {
+  color: #00ff9e;
+}
+.text-blue {
+  color: #0061ff;
+}
+.text-purple {
+  color: #9e00ff;
+}
+.text-pink {
+  color: #ff0061;
+}
+/*
+* 模块名称： 状态
+* 兼容测试： chrome、firefox、IE
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 14：09
+*/
+.disabled {
+  cursor: default;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/*
+* 模块名称： margin 常用值
+* 兼容测试： chrome、firefox、IE
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 14：34
+*/
+.m5 {
+  margin: 5px;
+}
+.m10 {
+  margin: 10px;
+}
+.m15 {
+  margin: 15px;
+}
+.m20 {
+  margin: 20px;
+}
+.m25 {
+  margin: 25px;
+}
+.m30 {
+  margin: 30px;
+}
+.m35 {
+  margin: 35px;
+}
+.m40 {
+  margin: 40px;
+}
+.m45 {
+  margin: 45px;
+}
+.m50 {
+  margin: 50px;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt15 {
+  margin-top: 15px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt25 {
+  margin-top: 25px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mt35 {
+  margin-top: 35px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mt45 {
+  margin-top: 45px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr15 {
+  margin-right: 15px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mr25 {
+  margin-right: 25px;
+}
+.mr30 {
+  margin-right: 30px;
+}
+.mr35 {
+  margin-right: 35px;
+}
+.mr40 {
+  margin-right: 40px;
+}
+.mr45 {
+  margin-right: 45px;
+}
+.mr50 {
+  margin-right: 50px;
+}
+.mb5 {
+  margin-bottom: 5px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb15 {
+  margin-bottom: 15px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb25 {
+  margin-bottom: 25px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.mb35 {
+  margin-bottom: 35px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+.mb45 {
+  margin-bottom: 45px;
+}
+.mb50 {
+  margin-bottom: 50px;
+}
+.ml5 {
+  margin-left: 5px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.ml15 {
+  margin-left: 15px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.ml25 {
+  margin-left: 25px;
+}
+.ml30 {
+  margin-left: 30px;
+}
+.ml35 {
+  margin-left: 35px;
+}
+.ml40 {
+  margin-left: 40px;
+}
+.ml45 {
+  margin-left: 45px;
+}
+.ml50 {
+  margin-left: 50px;
+}
+/*
+* 模块名称： 杂项
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 14：21
+*/
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.inline {
+  display: inline;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.span24,
+.span23,
+.span22,
+.span21,
+.span20,
+.span19,
+.span18,
+.span17,
+.span16,
+.span15,
+.span14,
+.span13,
+.span12,
+.span11,
+.span10,
+.span9,
+.span8,
+.span7,
+.span6,
+.span5,
+.span4,
+.span3,
+.span2,
+.span1 {
+  float: left;
+  margin-left: 10px;
+}
+.grid .row {
+  *zoom: 1;
+  margin-left: -10px;
+}
+.grid .row:before,
+.grid .row:after {
+  display: table;
+  content: "";
+}
+.grid .row:after {
+  clear: both;
+}
+.grid .row:before,
+.grid .row:after {
+  display: table;
+  content: "";
+}
+.grid .row:after {
+  clear: both;
+}
+.grid .span24 {
+  width: 950px;
+}
+.grid .span23 {
+  width: 910px;
+}
+.grid .span22 {
+  width: 870px;
+}
+.grid .span21 {
+  width: 830px;
+}
+.grid .span20 {
+  width: 790px;
+}
+.grid .span19 {
+  width: 750px;
+}
+.grid .span18 {
+  width: 710px;
+}
+.grid .span17 {
+  width: 670px;
+}
+.grid .span16 {
+  width: 630px;
+}
+.grid .span15 {
+  width: 590px;
+}
+.grid .span14 {
+  width: 550px;
+}
+.grid .span13 {
+  width: 510px;
+}
+.grid .span12 {
+  width: 470px;
+}
+.grid .span11 {
+  width: 430px;
+}
+.grid .span10 {
+  width: 390px;
+}
+.grid .span9 {
+  width: 350px;
+}
+.grid .span8 {
+  width: 310px;
+}
+.grid .span7 {
+  width: 270px;
+}
+.grid .span6 {
+  width: 230px;
+}
+.grid .span5 {
+  width: 190px;
+}
+.grid .span4 {
+  width: 150px;
+}
+.grid .span3 {
+  width: 110px;
+}
+.grid .span2 {
+  width: 70px;
+}
+.grid .span1 {
+  width: 30px;
+}
+.grid .offset24 {
+  margin-left: 970px;
+}
+.grid .offset23 {
+  margin-left: 930px;
+}
+.grid .offset22 {
+  margin-left: 890px;
+}
+.grid .offset21 {
+  margin-left: 850px;
+}
+.grid .offset20 {
+  margin-left: 810px;
+}
+.grid .offset19 {
+  margin-left: 770px;
+}
+.grid .offset18 {
+  margin-left: 730px;
+}
+.grid .offset17 {
+  margin-left: 690px;
+}
+.grid .offset16 {
+  margin-left: 650px;
+}
+.grid .offset15 {
+  margin-left: 610px;
+}
+.grid .offset14 {
+  margin-left: 570px;
+}
+.grid .offset13 {
+  margin-left: 530px;
+}
+.grid .offset12 {
+  margin-left: 490px;
+}
+.grid .offset11 {
+  margin-left: 450px;
+}
+.grid .offset10 {
+  margin-left: 410px;
+}
+.grid .offset9 {
+  margin-left: 370px;
+}
+.grid .offset8 {
+  margin-left: 330px;
+}
+.grid .offset7 {
+  margin-left: 290px;
+}
+.grid .offset6 {
+  margin-left: 250px;
+}
+.grid .offset5 {
+  margin-left: 210px;
+}
+.grid .offset4 {
+  margin-left: 170px;
+}
+.grid .offset3 {
+  margin-left: 130px;
+}
+.grid .offset2 {
+  margin-left: 90px;
+}
+.grid .offset1 {
+  margin-left: 50px;
+}
+.tile {
+  position: relative;
+  z-index: 10;
+  float: left;
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+}
+.half-tile {
+  width: 55px;
+  height: 55px;
+}
+.tile-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+}
+.one-tile {
+  width: 120px;
+  height: 120px;
+}
+.half-wide {
+  width: 55px;
+}
+.one-wide {
+  width: 120px;
+}
+.two-wide {
+  width: 250px;
+}
+.three-wide {
+  width: 380px;
+}
+.four-wide {
+  width: 510px;
+}
+.five-wide {
+  width: 640px;
+}
+.six-wide {
+  width: 770px;
+}
+.seven-wide {
+  width: 900px;
+}
+.eight-wide {
+  width: 1030px;
+}
+.nine-wide {
+  width: 1160px;
+}
+.ten-wide {
+  width: 1290px;
+}
+.half-tall {
+  height: 55px;
+}
+.one-tall {
+  height: 120px;
+}
+.two-tall {
+  height: 250px;
+}
+.three-tall {
+  height: 380px;
+}
+.four-tall {
+  height: 510px;
+}
+.five-tall {
+  height: 640px;
+}
+.six-tall {
+  height: 770px;
+}
+.seven-tall {
+  height: 900px;
+}
+.eight-tall {
+  height: 1030px;
+}
+.nine-tall {
+  height: 1160px;
+}
+.ten-tall {
+  height: 1290px;
+}
+.tile-group,
+.tile-strip {
+  float: left;
+}
+.tile-group.one-tile,
+.tile-strip.one-tile {
+  width: 130px;
+  height: 130px;
+}
+.tile-group.half-wide,
+.tile-strip.half-wide {
+  width: 65px;
+}
+.tile-group.one-wide,
+.tile-strip.one-wide {
+  width: 130px;
+}
+.tile-group.two-wide,
+.tile-strip.two-wide {
+  width: 260px;
+}
+.tile-group.three-wide,
+.tile-strip.three-wide {
+  width: 390px;
+}
+.tile-group.four-wide,
+.tile-strip.four-wide {
+  width: 520px;
+}
+.tile-group.five-wide,
+.tile-strip.five-wide {
+  width: 650px;
+}
+.tile-group.six-wide,
+.tile-strip.six-wide {
+  width: 780px;
+}
+.tile-group.seven-wide,
+.tile-strip.seven-wide {
+  width: 910px;
+}
+.tile-group.eight-wide,
+.tile-strip.eight-wide {
+  width: 1040px;
+}
+.tile-group.nine-wide,
+.tile-strip.nine-wide {
+  width: 1170px;
+}
+.tile-group.ten-wide,
+.tile-strip.ten-wide {
+  width: 1300px;
+}
+.tile-group.half-tall,
+.tile-strip.half-tall {
+  height: 65px;
+}
+.tile-group.one-tall,
+.tile-strip.one-tall {
+  height: 130px;
+}
+.tile-group.two-tall,
+.tile-strip.two-tall {
+  height: 260px;
+}
+.tile-group.three-tall,
+.tile-strip.three-tall {
+  height: 390px;
+}
+.tile-group.four-tall,
+.tile-strip.four-tall {
+  height: 520px;
+}
+.tile-group.five-tall,
+.tile-strip.five-tall {
+  height: 650px;
+}
+.tile-group.six-tall,
+.tile-strip.six-tall {
+  height: 780px;
+}
+.tile-group.seven-tall,
+.tile-strip.seven-tall {
+  height: 910px;
+}
+.tile-group.eight-tall,
+.tile-strip.eight-tall {
+  height: 1040px;
+}
+.tile-group.nine-tall,
+.tile-strip.nine-tall {
+  height: 1170px;
+}
+.tile-group.ten-tall,
+.tile-strip.ten-tall {
+  height: 1300px;
+}
+.tile-group-head {
+  margin: 5px;
+}
+.metro {
+  *zoom: 1;
+}
+.metro:before,
+.metro:after {
+  display: table;
+  content: "";
+}
+.metro:after {
+  clear: both;
+}
+.metro:before,
+.metro:after {
+  display: table;
+  content: "";
+}
+.metro:after {
+  clear: both;
+}
+/*
+* 模块描述： 代码样式 - prettify
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-13 10：29
+*/
+pre,
+code {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333;
+  background-color: #f7f7f9;
+}
+pre {
+  display: block;
+  padding: 8px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+code {
+  padding: 0 2px;
+  color: #d14;
+  white-space: nowrap;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+ol.linenums {
+  list-style-type: decimal;
+  margin: 0 0 0 33px;
+}
+ol.linenums li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #fff;
+}
+/* GitHub Theme */
+/* Pretty printing styles. Used with prettify.js. */
+/* SPAN elements with the classes below are added by prettyprint. */
+/* plain text */
+.pln {
+  color: #333333;
+}
+@media screen {
+  /* string content */
+  .str {
+    color: #dd1144;
+  }
+  /* a keyword */
+  .kwd {
+    color: #333333;
+  }
+  /* a comment */
+  .com {
+    color: #999988;
+  }
+  /* a type name */
+  .typ {
+    color: #445588;
+  }
+  /* a literal value */
+  .lit {
+    color: #445588;
+  }
+  /* punctuation */
+  .pun {
+    color: #333333;
+  }
+  /* lisp open bracket */
+  .opn {
+    color: #333333;
+  }
+  /* lisp close bracket */
+  .clo {
+    color: #333333;
+  }
+  /* a markup tag name */
+  .tag {
+    color: navy;
+  }
+  /* a markup attribute name */
+  .atn {
+    color: teal;
+  }
+  /* a markup attribute value */
+  .atv {
+    color: #dd1144;
+  }
+  /* a declaration */
+  .dec {
+    color: #333333;
+  }
+  /* a variable name */
+  .var {
+    color: teal;
+  }
+  /* a function name */
+  .fun {
+    color: #990000;
+  }
+}
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str {
+    color: #006600;
+  }
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  .lit {
+    color: #004444;
+  }
+  .pun,
+  .opn,
+  .clo {
+    color: #444400;
+  }
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  .atn {
+    color: #440044;
+  }
+  .atv {
+    color: #006600;
+  }
+}
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  /* */
+
+}
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */
+
+}
+/* 参考网站
+*
+* https://code.google.com/p/google-code-prettify/     =>  google code prettify js plugin
+* http://jmblog.github.io/color-themes-for-google-code-prettify/      =>  google code prettify css themes
+* http://google-code-prettify.googlecode.com/svn/trunk/README-zh-Hans.html    =>  google code prettify use
+*
+* http://boallen.com/htmlentities.html    =>  HTML escape code
+*//*
+* 模块描述： 分隔符样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-13 17：04
+*/
+.divider {
+  margin: 60px 0;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 5px;
+  color: #aaa;
+}
+/*
+* 模块描述： 按钮模块基础样式
+* 兼容测试： Google Chrome 27.0.1453.110 m
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 13：21
+*/
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 4px 20px;
+  line-height: 20px;
+  border: 1px solid #cacaca;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #4b88d3;
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e4e4e4));
+  background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -webkit-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: linear-gradient(to bottom, #fefefe, #e4e4e4);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+.btn:hover,
+.btn.hover {
+  text-decoration: none;
+  color: #4b88d3;
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e4e4e4), to(#fefefe));
+  background-image: -o-linear-gradient(top, #e4e4e4, #fefefe);
+  background-image: -webkit-linear-gradient(top, #e4e4e4, #fefefe);
+  background-image: -moz-linear-gradient(top, #e4e4e4, #fefefe);
+  background-image: linear-gradient(to bottom, #e4e4e4, #fefefe);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #e6e6e6;
+  -moz-box-shadow: inset 0 1px 0 #e6e6e6;
+  box-shadow: inset 0 1px 0 #e6e6e6;
+}
+.btn:active,
+.btn.active {
+  -webkit-box-shadow: inset 0 1px 5px #ffffff;
+  -moz-box-shadow: inset 0 1px 5px #ffffff;
+  box-shadow: inset 0 1px 5px #ffffff;
+}
+.btn:active:hover,
+.btn.active:hover,
+.btn:active.hover,
+.btn.active.hover {
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e4e4e4));
+  background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -webkit-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: linear-gradient(to bottom, #fefefe, #e4e4e4);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 5px #ffffff;
+  -moz-box-shadow: inset 0 1px 5px #ffffff;
+  box-shadow: inset 0 1px 5px #ffffff;
+}
+.btn[disabled],
+.btn.disabled {
+  cursor: default;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.btn[disabled]:hover,
+.btn.disabled:hover,
+.btn[disabled].hover,
+.btn.disabled.hover {
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e4e4e4));
+  background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -webkit-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: linear-gradient(to bottom, #fefefe, #e4e4e4);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+.btn-largest {
+  padding: 9px 40px;
+  font-size: 14px;
+}
+.btn-large {
+  padding: 6px 30px;
+  font-size: 14px;
+}
+.btn-small {
+  padding: 2px 10px;
+}
+.btn-smallest {
+  padding: 0 5px;
+}
+.btn-mini {
+  padding: 0 5px;
+  line-height: 18px;
+}
+/*
+* 模块描述： 按钮模块蓝色皮肤
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 13：21
+*/
+.btn-blue {
+  border-color: #2c609d;
+  color: #ffffff;
+  background-color: #4d8dd7;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5799e3), to(#3e7bc6));
+  background-image: -o-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -webkit-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -moz-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: linear-gradient(to bottom, #5799e3, #3e7bc6);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #5eaeff;
+  -moz-box-shadow: inset 0 1px 0 #5eaeff;
+  box-shadow: inset 0 1px 0 #5eaeff;
+}
+.btn-blue:hover,
+.btn-blue.hover {
+  color: #ffffff;
+  background-color: #4887d2;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3e7bc6), to(#5799e3));
+  background-image: -o-linear-gradient(top, #3e7bc6, #5799e3);
+  background-image: -webkit-linear-gradient(top, #3e7bc6, #5799e3);
+  background-image: -moz-linear-gradient(top, #3e7bc6, #5799e3);
+  background-image: linear-gradient(to bottom, #3e7bc6, #5799e3);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #2b94ff;
+  -moz-box-shadow: inset 0 1px 0 #2b94ff;
+  box-shadow: inset 0 1px 0 #2b94ff;
+}
+.btn-blue:active,
+.btn-blue.active {
+  -webkit-box-shadow: inset 0 1px 5px #91c8ff;
+  -moz-box-shadow: inset 0 1px 5px #91c8ff;
+  box-shadow: inset 0 1px 5px #91c8ff;
+}
+.btn-blue:active:hover,
+.btn-blue.active:hover,
+.btn-blue:active.hover,
+.btn-blue.active.hover {
+  background-color: #4d8dd7;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5799e3), to(#3e7bc6));
+  background-image: -o-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -webkit-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -moz-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: linear-gradient(to bottom, #5799e3, #3e7bc6);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 5px #91c8ff;
+  -moz-box-shadow: inset 0 1px 5px #91c8ff;
+  box-shadow: inset 0 1px 5px #91c8ff;
+}
+.btn-blue[disabled]:hover,
+.btn-blue.disabled:hover,
+.btn-blue[disabled].hover,
+.btn-blue.disabled.hover {
+  background-color: #4d8dd7;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5799e3), to(#3e7bc6));
+  background-image: -o-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -webkit-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -moz-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: linear-gradient(to bottom, #5799e3, #3e7bc6);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #5eaeff;
+  -moz-box-shadow: inset 0 1px 0 #5eaeff;
+  box-shadow: inset 0 1px 0 #5eaeff;
+}
+/*
+* 模块描述： 按钮模块蓝色皮肤
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 13：21
+*/
+.btn-green {
+  border-color: #7cb860;
+  color: #ffffff;
+  background-color: #81c761;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#94d376), to(#64b441));
+  background-image: -o-linear-gradient(top, #94d376, #64b441);
+  background-image: -webkit-linear-gradient(top, #94d376, #64b441);
+  background-image: -moz-linear-gradient(top, #94d376, #64b441);
+  background-image: linear-gradient(to bottom, #94d376, #64b441);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #b1e09c;
+  -moz-box-shadow: inset 0 1px 0 #b1e09c;
+  box-shadow: inset 0 1px 0 #b1e09c;
+}
+.btn-green:hover,
+.btn-green.hover {
+  color: #ffffff;
+  background-color: #77c056;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#64b441), to(#94d376));
+  background-image: -o-linear-gradient(top, #64b441, #94d376);
+  background-image: -webkit-linear-gradient(top, #64b441, #94d376);
+  background-image: -moz-linear-gradient(top, #64b441, #94d376);
+  background-image: linear-gradient(to bottom, #64b441, #94d376);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #92d475;
+  -moz-box-shadow: inset 0 1px 0 #92d475;
+  box-shadow: inset 0 1px 0 #92d475;
+}
+.btn-green:active,
+.btn-green.active {
+  -webkit-box-shadow: inset 0 1px 5px #d0ecc3;
+  -moz-box-shadow: inset 0 1px 5px #d0ecc3;
+  box-shadow: inset 0 1px 5px #d0ecc3;
+}
+.btn-green:active:hover,
+.btn-green.active:hover,
+.btn-green:active.hover,
+.btn-green.active.hover {
+  background-color: #81c761;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#94d376), to(#64b441));
+  background-image: -o-linear-gradient(top, #94d376, #64b441);
+  background-image: -webkit-linear-gradient(top, #94d376, #64b441);
+  background-image: -moz-linear-gradient(top, #94d376, #64b441);
+  background-image: linear-gradient(to bottom, #94d376, #64b441);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 5px #d0ecc3;
+  -moz-box-shadow: inset 0 1px 5px #d0ecc3;
+  box-shadow: inset 0 1px 5px #d0ecc3;
+}
+.btn-green[disabled]:hover,
+.btn-green.disabled:hover,
+.btn-green[disabled].hover,
+.btn-green.disabled.hover {
+  background-color: #81c761;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#94d376), to(#64b441));
+  background-image: -o-linear-gradient(top, #94d376, #64b441);
+  background-image: -webkit-linear-gradient(top, #94d376, #64b441);
+  background-image: -moz-linear-gradient(top, #94d376, #64b441);
+  background-image: linear-gradient(to bottom, #94d376, #64b441);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #b1e09c;
+  -moz-box-shadow: inset 0 1px 0 #b1e09c;
+  box-shadow: inset 0 1px 0 #b1e09c;
+}
+/*
+* 模块描述： 按钮模块蓝色皮肤
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 13：21
+*/
+.btn-orange {
+  border-color: #f75e01;
+  color: #ffffff;
+  background-color: #fa792b;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fc8a45), to(#f76004));
+  background-image: -o-linear-gradient(top, #fc8a45, #f76004);
+  background-image: -webkit-linear-gradient(top, #fc8a45, #f76004);
+  background-image: -moz-linear-gradient(top, #fc8a45, #f76004);
+  background-image: linear-gradient(to bottom, #fc8a45, #f76004);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #fda772;
+  -moz-box-shadow: inset 0 1px 0 #fda772;
+  box-shadow: inset 0 1px 0 #fda772;
+}
+.btn-orange:hover,
+.btn-orange.hover {
+  color: #ffffff;
+  background-color: #f9711e;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f76004), to(#fc8a45));
+  background-image: -o-linear-gradient(top, #f76004, #fc8a45);
+  background-image: -webkit-linear-gradient(top, #f76004, #fc8a45);
+  background-image: -moz-linear-gradient(top, #f76004, #fc8a45);
+  background-image: linear-gradient(to bottom, #f76004, #fc8a45);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #fc8840;
+  -moz-box-shadow: inset 0 1px 0 #fc8840;
+  box-shadow: inset 0 1px 0 #fc8840;
+}
+.btn-orange:active,
+.btn-orange.active {
+  -webkit-box-shadow: inset 0 1px 5px #fec6a4;
+  -moz-box-shadow: inset 0 1px 5px #fec6a4;
+  box-shadow: inset 0 1px 5px #fec6a4;
+}
+.btn-orange:active:hover,
+.btn-orange.active:hover,
+.btn-orange:active.hover,
+.btn-orange.active.hover {
+  background-color: #fa792b;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fc8a45), to(#f76004));
+  background-image: -o-linear-gradient(top, #fc8a45, #f76004);
+  background-image: -webkit-linear-gradient(top, #fc8a45, #f76004);
+  background-image: -moz-linear-gradient(top, #fc8a45, #f76004);
+  background-image: linear-gradient(to bottom, #fc8a45, #f76004);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 5px #fec6a4;
+  -moz-box-shadow: inset 0 1px 5px #fec6a4;
+  box-shadow: inset 0 1px 5px #fec6a4;
+}
+.btn-orange[disabled]:hover,
+.btn-orange.disabled:hover,
+.btn-orange[disabled].hover,
+.btn-orange.disabled.hover {
+  background-color: #fa792b;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fc8a45), to(#f76004));
+  background-image: -o-linear-gradient(top, #fc8a45, #f76004);
+  background-image: -webkit-linear-gradient(top, #fc8a45, #f76004);
+  background-image: -moz-linear-gradient(top, #fc8a45, #f76004);
+  background-image: linear-gradient(to bottom, #fc8a45, #f76004);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 #fda772;
+  -moz-box-shadow: inset 0 1px 0 #fda772;
+  box-shadow: inset 0 1px 0 #fda772;
+}
+/*
+* 模块描述： 按钮模块扁平化（flat）风格基础样式
+* 兼容测试： Google Chrome 27.0.1453.110 m
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 13：21
+*/
+.btn--flat {
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 5px 20px;
+  line-height: 20px;
+  border: none;
+  color: #666666;
+  background-color: #e4e4e4;
+}
+.btn--flat:hover,
+.btn--flat.hover {
+  text-decoration: none;
+  color: #666666;
+  background-color: #cbcbcb;
+}
+.btn--flat:active,
+.btn--flat.active {
+  background-color: #fefefe;
+}
+.btn--flat:active:hover,
+.btn--flat.active:hover,
+.btn--flat:active.hover,
+.btn--flat.active.hover {
+  background-color: #cbcbcb;
+}
+.btn--flat[disabled],
+.btn--flat.disabled {
+  cursor: default;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.btn--flat[disabled]:hover,
+.btn--flat.disabled:hover,
+.btn--flat[disabled].hover,
+.btn--flat.disabled.hover {
+  background-color: #cbcbcb;
+}
+/*
+* 模块描述： 按钮模块扁平化（flat）风格蓝色皮肤
+* 兼容测试： Google Chrome 27.0.1453.110 m
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 13：21
+*/
+.btn--flat-blue {
+  color: #ffffff;
+  background-color: #3e7bc6;
+}
+.btn--flat-blue:hover,
+.btn--flat-blue.hover {
+  color: #ffffff;
+  background-color: #3063a1;
+}
+.btn--flat-blue:active,
+.btn--flat-blue.active {
+  background-color: #6596d2;
+}
+.btn--flat-blue:active:hover,
+.btn--flat-blue.active:hover,
+.btn--flat-blue:active.hover,
+.btn--flat-blue.active.hover {
+  background-color: #3063a1;
+}
+.btn--flat-blue[disabled]:hover,
+.btn--flat-blue.disabled:hover,
+.btn--flat-blue[disabled].hover,
+.btn--flat-blue.disabled.hover {
+  background-color: #3063a1;
+}
+/*
+* 模块描述： 按钮模块扁平化（flat）风格蓝色皮肤
+* 兼容测试： Google Chrome 27.0.1453.110 m
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 13：21
+*/
+.btn--flat-green {
+  color: #ffffff;
+  background-color: #64b441;
+}
+.btn--flat-green:hover,
+.btn--flat-green.hover {
+  color: #ffffff;
+  background-color: #4f8f33;
+}
+.btn--flat-green:active,
+.btn--flat-green.active {
+  background-color: #80c662;
+}
+.btn--flat-green:active:hover,
+.btn--flat-green.active:hover,
+.btn--flat-green:active.hover,
+.btn--flat-green.active.hover {
+  background-color: #4f8f33;
+}
+.btn--flat-green[disabled]:hover,
+.btn--flat-green.disabled:hover,
+.btn--flat-green[disabled].hover,
+.btn--flat-green.disabled.hover {
+  background-color: #4f8f33;
+}
+/*
+* 模块描述： 按钮模块扁平化（flat）风格蓝色皮肤
+* 兼容测试： Google Chrome 27.0.1453.110 m
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 13：21
+*/
+.btn--flat-orange {
+  color: #ffffff;
+  background-color: #f76004;
+}
+.btn--flat-orange:hover,
+.btn--flat-orange.hover {
+  color: #ffffff;
+  background-color: #c54c03;
+}
+.btn--flat-orange:active,
+.btn--flat-orange.active {
+  background-color: #fc7f32;
+}
+.btn--flat-orange:active:hover,
+.btn--flat-orange.active:hover,
+.btn--flat-orange:active.hover,
+.btn--flat-orange.active.hover {
+  background-color: #c54c03;
+}
+.btn--flat-orange[disabled]:hover,
+.btn--flat-orange.disabled:hover,
+.btn--flat-orange[disabled].hover,
+.btn--flat-orange.disabled.hover {
+  background-color: #c54c03;
+}
+/*
+* 从属项目： admin
+* 模块描述： button 形态扩展样式
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-04 12:00
+*/
+.btn--login {
+  font-weight: bold;
+  letter-spacing: 3px;
+  border: none;
+  padding: 8px 40px;
+  -webkit-box-shadow: 0 2px 4px #3e72b2;
+  -moz-box-shadow: 0 2px 4px #3e72b2;
+  box-shadow: 0 2px 4px #3e72b2;
+}
+/*
+* 模块描述： 文本输入框(域)样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-17 16：27
+*/
+textarea,
+.input,
+.textarea {
+  padding: 4px;
+  line-height: 20px;
+  border: 1px solid #afc0cd;
+  width: 202px;
+}
+textarea[readonly],
+.input[readonly],
+.textarea[readonly],
+textarea[disabled],
+.input[disabled],
+.textarea[disabled] {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+textarea,
+.textarea {
+  resize: none;
+}
+.input {
+  height: 20px;
+}
+.input-mini {
+  width: 40px;
+}
+.input-smallest {
+  width: 94px;
+}
+.input-small {
+  width: 148px;
+}
+.input-large {
+  width: 256px;
+}
+.input-largest {
+  width: 310px;
+}
+/*
+* 模块描述： 下拉选择样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-18 09：55
+*/
+.select {
+  padding: 4px;
+  line-height: 20px;
+  border: 1px solid #afc0cd;
+}
+/*
+* 模块描述： 单选/多选样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-18 11：03
+*/
+.radio,
+.checkbox {
+  padding: 5px 0;
+  height: 20px;
+  line-height: 20px;
+}
+.radio input,
+.checkbox input {
+  margin-right: 3px;
+  vertical-align: -2px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 3px;
+  vertical-align: -2px;
+}
+/*
+* 模块描述： 表单样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-24 17：36
+*/
+.help-inline,
+.help-block {
+  height: 30px;
+  line-height: 30px;
+}
+.help-inline {
+  display: inline;
+}
+.help-block {
+  display: block;
+}
+.form-search .input,
+.form-search .btn {
+  display: inline-block;
+}
+.form-search .input {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  border-color: #ccc;
+}
+.form-search .btn {
+  margin-left: -5px;
+}
+.control-group {
+  *zoom: 1;
+}
+.control-group:before,
+.control-group:after {
+  display: table;
+  content: "";
+}
+.control-group:after {
+  clear: both;
+}
+.control-group:before,
+.control-group:after {
+  display: table;
+  content: "";
+}
+.control-group:after {
+  clear: both;
+}
+.control-label {
+  float: left;
+}
+.form-horizontal .control-group {
+  *zoom: 1;
+  margin-bottom: 20px;
+}
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  content: "";
+}
+.form-horizontal .control-group:after {
+  clear: both;
+}
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  content: "";
+}
+.form-horizontal .control-group:after {
+  clear: both;
+}
+.form-horizontal .control-label {
+  float: left;
+  width: 120px;
+  text-align: right;
+  padding: 5px 0;
+  line-height: 20px;
+}
+.form-horizontal .controls {
+  margin-left: 130px;
+}
+/*
+* 模块名称： 基本列表
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-25 14：29
+*/
+ul.normal {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+ul.normal ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+ul.normal ul ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+ul.inline {
+  *zoom: 1;
+}
+ul.inline:before,
+ul.inline:after {
+  display: table;
+  content: "";
+}
+ul.inline:after {
+  clear: both;
+}
+ul.inline:before,
+ul.inline:after {
+  display: table;
+  content: "";
+}
+ul.inline:after {
+  clear: both;
+}
+ul.inline li {
+  float: left;
+}
+ol.normal {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+dl.normal dd {
+  padding-left: 20px;
+}
+.dl-horizontal {
+  *zoom: 1;
+}
+.dl-horizontal:before,
+.dl-horizontal:after {
+  display: table;
+  content: "";
+}
+.dl-horizontal:after {
+  clear: both;
+}
+.dl-horizontal:before,
+.dl-horizontal:after {
+  display: table;
+  content: "";
+}
+.dl-horizontal:after {
+  clear: both;
+}
+.dl-horizontal dt {
+  float: left;
+  width: 150px;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dl-horizontal dd {
+  margin-left: 160px;
+}
+/*
+* 模块描述： 表格样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-21 14：08
+*/
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.table .hidden {
+  max-width: 100px;
+  width: auto !important;
+  width: 100px;
+}
+.table .red td {
+  background-color: #bf4f40;
+}
+.table .orange td {
+  background-color: #bf8f40;
+}
+.table .yellow td {
+  background-color: #b0bf40;
+}
+.table .green td {
+  background-color: #40bf4f;
+}
+.table .blue td {
+  background-color: #4070bf;
+}
+.table .gray td {
+  background-color: #999999;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 5px 10px;
+}
+.thead-gray {
+  color: #646567;
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e4e4e4));
+  background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -webkit-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: linear-gradient(to bottom, #fefefe, #e4e4e4);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0px #ffffff;
+  -moz-box-shadow: inset 0 1px 0px #ffffff;
+  box-shadow: inset 0 1px 0px #ffffff;
+}
+.table-spaced tr {
+  border-bottom: 1px solid #cad7e2;
+}
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f4f8fc;
+}
+.table-bordered {
+  border-top: 1px solid #cad7e2;
+  border-right: 1px solid #cad7e2;
+}
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #cad7e2;
+  border-bottom: 1px solid #cad7e2;
+}
+.table-hovered tbody tr:hover {
+  background-color: #f6f8fa;
+}
+.table-hovered tbody .hover {
+  background-color: #f6f8fa;
+}
+.table-condensed th,
+.table-condensed td {
+  padding: 2px;
+}
+.table-centered th,
+.table-centered td {
+  text-align: center;
+}
+/*
+* 模块描述： 列表表格
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-21 16：29
+*/
+.table--listing {
+  border-top: 1px solid #cad7e2;
+  border-right: 1px solid #cad7e2;
+  border-left: 1px solid #cad7e2;
+}
+.table--listing tr {
+  border-bottom: 1px solid #cad7e2;
+}
+.table--listing .even {
+  background-color: #f4f8fc;
+}
+.table--listing .span1,
+.table--listing .span2,
+.table--listing .span3,
+.table--listing .span4,
+.table--listing .span5,
+.table--listing .span6,
+.table--listing .span7,
+.table--listing .span8,
+.table--listing .span9,
+.table--listing .span10 {
+  text-align: right;
+}
+.table--listing .span1 {
+  width: 30px;
+}
+.table--listing .span2 {
+  width: 70px;
+}
+.table--listing .span3 {
+  width: 110px;
+}
+.table--listing .span4 {
+  width: 150px;
+}
+.table--listing .span5 {
+  width: 190px;
+}
+.table--listing .span6 {
+  width: 230px;
+}
+.table--listing .span7 {
+  width: 270px;
+}
+.table--listing .span8 {
+  width: 310px;
+}
+.table--listing .span9 {
+  width: 350px;
+}
+.table--listing .span10 {
+  width: 390px;
+}
+/*
+* 模块描述： 酒店平台雪碧图样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：08
+*/
+/*
+* 模块描述： icon图标样式
+* 兼容测试： none
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：58
+*/
+/*
+* 模块描述： 酒店后台icon图标样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：58
+*/
+.icon {
+  background: url("../images/iconSprite.png") no-repeat;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.i-off {
+  background-position: -16px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-on {
+  background-position: -32px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-arrow-right-white {
+  background-position: -256px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-arrow-left-white {
+  background-position: -272px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-calendar {
+  background-position: -144px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.i-close {
+  background-position: -80px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-dialog-success {
+  background-position: -16px -64px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 48px;
+  height: 48px;
+}
+.i-dialog-warning {
+  background-position: -64px -64px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 48px;
+  height: 48px;
+}
+.i-exit {
+  background-position: -96px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-arrow-select {
+  background-position: -112px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-notice-info {
+  background-position: -16px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.i-notice-success {
+  background-position: -48px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.i-notice-error {
+  background-position: -80px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.i-notice-warm {
+  background-position: -112px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.i-arrow-up {
+  background-position: -16px -128px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-arrow-down {
+  background-position: -32px -128px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-arrow-left {
+  background-position: -48px -128px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-arrow-right {
+  background-position: -64px -128px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-chevron-up {
+  background-position: -80px -128px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.i-chevron-down {
+  background-position: -96px -128px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*
+* 模块描述： 目录样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-10 17：32
+*/
+.toc {
+  width: 200px;
+}
+.toc li {
+  height: 35px;
+  line-height: 35px;
+  text-indent: 10px;
+  border-bottom: 1px solid #eee;
+}
+.toc a {
+  display: block;
+  color: #666;
+}
+.toc a:hover {
+  color: #c72020;
+  text-decoration: none;
+}
+.toc .toc-active a {
+  color: #c72020;
+}
+/*
+* 模块描述： 正常（ul有结构层次）目录样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-10 17：36
+*/
+.toc-normal li {
+  height: 25px;
+  line-height: 25px;
+}
+.toc-normal a:hover {
+  color: #ff6b3c;
+  text-decoration: none;
+}
+.toc-normal .toc-h3 {
+  padding-left: 20px;
+}
+.toc-normal .toc-h4 {
+  padding-left: 40px;
+}
+.toc-normal .toc-h5 {
+  padding-left: 60px;
+}
+.toc-normal .toc-h6 {
+  padding-left: 80px;
+}
+.level-one {
+  font-size: 17px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #eee;
+  margin: 20px 0;
+}
+.level-two {
+  font-size: 15px;
+  height: 45px;
+  line-height: 45px;
+}
+.level-two:before {
+  font-size: 18px;
+  content: " ✎ ";
+}
+.level-three {
+  font-size: 13px;
+  height: 35px;
+  line-height: 35px;
+}
+.level-four {
+  font-size: 13px;
+  height: 35px;
+  line-height: 35px;
+  color: #888;
+}
+.level-four:before {
+  content: " ⊙ ";
+}
+/*
+* 模块描述： 按钮组样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-21 18：15
+*/
+.btn-group {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+.btn-group:before,
+.btn-group:after {
+  display: table;
+  content: "";
+}
+.btn-group:after {
+  clear: both;
+}
+.btn-group:before,
+.btn-group:after {
+  display: table;
+  content: "";
+}
+.btn-group:after {
+  clear: both;
+}
+.btn-group .btn {
+  float: left;
+  margin-right: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.btn-group .btn:first-child {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+.btn-group .btn:last-child {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+/*
+* 模块描述： 分页组件
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-21 17：07
+*/
+.pagination li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 3px;
+}
+.pagination a {
+  display: block;
+  padding: 4px 10px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+}
+.pagination a:hover {
+  text-decoration: none;
+}
+.pagination .active a {
+  color: #fff;
+  background-color: #619bcd;
+}
+.pagination .disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.pagination .disabled a {
+  cursor: default;
+}
+.pagination .total span {
+  display: block;
+  padding: 4px 10px;
+  line-height: 20px;
+  border: 1px solid #e0e0e0;
+}
+.pagination-small li {
+  margin: 0 3px;
+}
+.pagination-small a {
+  padding: 2px 8px;
+  line-height: 19px;
+}
+.pagination-small .total span {
+  padding: 2px 8px;
+  line-height: 19px;
+}
+.pagination-smallest li {
+  margin: 0 2px;
+}
+.pagination-smallest a {
+  padding: 2px 8px;
+  line-height: 14px;
+}
+.pagination-smallest .total span {
+  padding: 2px 2px;
+  line-height: 14px;
+}
+.pagination-centered {
+  text-align: center;
+}
+.pagination-right {
+  text-align: right;
+}
+/*
+* 模块描述： 酒店后台评级组件样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-20 17：45
+*/
+.rating--medal,
+.rating {
+  *zoom: 1;
+  overflow: hidden;
+}
+.rating--medal:before,
+.rating:before,
+.rating--medal:after,
+.rating:after {
+  display: table;
+  content: "";
+}
+.rating--medal:after,
+.rating:after {
+  clear: both;
+}
+.rating--medal:before,
+.rating:before,
+.rating--medal:after,
+.rating:after {
+  display: table;
+  content: "";
+}
+.rating--medal:after,
+.rating:after {
+  clear: both;
+}
+.rating,
+.rating-inner,
+.rating-hover,
+.rating-active,
+.rating-star,
+.rating-text {
+  height: 20px;
+}
+.rating-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #ff1e00;
+  width: 10%;
+}
+.rating-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #ff9e00;
+  width: 20%;
+}
+.rating-star {
+  position: relative;
+  z-index: 4;
+  background: url("../images/stars.png") repeat-x;
+}
+.rating-inner {
+  position: relative;
+  float: left;
+  width: 115px;
+  margin-right: 5px;
+}
+.rating-text {
+  float: left;
+  line-height: 20px;
+  font-size: 13px;
+}
+.rating-large .rating-inner {
+  width: 230px;
+}
+.rating-large.rating,
+.rating-large .rating-inner,
+.rating-large .rating-hover,
+.rating-large .rating-active,
+.rating-large .rating-star,
+.rating-large .rating-text {
+  height: 30px;
+}
+.rating-large .rating-star {
+  background: url("");
+}
+.rating-large .rating-text {
+  line-height: 30px;
+  font-size: 14px;
+}
+.rating-small .rating-inner {
+  width: 170px;
+}
+.rating-small.rating,
+.rating-small .rating-inner,
+.rating-small .rating-hover,
+.rating-small .rating-active,
+.rating-small .rating-star,
+.rating-small .rating-text {
+  height: 15px;
+}
+.rating-small .rating-star {
+  background: url("../images/stars_small.png") repeat-x;
+}
+.rating-small .rating-text {
+  line-height: 15px;
+  font-size: 12px;
+}
+.rating--medal .rating-hover {
+  background-color: #ff1e00;
+  width: 10%;
+}
+.rating--medal .rating-active {
+  background-color: #ff9e00;
+  width: 20%;
+}
+.rating--medal .rating-star {
+  background: url("");
+}
+.rating--medal .rating-inner {
+  width: 230px;
+}
+/*
+* 模块描述： 酒店后台弹窗样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：39
+*/
+.dialog {
+  width: 100%;
+  height: 100%;
+  background-color: #e9e9e9;
+  border: 1px solid #c1c1c1;
+}
+.dialog-head {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-indent: 10px;
+  background-color: #4d8dd7;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5799e3), to(#3e7bc6));
+  background-image: -o-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -webkit-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -moz-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: linear-gradient(to bottom, #5799e3, #3e7bc6);
+  background-repeat: repeat-x;
+}
+.dialog-head .close {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  display: block;
+  overflow: hidden;
+  text-indent: -999px;
+  letter-spacing: -999px;
+  background: url("../images/iconSprite.png") no-repeat;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-position: -80px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.dialog-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+.dialog-body {
+  margin: 10px;
+  background-color: #fff;
+  border: 1px solid #c8c8c8;
+}
+.dialog-body .alert {
+  padding: 60px;
+  border: none;
+  height: auto;
+}
+.dialog-body-noborder {
+  border: none;
+}
+.dialog-foot {
+  margin: 0 10px 10px;
+  text-align: right;
+}
+/*
+* 模块描述： 酒店平台滚动条样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：10
+*/
+.scrollbar {
+  position: relative;
+  height: 16px;
+  background-color: #252525;
+}
+.scrollbar .scroll-first,
+.scrollbar .scroll-prev,
+.scrollbar .scroll-next,
+.scrollbar .scroll-last,
+.scrollbar .bar-first,
+.scrollbar .bar-dragger,
+.scrollbar .bar-last {
+  overflow: hidden;
+  text-indent: -999px;
+  letter-spacing: -999px;
+  width: 16px;
+  height: 16px;
+  background: url("../images/sprite.png") no-repeat;
+}
+.scrollbar .scroll-first,
+.scrollbar .scroll-prev,
+.scrollbar .scroll-next,
+.scrollbar .scroll-last {
+  display: block;
+}
+.scrollbar .scroll-first,
+.scrollbar .scroll-prev,
+.scrollbar .scroll-next,
+.scrollbar .scroll-last,
+.scrollbar .scroll-bar {
+  position: absolute;
+  top: 0;
+}
+.scrollbar .scroll-first,
+.scrollbar .scroll-prev,
+.scrollbar .scroll-next,
+.scrollbar .scroll-last {
+  background-color: #484848;
+}
+.scrollbar .scroll-first:hover,
+.scrollbar .scroll-prev:hover,
+.scrollbar .scroll-next:hover,
+.scrollbar .scroll-last:hover {
+  background-color: #5c5c5c;
+}
+.scrollbar .scroll-first {
+  left: 0;
+  background-position: -240px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar .scroll-prev {
+  left: 17px;
+  background-position: -256px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar .scroll-next {
+  right: 17px;
+  background-position: -272px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar .scroll-last {
+  right: 0;
+  background-position: -288px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar .scroll-bar,
+.scrollbar .bar-first,
+.scrollbar .bar-dragger,
+.scrollbar .bar-last {
+  float: left;
+}
+.scrollbar .scroll-bar {
+  *zoom: 1;
+  height: 16px;
+  left: 33px;
+}
+.scrollbar .scroll-bar:before,
+.scrollbar .scroll-bar:after {
+  display: table;
+  content: "";
+}
+.scrollbar .scroll-bar:after {
+  clear: both;
+}
+.scrollbar .scroll-bar:before,
+.scrollbar .scroll-bar:after {
+  display: table;
+  content: "";
+}
+.scrollbar .scroll-bar:after {
+  clear: both;
+}
+.scrollbar .bar-first {
+  background-position: -240px -48px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar .bar-dragger {
+  background-color: #03bbe9;
+}
+.scrollbar .bar-last {
+  background-position: -256px -48px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scroll-wrap {
+  position: relative;
+}
+.scroll-wrap .scrollbar,
+.scroll-wrap .scrollbar-vertical {
+  position: absolute;
+}
+.scroll-wrap .scrollbar {
+  bottom: 10px;
+  left: 0;
+}
+.scroll-wrap .scrollbar-vertical {
+  top: 0;
+  right: 10px;
+}
+/*
+* 模块描述： 酒店平台滚动条样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：10
+*/
+.scrollbar-vertical {
+  position: relative;
+  width: 16px;
+  background-color: #252525;
+}
+.scrollbar-vertical .scroll-first,
+.scrollbar-vertical .scroll-prev,
+.scrollbar-vertical .scroll-next,
+.scrollbar-vertical .scroll-last,
+.scrollbar-vertical .bar-first,
+.scrollbar-vertical .bar-dragger,
+.scrollbar-vertical .bar-last {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  text-indent: -999px;
+  letter-spacing: -999px;
+  display: block;
+  background: url("../images/sprite.png") no-repeat;
+}
+.scrollbar-vertical .scroll-first,
+.scrollbar-vertical .scroll-prev,
+.scrollbar-vertical .scroll-next,
+.scrollbar-vertical .scroll-last,
+.scrollbar-vertical .scroll-bar {
+  position: absolute;
+  left: 0;
+}
+.scrollbar-vertical .scroll-first,
+.scrollbar-vertical .scroll-prev,
+.scrollbar-vertical .scroll-next,
+.scrollbar-vertical .scroll-last {
+  background-color: #484848;
+}
+.scrollbar-vertical .scroll-first:hover,
+.scrollbar-vertical .scroll-prev:hover,
+.scrollbar-vertical .scroll-next:hover,
+.scrollbar-vertical .scroll-last:hover {
+  background-color: #5c5c5c;
+}
+.scrollbar-vertical .scroll-first {
+  top: 0;
+  background-position: -240px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar-vertical .scroll-prev {
+  top: 17px;
+  background-position: -256px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar-vertical .scroll-next {
+  bottom: 17px;
+  background-position: -272px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar-vertical .scroll-last {
+  bottom: 0;
+  background-position: -288px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar-vertical .scroll-bar,
+.scrollbar-vertical .bar-first,
+.scrollbar-vertical .bar-dragger,
+.scrollbar-vertical .bar-last {
+  float: left;
+}
+.scrollbar-vertical .scroll-bar {
+  *zoom: 1;
+  width: 16px;
+  top: 33px;
+}
+.scrollbar-vertical .scroll-bar:before,
+.scrollbar-vertical .scroll-bar:after {
+  display: table;
+  content: "";
+}
+.scrollbar-vertical .scroll-bar:after {
+  clear: both;
+}
+.scrollbar-vertical .scroll-bar:before,
+.scrollbar-vertical .scroll-bar:after {
+  display: table;
+  content: "";
+}
+.scrollbar-vertical .scroll-bar:after {
+  clear: both;
+}
+.scrollbar-vertical .bar-first {
+  background-position: -288px -48px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.scrollbar-vertical .bar-dragger {
+  background-color: #03bbe9;
+}
+.scrollbar-vertical .bar-last {
+  background-position: -288px -64px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*
+* 模块描述： 酒店后台日历样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：43
+*/
+.calendar {
+  width: 200px;
+  border: 1px solid #84baf9;
+}
+.calendar-head {
+  *zoom: 1;
+  height: 20px;
+  line-height: 20px;
+  padding: 5px;
+  background-color: #4d8dd7;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5799e3), to(#3e7bc6));
+  background-image: -o-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -webkit-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: -moz-linear-gradient(top, #5799e3, #3e7bc6);
+  background-image: linear-gradient(to bottom, #5799e3, #3e7bc6);
+  background-repeat: repeat-x;
+}
+.calendar-head:before,
+.calendar-head:after {
+  display: table;
+  content: "";
+}
+.calendar-head:after {
+  clear: both;
+}
+.calendar-head:before,
+.calendar-head:after {
+  display: table;
+  content: "";
+}
+.calendar-head:after {
+  clear: both;
+}
+.calendar-title {
+  text-align: center;
+  color: #fff;
+}
+.calendar-title .dropdown-toggle {
+  padding: 0;
+}
+.calendar-title .dropdown-label {
+  width: 30px;
+  text-align: center;
+  padding: 0;
+  height: 16px;
+}
+.calendar-title .dropdown-arrow .icon {
+  margin: 0;
+}
+.calendar-prev,
+.calendar-next {
+  overflow: hidden;
+  text-indent: -999px;
+  letter-spacing: -999px;
+  background: url("../images/iconSprite.png") no-repeat;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.calendar-prev {
+  float: left;
+  background-position: -272px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.calendar-next {
+  float: right;
+  background-position: -256px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.calendar-body {
+  *zoom: 1;
+  background-color: #fefefe;
+}
+.calendar-body:before,
+.calendar-body:after {
+  display: table;
+  content: "";
+}
+.calendar-body:after {
+  clear: both;
+}
+.calendar-body:before,
+.calendar-body:after {
+  display: table;
+  content: "";
+}
+.calendar-body:after {
+  clear: both;
+}
+.calendar-body a {
+  display: block;
+}
+.calendar-body a:hover {
+  text-decoration: none;
+}
+.calendar-body .calendar-day {
+  float: left;
+  width: 200px;
+}
+.calendar-body {
+  *zoom: 1;
+  background-color: #fefefe;
+}
+.calendar-body:before,
+.calendar-body:after {
+  display: table;
+  content: "";
+}
+.calendar-body:after {
+  clear: both;
+}
+.calendar-body:before,
+.calendar-body:after {
+  display: table;
+  content: "";
+}
+.calendar-body:after {
+  clear: both;
+}
+.calendar-body a {
+  display: block;
+}
+.calendar-body a:hover {
+  text-decoration: none;
+}
+.calendar-body .timepicker {
+  border-top: 1px solid #f1f1f1;
+  padding: 10px 5px 5px;
+}
+.calendar-body .timepicker .spinner input {
+  width: 25px;
+}
+.calendar-day,
+.calendar-month,
+.calendar-year {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.calendar-day thead {
+  background-color: #ededed;
+}
+.calendar-day td {
+  text-align: center;
+}
+.calendar-day a:hover {
+  background-color: #ececec;
+}
+.calendar-day .active {
+  border: 1px solid #3f7cc7;
+  color: #3f7cc7;
+}
+.calendar-day .disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.calendar-day .disabled:hover,
+.calendar-day .disabled.hover {
+  background-color: #fefefe;
+}
+.month-1 {
+  background: url("../images/date/1.gif") center center no-repeat;
+}
+.month-2 {
+  background: url("../images/date/2.gif") center center no-repeat;
+}
+.month-3 {
+  background: url("../images/date/3.gif") center center no-repeat;
+}
+.month-4 {
+  background: url("../images/date/4.gif") center center no-repeat;
+}
+.month-5 {
+  background: url("../images/date/5.gif") center center no-repeat;
+}
+.month-6 {
+  background: url("../images/date/6.gif") center center no-repeat;
+}
+.month-7 {
+  background: url("../images/date/7.gif") center center no-repeat;
+}
+.month-8 {
+  background: url("../images/date/8.gif") center center no-repeat;
+}
+.month-9 {
+  background: url("../images/date/9.gif") center center no-repeat;
+}
+.month-10 {
+  background: url("../images/date/10.gif") center center no-repeat;
+}
+.month-11 {
+  background: url("../images/date/11.gif") center center no-repeat;
+}
+.month-12 {
+  background: url("../images/date/12.gif") center center no-repeat;
+}
+.calendar-foot {
+  padding: 5px;
+  background-color: #EAF3F5;
+  text-align: right;
+}
+/*
+* 模块名称： 下拉组件
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-26 12：32
+*/
+.dropdown {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  position: relative;
+}
+.dropdown .dropdown-toggle {
+  *zoom: 1;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  color: #4b88d3;
+}
+.dropdown .dropdown-toggle:before,
+.dropdown .dropdown-toggle:after {
+  display: table;
+  content: "";
+}
+.dropdown .dropdown-toggle:after {
+  clear: both;
+}
+.dropdown .dropdown-toggle:before,
+.dropdown .dropdown-toggle:after {
+  display: table;
+  content: "";
+}
+.dropdown .dropdown-toggle:after {
+  clear: both;
+}
+.dropdown .dropdown-label,
+.dropdown .dropdown-arrow {
+  float: left;
+}
+.dropdown .dropdown-label {
+  padding: 4px;
+}
+.dropdown .dropdown-arrow {
+  border-left: 1px solid #cccccc;
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e4e4e4));
+  background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -webkit-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: linear-gradient(to bottom, #fefefe, #e4e4e4);
+  background-repeat: repeat-x;
+}
+.dropdown .dropdown-arrow .icon {
+  margin: 6px;
+}
+.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: -1px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+.dropdown .dropdown-menu.show {
+  display: block;
+}
+.dropdown .dropdown-menu a {
+  display: block;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #4b88d3;
+}
+.dropdown .dropdown-menu a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #78a6dd;
+}
+.select {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+}
+.select .dropdown-toggle {
+  *zoom: 1;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+.select .dropdown-toggle:before,
+.select .dropdown-toggle:after {
+  display: table;
+  content: "";
+}
+.select .dropdown-toggle:after {
+  clear: both;
+}
+.select .dropdown-toggle:before,
+.select .dropdown-toggle:after {
+  display: table;
+  content: "";
+}
+.select .dropdown-toggle:after {
+  clear: both;
+}
+.select .dropdown-label,
+.select .dropdown-arrow {
+  float: left;
+}
+.select .dropdown-label {
+  padding: 4px;
+  color: #4b88d3;
+  width: 100px;
+  border: none;
+  height: 20px;
+  line-height: 20px;
+}
+.select .dropdown-arrow {
+  border-left: 1px solid #cccccc;
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e4e4e4));
+  background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -webkit-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: linear-gradient(to bottom, #fefefe, #e4e4e4);
+  background-repeat: repeat-x;
+}
+.select .dropdown-arrow .icon {
+  margin: 6px;
+}
+.select-menu {
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+.select-menu .dropdown-menu a {
+  display: block;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #4b88d3;
+}
+.select-menu .dropdown-menu a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #78a6dd;
+}
+/*
+* 模块名称： 时间微调器组件
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-26 09：16
+*/
+.spinner {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 28px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+.spinner:before,
+.spinner:after {
+  display: table;
+  content: "";
+}
+.spinner:after {
+  clear: both;
+}
+.spinner:before,
+.spinner:after {
+  display: table;
+  content: "";
+}
+.spinner:after {
+  clear: both;
+}
+.spinner-label,
+.spinner-btn {
+  float: left;
+}
+.spinner-label {
+  padding: 4px;
+  color: #666;
+}
+.spinner-label input {
+  height: 18px;
+  border: none;
+}
+.spinner-btn {
+  width: 24px;
+  border-left: 1px solid #ccc;
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e4e4e4));
+  background-image: -o-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -webkit-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+  background-image: linear-gradient(to bottom, #fefefe, #e4e4e4);
+  background-repeat: repeat-x;
+}
+.spinner-prev,
+.spinner-next {
+  overflow: hidden;
+  text-indent: -999px;
+  letter-spacing: -999px;
+  display: block;
+  width: 24px;
+  background: url("../images/iconSprite.png") no-repeat;
+}
+.spinner-prev {
+  background-position: -76px -129px;
+  height: 14px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.spinner-next {
+  height: 13px;
+  background-position: -92px -129px;
+}
+/*
+* 从属项目： admin
+* 模块描述： notice 基础样式
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-01 12:00
+*/
+.notice,
+.notice-inner {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 50px;
+  line-height: 50px;
+  background: url("../images/notice_bg.gif") no-repeat;
+}
+.notice {
+  background-position: right 0;
+  margin-left: 5px;
+}
+.notice-inner {
+  background-position: 0 -51px;
+  margin-left: -5px;
+  padding: 0 20px;
+}
+.notice-icon {
+  vertical-align: top;
+  margin: 8px 5px 0 0;
+}
+.notice-info {
+  background: url("../images/iconSprite.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: -16px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.notice-warm {
+  background: url("../images/iconSprite.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: -112px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.notice-error {
+  background: url("../images/iconSprite.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: -80px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.notice-success {
+  background: url("../images/iconSprite.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: -48px -32px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 32px;
+  height: 32px;
+}
+.notice-text {
+  font-size: 14px;
+}
+/*
+* 模块描述： 酒店后台警告信息提示样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：54
+*/
+.alert {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 4px 5px;
+  height: 20px;
+  line-height: 20px;
+  color: #333;
+  border: 1px solid #999;
+  background-color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+/*
+* 模块描述： 导航样式
+* 兼容测试： none
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：28
+*/
+.nav li {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.nav a {
+  display: block;
+}
+.nav a:hover {
+  text-decoration: none;
+}
+/*
+* 模块描述： 酒店后台导航样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：28
+*/
+.nav-tabs {
+  *zoom: 1;
+  height: 30px;
+  border-bottom: 1px solid #ccd4da;
+  padding-left: 30px;
+}
+.nav-tabs:before,
+.nav-tabs:after {
+  display: table;
+  content: "";
+}
+.nav-tabs:after {
+  clear: both;
+}
+.nav-tabs:before,
+.nav-tabs:after {
+  display: table;
+  content: "";
+}
+.nav-tabs:after {
+  clear: both;
+}
+.nav-tabs li {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: -1px;
+}
+.nav-tabs a {
+  padding: 5px 20px 4px;
+  border-left: 1px solid #ccd4da;
+  border-right: 1px solid #ccd4da;
+  border-top: 1px solid #ccd4da;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  background-color: #f0f0f0;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ebebeb));
+  background-image: -o-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image: linear-gradient(to bottom, #f4f4f4, #ebebeb);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0px #ffffff;
+  -moz-box-shadow: inset 0 1px 0px #ffffff;
+  box-shadow: inset 0 1px 0px #ffffff;
+  color: #797979;
+}
+.nav-tabs a:hover {
+  background-color: #efefef;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ebebeb), to(#f4f4f4));
+  background-image: -o-linear-gradient(top, #ebebeb, #f4f4f4);
+  background-image: -webkit-linear-gradient(top, #ebebeb, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #ebebeb, #f4f4f4);
+  background-image: linear-gradient(to bottom, #ebebeb, #f4f4f4);
+  background-repeat: repeat-x;
+}
+.nav-tabs .active a {
+  border-bottom: 1px solid #fff;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ffffff));
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  background-repeat: repeat-x;
+  color: #333;
+}
+/*
+* 模块描述： 酒店后台导航菜单样式
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-09 12：34
+*/
+.nav--menu .icon {
+  margin: 2px 5px 0 0;
+  vertical-align: top;
+}
+.nav--menu .dropdown-menu,
+.nav--menu .dropdown-submenu {
+  display: none;
+}
+.nav--menu .menu-on .i-off {
+  background-position: -32px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.nav--menu .menu-on .dropdown-menu {
+  display: block;
+}
+.nav--menu .dropdown-toggle {
+  padding: 7px 0 7px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #376ba8;
+  border-bottom: 1px solid #ccd4da;
+  background-color: #f0f0f0;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ebebeb));
+  background-image: -o-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #ebebeb);
+  background-image: linear-gradient(to bottom, #f4f4f4, #ebebeb);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0px #ffffff;
+  -moz-box-shadow: inset 0 1px 0px #ffffff;
+  box-shadow: inset 0 1px 0px #ffffff;
+}
+.nav--menu .dropdown-menu .menu-on .i-arrow-right {
+  background-position: -64px -16px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.nav--menu .dropdown-menu .menu-on .dropdown-submenu {
+  display: block;
+}
+.nav--menu .dropdown-menu .dropdown-toggle {
+  padding: 5px 0 4px 30px;
+  font-weight: normal;
+  color: #4d4d4d;
+  border-bottom: 1px solid #e2e7e8;
+  background-color: #f4f8fc;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f8fc), to(#f4f8fc));
+  background-image: -o-linear-gradient(top, #f4f8fc, #f4f8fc);
+  background-image: -webkit-linear-gradient(top, #f4f8fc, #f4f8fc);
+  background-image: -moz-linear-gradient(top, #f4f8fc, #f4f8fc);
+  background-image: linear-gradient(to bottom, #f4f8fc, #f4f8fc);
+  background-repeat: repeat-x;
+}
+.nav--menu .dropdown-submenu {
+  border-bottom: 1px solid #e2e7e8;
+}
+.nav--menu a {
+  padding: 4px 0 4px 50px;
+  color: #6d758d;
+  background-color: #fff;
+}
+.nav--menu .active a {
+  font-weight: bold;
+  color: #fff;
+  background-color: #78a6dd;
+}
+/*
+* 模块名称： 实例块样式
+* 兼容测试： 
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-07-03 15：37
+*/
+.block--example {
+  margin: 20px 0;
+}
+.block--example .block-foot {
+  padding-top: 20px;
+}
+/*
+* 模块名称： 浏览器支持
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-07-04 10：00
+*/
+.browser li {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 60px;
+  height: 60px;
+  background: url("../images/browser.png") no-repeat;
+  margin-right: 20px;
+}
+.browser span {
+  position: absolute;
+  bottom: 0;
+  right: -15px;
+}
+.browser .chrome {
+  background-position: 0 0;
+}
+.browser .firefox {
+  background-position: -60px 0;
+}
+.browser .explorer {
+  background-position: -120px 0;
+}
+.dataSelect-listing {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.dataSelect-listing:before,
+.dataSelect-listing:after {
+  display: table;
+  content: "";
+}
+.dataSelect-listing:after {
+  clear: both;
+}
+.dataSelect-listing:before,
+.dataSelect-listing:after {
+  display: table;
+  content: "";
+}
+.dataSelect-listing:after {
+  clear: both;
+}
+.dataSelect-listing .dataSelect-source,
+.dataSelect-listing .dataSelect-btn,
+.dataSelect-listing .dataSelect-selected {
+  float: left;
+}
+.dataSelect-listing .dataSelect-source,
+.dataSelect-listing .dataSelect-btn {
+  margin-right: 10px;
+}
+.dataSelect-listing .dataSelect-source,
+.dataSelect-listing .dataSelect-selected {
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 382px;
+}
+.dataSelect-listing .dataSelect-source {
+  position: relative;
+}
+.dataSelect-listing .dataSelect-search {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 5px;
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#eeeeee));
+  background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+  background-repeat: repeat-x;
+}
+.dataSelect-listing .dataSelect-search .input {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 4px 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.dataSelect-listing .dataSelect-search .input:focus {
+  outline: none;
+}
+.dataSelect-listing .dataSelect-search .btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.dataSelect-listing .dataSelect-list {
+  height: 310px;
+}
+.dataSelect-listing .dataSelect-list li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #eee;
+}
+.dataSelect-listing .dataSelect-list li .active {
+  color: #FFF;
+  background-color: #619BCD;
+}
+.dataSelect-listing .dataSelect-list a {
+  display: block;
+  padding: 0 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dataSelect-listing .dataSelect-list a:hover {
+  text-decoration: none;
+}
+.dataSelect-listing .dataSelect-pager {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #ccc;
+  padding: 5px;
+  height: 20px;
+  text-align: right;
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#eeeeee));
+  background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+  background-repeat: repeat-x;
+}
+/*
+* 模块描述： ST CSS框架帮助文档网站布局
+* 兼容测试： chrome
+* 模块维护： @yinchuanwu
+* 最后更新： 2013-06-10 16：17
+*/
+h3 {
+  font-size: 16px;
+  line-height: 40px;
+}
+h6 {
+  line-height: 30px;
+}
+pre {
+  margin: 20px 0;
+}
+.inner,
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.navbar {
+  height: 65px;
+  line-height: 65px;
+  border-top: 5px solid #252525;
+}
+.navbar .nav {
+  *zoom: 1;
+}
+.navbar .nav:before,
+.navbar .nav:after {
+  display: table;
+  content: "";
+}
+.navbar .nav:after {
+  clear: both;
+}
+.navbar .nav:before,
+.navbar .nav:after {
+  display: table;
+  content: "";
+}
+.navbar .nav:after {
+  clear: both;
+}
+.navbar .nav li {
+  float: left;
+}
+.navbar .nav li a {
+  padding: 0 25px;
+  font-size: 14px;
+  color: #333;
+}
+.navbar .nav li a:hover {
+  text-decoration: none;
+  color: #c72020;
+}
+.navbar .nav .active a {
+  color: #c72020;
+}
+.logo {
+  font-size: 22px;
+}
+.logo a {
+  display: block;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+.overview {
+  background-color: #f1f1f1;
+  padding: 40px 0;
+}
+.overview h2 {
+  font-size: 20px;
+  line-height: 35px;
+  color: #333;
+}
+.overview p {
+  color: #666;
+}
+p {
+  margin-bottom: 10px;
+}
+.container {
+  margin: 50px auto;
+}
+.container.ST {
+  font-size: 13px;
+}
+.aside {
+  float: left;
+  width: 200px;
+}
+.content {
+  float: right;
+  width: 760px;
+}
+.module-name {
+  font-size: 16px;
+  line-height: 30px;
+}
+.grid .span24,
+.grid .span23,
+.grid .span22,
+.grid .span21,
+.grid .span20,
+.grid .span19,
+.grid .span18,
+.grid .span17,
+.grid .span16,
+.grid .span15,
+.grid .span14,
+.grid .span13,
+.grid .span12,
+.grid .span11,
+.grid .span10,
+.grid .span9,
+.grid .span8,
+.grid .span7,
+.grid .span6,
+.grid .span5,
+.grid .span4,
+.grid .span3,
+.grid .span2,
+.grid .span1 {
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #efefef;
+}
+.grid .row {
+  margin-bottom: 10px;
+}
+.tile {
+  background-color: #efefef;
+}
+.scrolltop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  background: url('../images/icon_top.png') no-repeat;
+  opacity: .3;
+  display: none;
+}
+.guide {
+  font-size: 13px;
+}

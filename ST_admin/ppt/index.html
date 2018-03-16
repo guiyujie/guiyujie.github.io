@@ -1,0 +1,454 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=680, user-scalable=no"/>
+    <base href="#" target="_blank"/>
+
+    <title>内部后台用户界面库使用指南（使用篇）_2014-08-13_尹传武</title>
+    <link rel="stylesheet" href="dest/css/prism.css"/>
+    <link rel="stylesheet" href="dest/css/shower.min.css"/>
+</head>
+<body class="list">
+
+<header class="caption">
+    <h1>内部后台用户界面库使用指南（使用篇）</h1>
+</header>
+<!--caption-->
+
+
+    <div class="slide cover w">
+    <div>
+        <h2 class="place c ppt-theme">ST_admin.css</h2>
+        <img src="slides/images/cover.jpg" alt=""/>
+    </div>
+</div>
+
+    <div class="slide">
+    <div>
+        <div class="place c">
+            <img src="slides/images/about.png" alt=""/>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <p class="place c ppt-say">致力于Web产品界面前端设计与开发</p>
+    </div>
+</div>
+
+
+    <div class="slide shout right">
+    <div>
+        <h2>概述</h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <h2 class="place c ppt-say">
+            主角：内部后台用户界面库（ST_admin.css）
+        </h2>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/admin.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/admin_index.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <h2 class="place c ppt-say">
+            浏览器兼容性
+        </h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <h2>浏览器兼容性</h2>
+        <p>考虑了市面上主流的浏览器；采用 “渐进增强” 的方式实现。</p>
+        <ul lang="ru">
+            <li><img src="slides/images/Chrome.png" style="vertical-align: middle" alt=""/> Chrome Current （Webkit，Blink）</li>
+            <li><img src="slides/images/Firefox.png" style="vertical-align: middle" alt=""/> Firefox Current （Gecko）</li>
+            <li><img src="slides/images/Internet_Explorer.png" style="vertical-align: middle" alt=""/> Internet Explorer 7+ （Trident）</li>
+        </ul>
+
+        <p class="notes">浏览器内核：http://baike.baidu.com/view/1369399.htm?fr=aladdin</p>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <h2 class="place c ppt-say">
+            包含组件
+        </h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <img class="place" src="slides/images/component.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <h2 class="place c ppt-say">
+            与第三方UI库的区别
+        </h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <h2>与第三方UI库的区别</h2>
+        <p>优势：</p>
+        <ul lang="ru">
+            <li>自己人开发，维护、扩展容易。</li>
+            <li>方便根据业务定制风格统一的组件。</li>
+        </ul>
+
+        <p>劣势：</p>
+        <ul lang="ru">
+            <li>控件库不够丰富。</li>
+            <li>使用不方便（欠缺文档，示例Demo）</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide shout right">
+    <div>
+        <h2>基本用法</h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <div class="place c ppt-say">
+            基本使用
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <h2>基本使用</h2>
+        <p>在 HTML &lt;head&gt 中引入 ST_admin.css，项目其他 CSS 放在 ST_admin.css 之后。</p>
+        <pre><code class="language-markup">&lt;html&gt;
+  &lt;head&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;css/ST_admin.css&quot;/&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;css/project-other.css&quot;/&gt;
+  &lt;/head&gt;</code></pre>
+
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <div class="place c ppt-say">
+            使用误区
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <h2>使用误区</h2>
+        <p>直接从其他项目将前端资源包或代码片段拷贝到新开发项目中；这将会导致：</p>
+        <ul lang="ru">
+            <li>项目私有代码被拷贝到了新项目，导致冲突。</li>
+            <li>后台界面库无法正常升级、维护难度高。</li>
+        </ul>
+        <p>重在理解！不是搬运~</p>
+    </div>
+</div>
+
+<div class="slide shout right">
+    <div>
+        <h2>CSS class 使用</h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <div class="place c ppt-say">
+            理解组件设计
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <h2>理解组件设计</h2>
+        <p>有几点说明下可以加深我们对内部后台界面库中class使用的理解。</p>
+        <ul lang="ru">
+            <li class="next">使用了“OOCSS”的设计模式来构建界面组件（基类，扩展类）</li>
+            <li class="next">使用了“模块化”的方式来管理、构建界面组件（展现形态、主题（风格），皮肤（颜色）、状态、大小...）</li>
+        </ul>
+        <p class="next">模块化的 class 都属于扩展类。</p>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <p>使用“OOCSS”将 class 划分为：基类[base]、扩展类[extend]。</p>
+<pre><code class="language-markup">&lt;button class=&quot;base&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;button class=&quot;base base-extend&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;</code></pre>
+<p>使用“模块化”将 class 拆分为：展现形态[type]、主题（风格）[theme]，皮肤（颜色）[color]、状态[state]、大小[size]...</p>
+<pre><code class="language-markup">&lt;button class=&quot;base base-type&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;button class=&quot;base base-theme&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;button class=&quot;base base-state&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;button class=&quot;base base-skin&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;button class=&quot;base base-size&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;</code></pre>
+
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            所以呢，class到底要怎么用？
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            举个 button 的使用示例
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <p>按钮基类</p>
+<pre><code class="language-markup">&lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;</code></pre>
+<p>按钮扩展类</p>
+<pre><code class="language-markup">&lt;button class=&quot;btn btn-active&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;button class=&quot;btn btn-blue&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;button class=&quot;btn btn-large&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;</code></pre>
+
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <img class="place" src="slides/images/button.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide shout up">
+    <div>
+        <h2 class="place c">Web界面拼装</h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <div class="place c ppt-say">
+            如玩游戏一般，很爽！
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <img class="place" src="slides/images/games.jpg" alt=""/>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <img class="place" src="slides/images/renktetris.gif" alt=""/>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            Web界面拼装亦是如此简单
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            元件 -> 组件 -> 布局
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            举个例子：我们想拼装一个条件过滤的表单结构
+        </div>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/flow_0.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/flow.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/flow_2.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide shout right">
+    <div>
+        <h2>帮助文档</h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            一看就会的示例Demo
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            <a href="http://localhost:9000/html/element/element">http://localhost:9000/html/element/element</a>
+        </div>
+    </div>
+</div>
+
+<div class="slide shout up">
+    <div>
+        <h2 class="place c">FAQ</h2>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            还有疑问？
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <blockquote></blockquote>
+        <div class="place c ppt-say">
+            为了能够高效、高质的完成日常开发任务，我开发了一些其他的CSS工具。
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            cosyless：一个舒适的 LESS 框架，一种更好的 CSS 书写方式
+        </div>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/cosyless.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            magic：一个基于 cosyless 的 CSS3 动画库
+        </div>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/magic.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            beeui：对外通用后台界面库
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div>
+        <div class="place c ppt-say">
+            正在用飞一般的速度构建（编码）中...
+        </div>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/beeui.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide cover h">
+    <div>
+        <img src="slides/images/beeui_index.png" alt=""/>
+    </div>
+</div>
+
+<div class="slide cover">
+    <div>
+        <div class="place c ppt-say">
+            当你觉得工作累时，想想吧！ <br/> 如何让复杂的事情简单化...
+        </div>
+    </div>
+</div>
+
+
+    <div class="slide shout">
+    <div>
+        <h2 class="place c ppt-part">谢 谢</h2>
+    </div>
+</div>
+
+
+<div class="progress">
+    <div></div>
+</div>
+<!--progress-->
+
+<script src="dest/js/shower.min.js"></script>
+<script src="dest/js/prism.js"></script>
+
+</body>
+</html>

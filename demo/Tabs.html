@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>选项卡 DEMO</title>
+  <link rel="stylesheet" href="../public/css/ST_admin.css"/>
+  <style type="text/css">
+    pre {
+      background-color: #fff
+    }
+  </style>
+  <script src="../public/js/jquery-min.js"></script>
+  <script src="../public/js/ZeroClipboard/jquery.zclip.min.js"></script>
+  <script src="../public/js/ST.Config.js"></script>
+</head>
+<body class="admin-frame">
+
+<div id="_demo" class="m50">
+  <div class="alert alert-info mb20">
+    <i class="icon"></i>
+    简单选项卡  <a class="fn_trigger" data-source="_code0" data-cmd="showCode" href="" title="查看代码">[code]</a>
+<pre id="_code0" data-title="" style="display:none">
+&lt;!--HTML部分--&gt;
+&lt;ul class="nav nav-tabs" <code>id="_tabs"</code>&gt;
+  &lt;li <code>class="active"</code>&gt;&lt;a href="javascript:;"&gt;栏目1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript:;"&gt;栏目2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript:;"&gt;栏目3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript:;"&gt;栏目4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div <code>class="fn_tab_content"</code>&gt;&lt;p class="m30"&gt;栏目1内容&lt;/p&gt;&lt;/div&gt;
+&lt;div <code>class="fn_tab_content" style="display:none"</code>&gt;&lt;p class="m30"&gt;栏目2内容&lt;/p&gt;&lt;/div&gt;
+&lt;div <code>class="fn_tab_content" style="display:none"</code>&gt;&lt;p class="m30"&gt;栏目3内容&lt;/p&gt;&lt;/div&gt;
+&lt;div <code>class="fn_tab_content" style="display:none"</code>&gt;&lt;p class="m30"&gt;栏目4内容&lt;/p&gt;&lt;/div&gt;
+
+&lt;!--JS部分--&gt;
+&lt;script src="__YOURPATH__/js/ST.Tabs.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  /*
+  默认配置
+  {
+    ts:'',          //tab目标容器（jq选择器，如：'#_tabs'）
+    el:'',          //tab模板元素（jq选择器，如：'li'）
+    curClass:'',    //激活样式
+    evType:"click", //激活事件
+    sfun:'',        //tab切换时执行的方法
+  }
+  */
+  new ST.Tabs({
+    ts:'#_tabs',
+    el:'li',
+    curClass:'active',
+    evType:"mouseover",
+    sfun:function(node,i){
+      var conts = $('.fn_tab_content');
+      conts.hide().eq(i).show();
+    }
+  });
+&lt;/script&gt;
+</pre>
+  </div>
+  <ul class="nav nav-tabs" id="_tabs">
+    <li class="active"><a href="javascript:;">栏目1</a></li>
+    <li><a href="javascript:;">栏目2</a></li>
+    <li><a href="javascript:;">栏目3</a></li>
+    <li><a href="javascript:;">栏目4</a></li>
+  </ul>
+  <div class="fn_tab_content"><p class="m30">栏目1内容</p></div>
+  <div class="fn_tab_content" style="display:none"><p class="m30">栏目2内容</p></div>
+  <div class="fn_tab_content" style="display:none"><p class="m30">栏目3内容</p></div>
+  <div class="fn_tab_content" style="display:none"><p class="m30">栏目4内容</p></div>
+</div>
+<script src="../public/js/doc/prettify.js"></script>
+<script src="../public/js/ST_dev.js"></script>
+<script src="../public/js/ST.Tabs.js"></script>
+<script src="../public/js/demo/demo.js"></script>
+<script type="text/javascript">
+  ST.jsTemplates.push('common');
+  $.extend(ST, {
+    todoList: function () {
+      new ST.Tabs({
+        ts:'#_tabs',
+        el:'li',
+        curClass:'active',
+        evType:"mouseover",
+        sfun:function(node,i){
+          var conts = $('.fn_tab_content');
+          conts.hide().eq(i).show();
+        }
+      });
+    }
+  });
+  ST.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<MKM version="2.0" imageFileUrl="file:///E:/ST/doc/public/images/toc.psd">
+  <Marks>
+    <TextMark defaultDirection="6" direction="6" color="16711680" x="488" y="298" textMaxWidth="100" offsetX="305" offsetY="59" text=" "/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="253" y="941" textMaxWidth="100" offsetX="25" offsetY="10" text="项目CSS文件&#xD;"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="255" y="902" textMaxWidth="202" offsetX="25" offsetY="10" text="项目LESS配置文件"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="147" y="303" textMaxWidth="163" offsetX="25" offsetY="10" text="最新JS包（除开doc文件夹）"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="202" y="339" textMaxWidth="100" offsetX="25" offsetY="10" text="最新JS模板包"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="128" y="60" textMaxWidth="100" offsetX="73" offsetY="7" text="供拷贝资源包"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="169" y="99" textMaxWidth="100" offsetX="33" offsetY="6" text="后台类项目"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="170" y="140" textMaxWidth="100" offsetX="31" offsetY="6" text="前台类项目"/>
+  </Marks>
+</MKM>

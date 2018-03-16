@@ -1,0 +1,32 @@
+.calendar-title{margin: 0 20px;}
+.calendar-title a{display: block;color:#fff;}
+.calendar-title:hover{ background-color: #a3bfdf;}
+.calendar-body{position: relative;}
+.calendar_time_choose{position: absolute;right: -80px;top:0; width: 80px;height:196px; overflow-y: hidden; background-color: #fff; border:1px solid #84baf9; }
+.calendar_time_choose .calendar-head{color:#fff; text-align: center;}
+.calendar_time_choose .calendar_time{height:174px;    line-height: 30px; overflow-y: auto; text-align: center;}
+.calendar_time_choose .calendar_time { display: block;}
+.calendar_time_choose .calendar_time li.active,.calendar_time_choose .calendar_time li:hover{
+    color: #fff;
+    background-color: #a3bfdf;
+}
+.calendar-day a:hover{ background-color: #a3bfdf;}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px
+}
+::-webkit-scrollbar-track-piece {
+    background-color: #f7f7f7
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px
+}
+::-webkit-scrollbar-thumb:vertical {
+    width: 7px;
+    border: 2px solid #f7f7f7;
+    border-left-width: 1px
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ddd
+}

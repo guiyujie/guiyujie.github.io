@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>magic：一个基于 cosyless 的 CSS3 动画库</title>
+  <link rel="stylesheet" href="../dest/css/doc-reference_magic.min.css"/>
+</head>
+<body>
+
+<div class="doc-sidebar">
+  <a class="doc-close" href="javascript:;"><span>关闭</span></a>
+  <div class="toc toc-default"></div>
+</div>
+<!--doc-sidebar-->
+
+<div class="doc-header">
+  <h1>magic</h1>
+  <p>一个基于 cosyless 的 CSS3 动画库</p>
+</div>
+<!--doc-header-->
+
+<div class="doc-navbar">
+  <ul class="nav doc-nav">
+    <li class="active"><a href="index.html">使用</a></li>
+    <li>*</li>
+    <li><a href="type.html">动画类型</a></li>
+    <li>*</li>
+    <li><a href="changelog.html">更新日志</a></li>
+  </ul>
+</div>
+<!--doc-navbar-->
+
+<div class="doc-container">
+
+  <div class="doc-panel">
+    <h3>magic 简介</h3>
+    <pre class="prettyprint">
+      <strong>magic</strong>：一个基于 cosyless 的 CSS3 动画库。
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>使用方式</h3>
+
+    <p>作为独立 CSS 文件引入 html 页面。</p>
+    <pre class="prettyprint">
+      &lt;link rel="stylesheet" href="../dest/css/magic-desktop.min.css"/&gt;
+    </pre>
+    <p>文件可选值有：</p>
+    <ul class="typo-ul">
+      <li><strong>magic.min.css</strong>：Webkit版（CSS3属性兼容 W3C、-webkit-）。【42kb】</li>
+      <li><strong>magic-desktop.min.css</strong>：PC版（CSS3属性兼容 W3C、-webkit-、-moz-）。【83kb】</li>
+      <li><strong>magic-mobile.min.css</strong>：Mobile版（CSS3属性兼容 W3C、-webkit-、-o-、-ms-、-moz-）。【205kb】</li>
+    </ul>
+    <p>html 页面引入 magic 动画库后，给定元素添加动画基类 <code class="prettyprint">magic</code>。</p>
+    <pre class="prettyprint">
+      &lt;div class="magic"&gt;&lt;/div&gt;
+    </pre>
+    <p>选择追加所需的动画效果类名，就会具有对应的 CSS 动画效果，如：<code class="prettyprint">shake</code>。</p>
+    <pre class="prettyprint">
+      &lt;div class="magic shake"&gt;&lt;/div&gt;
+    </pre>
+    <p>若需要无限循环动画，添加 <code class="prettyprint">infinote</code> 类即可。</p>
+    <pre class="prettyprint">
+      &lt;div class="magic shake infinote "&gt;&lt;/div&gt;
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>问题反馈</h3>
+
+    <dl class="typo-dl">
+      <dt>call me：</dt>
+      <dd>尹传武（研发中心 > web研发部 > web前端开发组）</dd>
+      <dt>企业邮箱：</dt>
+      <dd><a href="mailto:yinchuanwu@stnts.com">yinchuanwu@stnts.com</a></dd>
+    </dl>
+  </div>
+
+</div>
+<!--doc-container-->
+
+
+<script src="../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../dest/js/easing.js"></script>
+<script src="../dest/js/jquery.toc.min.js"></script>
+<script src="../dest/js/jquery.ui.totop.min.js"></script>
+<script src="../dest/js/prettify.js"></script>
+<script src="../dest/js/reference_magic_config.js"></script>
+
+</body>
+</html>

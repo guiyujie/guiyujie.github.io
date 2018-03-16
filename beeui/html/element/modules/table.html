@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>BeeUI 示例文档</title>
+    <link rel="stylesheet" href="../../dest/css/doc_demo.css"/>
+    <link rel="stylesheet" href="../../dest/css/prism.css"/>
+    <link rel="stylesheet" href="../../dest/css/beeui.min.css"/>
+</head>
+<body>
+
+<div class="doc-header">
+    <div class="doc-inner">
+        <h1 class="doc-logo"><a href="#">BeeUI（1.0.0）</a></h1>
+        <div class="doc-navbar">
+    <ul class="doc-nav">
+        <li class=""><a href="../element/element.html">元件</a></li>
+        <li class=""><a href="../component/component.html">组件</a></li>
+        <li class=""><a href="../layout/index.html" target="_blank">布局</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+<!--header-->
+
+<div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-sticker">
+            <div class="doc-toc"></div>
+        </div>
+    </div>
+    <!--sidebar-->
+    <div class="doc-content">
+        <h2>table（表格）</h2>
+<p>表格样式。</p>
+<h3>标签</h3>
+<p>表格标签嵌套规则。</p>
+<pre><code class="language-markup">&lt;table&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<h3>table-default</h3>
+<p>beeui 默认表格样式。</p>
+<pre><code class="language-markup">&lt;table class=&quot;table table-default&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+     &lt;tr&gt;
+         &lt;td&gt;td&lt;/td&gt;
+         &lt;td&gt;td&lt;/td&gt;
+         &lt;td&gt;td&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<table class="table table-default">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+     <tr>
+         <td>td</td>
+         <td>td</td>
+         <td>td</td>
+     </tr>
+   </tbody>
+</table>
+
+<h3>table-striped</h3>
+<p>隔行换色的表格样式。</p>
+<table class="table table-default table-striped">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>table-hovered</h3>
+<p>有 hover 状态的表格。</p>
+<table class="table table-default table-hovered">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>table-embedded</h3>
+<p>嵌入其他组件内的表格（noborder），可配置的表格边框样式：</p>
+<ul>
+<li>table-border-t</li>
+<li>table-border-b</li>
+<li>table-border-l</li>
+<li>table-border-r</li>
+</ul>
+<div class="tab">
+    <div class="tab-nav">
+        <ul class="nav nav-tabs nav-sm">
+            <li class="active"><a href="#">item 01</a></li>
+            <li><a href="#">item 02</a></li>
+        </ul>
+        <div class="tab-more">
+            <span>如有疑问，请联系高务人员</span>
+        </div>
+    </div>
+    <div class="tab-main">
+        <div class="p10"></div>
+        <div class="tab-panel tab-current">
+            <table class="table table-default table-embedded table-border-t">
+                <thead>
+                <tr>
+                    <th>th</th>
+                    <th>th</th>
+                    <th>th</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-panel">panel 02</div>
+    </div>
+</div>
+
+
+<h3>皮肤</h3>
+<p>beeui 提供支持表格换肤功能。内置可选值有：</p>
+<ul>
+<li>table-default 默认（灰色）</li>
+<li>table-blue 蓝色</li>
+</ul>
+<table class="table table-default table-blue">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+    </div>
+    <!--content-->
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <div class="doc-inner"></div>
+</div>
+<!--footer-->
+
+<script src="../../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../../dest/js/jquery.toc.min.js"></script>
+<script src="../../dest/js/jquery.sticky.js"></script>
+<script src="../../dest/js/prism.js"></script>
+<script src="../../dest/js/doc_demo.js"></script>
+
+</body>
+</html>

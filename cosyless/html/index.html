@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>cosyless：一个舒适的LESS框架</title>
+  <link rel="stylesheet" href="../dest/css/doc-reference.min.css"/>
+</head>
+<body>
+
+<div class="doc-sidebar">
+  <a class="doc-close" href="javascript:;"><span>关闭</span></a>
+  <div class="toc toc-default"></div>
+</div>
+<!--doc-sidebar-->
+
+<div class="doc-header">
+  <h1>cosyless</h1>
+  <p>一个舒适的 LESS 框架，一种更好的 CSS 书写方式</p>
+</div>
+<!--doc-header-->
+
+<div class="doc-navbar">
+  <ul class="nav doc-nav">
+    <li class="active"><a href="index.html">使用</a></li>
+    <li>*</li>
+    <li><a href="api.html">API</a></li>
+    <li>*</li>
+    <li><a href="changelog.html">更新日志</a></li>
+  </ul>
+</div>
+<!--doc-navbar-->
+
+<div class="doc-container">
+
+  <div class="doc-panel">
+    <h3>cosyless 简介</h3>
+    <pre class="prettyprint">
+      <strong>cosyless</strong>：一个舒适的 LESS 框架，一种更好的 CSS 书写方式。
+    </pre>
+
+    <p>cosyless 愿景：</p>
+    <ol class="typo-ol">
+      <li>开发者（CSS）：在界面构建过程中 cosy（舒适）、享受。</li>
+      <li>使用者：在使用过程中 简单、顺心。</li>
+    </ol>
+
+    <p>使用了 cosyless 的内部产品（界面构建）：</p>
+    <ul class="typo-ul">
+      <li><strong>magic</strong>：一个基于 cosyless 的 CSS3 动画库</li>
+      <!--<li><strong>baseui</strong>：一个UI（user interface，用户界面）开发规范参考文档</li>-->
+      <li><strong>cosyui</strong>：一个通用后台UI库（基于 cosyless 和 baseui）</li>
+    </ul>
+  </div>
+
+  <div class="doc-panel">
+    <h3>组成部分</h3>
+    <p>cosyless 由四个部分组成（与源码文件分类一一对应）：</p>
+
+    <ul class="typo-ul">
+      <li><strong>global</strong>：全局设置样式；包括 reset、全局颜色变量、全局状态、全局大小...</li>
+      <li><strong>fix</strong>：常用 CSS 浏览器 hack 样式（浏览器修复）</li>
+      <li><strong>css3</strong>：常用 CSS3 浏览器兼容样式（浏览器兼容）</li>
+      <li><strong>tools</strong>：常用 CSS 开发工具集</li>
+    </ul>
+    <p>cosyless 各部分具体内容请看 api。</p>
+  </div>
+
+  <div class="doc-panel">
+    <h3>使用方式</h3>
+    <p>关于使用，有两点要说明下：</p>
+
+    <ol class="typo-ol">
+      <li>cosyless 是一个框架（或库），存放在 lib 目录下。</li>
+      <li>cosyless 是作为 less 模块的 “强依赖” 存在的，所以编写每个 less 模块时，必须（不绝对）在 less 文件顶部添加以下代码。</li>
+    </ol>
+    <pre class="prettyprint">
+      @import (reference) "../../../lib/cosyless/cosyless";
+    </pre>
+    <p>不绝对具体详解参考 less 官网 <a href="http://lesscss.org/features/#import-options">import-options</a>。</p>
+  </div>
+
+  <div class="doc-panel">
+    <h3>问题反馈</h3>
+
+    <dl class="typo-dl">
+      <dt>call me：</dt>
+      <dd>尹传武（研发中心 > web研发部 > web前端开发组）</dd>
+      <dt>企业邮箱：</dt>
+      <dd><a href="mailto:yinchuanwu@stnts.com">yinchuanwu@stnts.com</a></dd>
+    </dl>
+  </div>
+
+</div>
+<!--doc-container-->
+
+
+<script src="../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../dest/js/easing.js"></script>
+<script src="../dest/js/jquery.toc.min.js"></script>
+<script src="../dest/js/jquery.ui.totop.min.js"></script>
+<script src="../dest/js/prettify.js"></script>
+<script src="../dest/js/reference_config.js"></script>
+
+</body>
+</html>

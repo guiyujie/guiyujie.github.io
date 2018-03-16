@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>BeeUI 示例文档</title>
+    <link rel="stylesheet" href="../../dest/css/doc_demo.css"/>
+    <link rel="stylesheet" href="../../dest/css/prism.css"/>
+    <link rel="stylesheet" href="../../dest/css/beeui.min.css"/>
+</head>
+<body>
+
+<div class="doc-header">
+    <div class="doc-inner">
+        <h1 class="doc-logo"><a href="#">BeeUI（1.0.0）</a></h1>
+        <div class="doc-navbar">
+    <ul class="doc-nav">
+        <li class=""><a href="../element/element.html">元件</a></li>
+        <li class=""><a href="../component/component.html">组件</a></li>
+        <li class=""><a href="../layout/index.html" target="_blank">布局</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+<!--header-->
+
+<div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-sticker">
+            <div class="doc-toc"></div>
+        </div>
+    </div>
+    <!--sidebar-->
+    <div class="doc-content">
+        <h2>btn（按钮）</h2>
+<p>按钮样式。</p>
+<h3>标签</h3>
+<p>常规下，作为按钮的 HTML 标签有：</p>
+<pre><code class="language-markup">&lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;input class=&quot;btn&quot; type=&quot;button&quot; value=&quot;button&quot;/&gt;
+&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;button&lt;/a&gt;</code></pre>
+<p><button class="btn" type="button">button</button></p>
+<p><input class="btn" type="button" value="button"/>
+<a class="btn" href="javascript:;">button</a></p>
+<h3>形态</h3>
+<p>按钮展现形态。beeui 提供三种不同形态的按钮：</p>
+<pre><code class="language-markup">&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;button&lt;/a&gt;
+&lt;a class=&quot;btn btn-unbent&quot; href=&quot;javascript:;&quot;&gt;unbent button&lt;/a&gt;
+&lt;a class=&quot;btn btn-block&quot; href=&quot;javascript:;&quot;&gt;block button&lt;/a&gt;</code></pre>
+<p><a class="btn" href="javascript:;">button</a>
+<a class="btn btn-unbent" href="javascript:;">unbent button</a></p>
+<p><a class="btn btn-block" href="javascript:;">block button</a></p>
+<h3>皮肤</h3>
+<p>按钮皮肤。beeui 中按钮皮肤可选值有：</p>
+<ul>
+<li>btn 默认（橙色）</li>
+<li>btn-blue 蓝色</li>
+<li>btn-green 绿色</li>
+<li>btn-gray 灰色</li>
+<li>btn-white 白色</li>
+</ul>
+<pre><code class="language-markup">&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;default button&lt;/a&gt;
+&lt;a class=&quot;btn btn-blue&quot; href=&quot;javascript:;&quot;&gt;blue button&lt;/a&gt;
+&lt;a class=&quot;btn btn-green&quot; href=&quot;javascript:;&quot;&gt;green button&lt;/a&gt;
+&lt;a class=&quot;btn btn-gray&quot; href=&quot;javascript:;&quot;&gt;gray button&lt;/a&gt;
+&lt;a class=&quot;btn btn-white&quot; href=&quot;javascript:;&quot;&gt;white button&lt;/a&gt;</code></pre>
+<p><a class="btn" href="javascript:;">default button</a>
+<a class="btn btn-blue" href="javascript:;">blue button</a>
+<a class="btn btn-green" href="javascript:;">green button</a>
+<a class="btn btn-gray" href="javascript:;">gray button</a>
+<a class="btn btn-white" href="javascript:;">white button</a></p>
+<h3>状态</h3>
+<p>按钮状态。常用状态有： default（默认）、hover、active、disabled</p>
+<pre><code class="language-markup">&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;default button&lt;/a&gt;
+&lt;a class=&quot;btn hover&quot; href=&quot;javascript:;&quot;&gt;blue button&lt;/a&gt;
+&lt;a class=&quot;btn active&quot; href=&quot;javascript:;&quot;&gt;green button&lt;/a&gt;
+&lt;a class=&quot;btn disabled&quot; href=&quot;javascript:;&quot;&gt;gray button&lt;/a&gt;
+...</code></pre>
+<p><a class="btn" href="javascript:;">btn</a>
+<a class="btn hover" href="javascript:;">hover</a>
+<a class="btn active" href="javascript:;">active</a>
+<a class="btn disabled" href="javascript:;">disabled</a></p>
+<p><a class="btn btn-blue" href="javascript:;">btn</a>
+<a class="btn btn-blue hover" href="javascript:;">hover</a>
+<a class="btn btn-blue active" href="javascript:;">active</a>
+<a class="btn btn-blue disabled" href="javascript:;">disabled</a></p>
+<p><a class="btn btn-green" href="javascript:;">btn</a>
+<a class="btn btn-green hover" href="javascript:;">hover</a>
+<a class="btn btn-green active" href="javascript:;">active</a>
+<a class="btn btn-green disabled" href="javascript:;">disabled</a></p>
+<p><a class="btn btn-gray" href="javascript:;">btn</a>
+<a class="btn btn-gray hover" href="javascript:;">hover</a>
+<a class="btn btn-gray active" href="javascript:;">active</a>
+<a class="btn btn-gray disabled" href="javascript:;">disabled</a></p>
+<p><a class="btn btn-white" href="javascript:;">btn</a>
+<a class="btn btn-white hover" href="javascript:;">hover</a>
+<a class="btn btn-white active" href="javascript:;">active</a>
+<a class="btn btn-white disabled" href="javascript:;">disabled</a></p>
+<h3>大小</h3>
+<p>按钮大小。beeui 为按钮提供 6 种不同的大小值：</p>
+<ul>
+<li>btn-mn  微型的</li>
+<li>btn-smt  最小的</li>
+<li>btn-sm 小的</li>
+<li>btn  默认</li>
+<li>btn-lg 大的</li>
+<li>btn-lgt   最大的</li>
+</ul>
+<pre><code class="language-markup">&lt;a class=&quot;btn btn-mn&quot; href=&quot;javascript:;&quot;&gt;mini button&lt;/a&gt;
+&lt;a class=&quot;btn btn-smt&quot; href=&quot;javascript:;&quot;&gt;smallest button&lt;/a&gt;
+&lt;a class=&quot;btn btn-sm&quot; href=&quot;javascript:;&quot;&gt;small button&lt;/a&gt;
+&lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;button&lt;/a&gt;
+&lt;a class=&quot;btn btn-lg&quot; href=&quot;javascript:;&quot;&gt;large button&lt;/a&gt;
+&lt;a class=&quot;btn btn-lgt&quot; href=&quot;javascript:;&quot;&gt;largest button&lt;/a&gt;</code></pre>
+<p><a class="btn btn-mn" href="javascript:;">mini button</a>
+<a class="btn btn-smt" href="javascript:;">smallest button</a>
+<a class="btn btn-sm" href="javascript:;">small button</a>
+<a class="btn" href="javascript:;">button</a>
+<a class="btn btn-lg" href="javascript:;">large button</a>
+<a class="btn btn-lgt" href="javascript:;">largest button</a></p>
+
+    </div>
+    <!--content-->
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <div class="doc-inner"></div>
+</div>
+<!--footer-->
+
+<script src="../../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../../dest/js/jquery.toc.min.js"></script>
+<script src="../../dest/js/jquery.sticky.js"></script>
+<script src="../../dest/js/prism.js"></script>
+<script src="../../dest/js/doc_demo.js"></script>
+
+</body>
+</html>

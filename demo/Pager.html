@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>前端分页 DEMO</title>
+  <link rel="stylesheet" href="../public/css/ST_admin.css"/>
+  <style type="text/css">
+    pre {
+      background-color: #fff
+    }
+  </style>
+  <script src="../public/js/jquery-min.js"></script>
+  <script src="../public/js/ZeroClipboard/jquery.zclip.min.js"></script>
+  <script src="../public/js/ST.Config.js"></script>
+</head>
+<body class="admin-frame">
+<div id="_demo" class="m50">
+  <div class="alert alert-info mb20">
+    <i class="icon"></i>
+    前端分页  <a class="fn_trigger" data-source="_code0" data-cmd="showCode" href="" title="查看代码">[code]</a>
+  </div>
+  <div id="pager_content"></div>
+  <div id="pager"></div>
+  <pre id="_code0" data-title="" style="display:none">
+  &lt;!--HTML部分--&gt;
+  &lt;div <code>id="pager_content"</code>&gt;&lt;/div&gt;
+  &lt;div <code>id="pager"</code>&gt;&lt;/div&gt;
+
+  &lt;!--JS部分--&gt;
+  &lt;script&gt;
+      //虚拟数据
+      var _data = function () {
+        var a = [];
+        for (var i = 1; i <= 100; i++) {
+          a.push({id: i, title: '这是第'+i+'条数据'});
+        }
+        return a;
+      }();
+      //填充内容
+      var fillContent = function(page){
+        var data = _data.slice((page - 1) * 10, page * 10), contentArr = [];
+        for (var i = 0, l = data.length, d; i < l, d = data[i]; i++){
+          contentArr.push('&lt;p class="m5"&gt;'+ d.title+'&lt;/p&gt;');
+        }
+        $("#pager_content").html(contentArr.join(''));
+      };
+      /*
+        默认配置
+       {
+          dataNum:  数据条数
+          pageSize: 页大小
+          dynamic:   动态分页
+          pageTemp:  分页模板
+          pageNumTemp: 分页页码模板
+          pageHash: 是否使用页面HASH（默认不使用）
+       }
+      */
+      //初始化插件
+      var page = ST.getHash('page');//获取页面hash
+      var pager = new ST.Pager("pager", {dataNum: _data.length, pageSize: 10, pageHash: true}, function (page) {
+        fillContent(page);
+      });
+      fillContent(page);
+  &lt;/script&gt;
+  </pre>
+</div>
+<script src="../public/js/doc/prettify.js"></script>
+<script src="../public/js/ST_dev.js"></script>
+<script src="../public/js/demo/demo.js"></script>
+<script type="text/javascript">
+  ST.jsTemplates.push('common');
+  $.extend(ST, {
+    todoList: function () {
+      //虚拟数据
+      var _data = function () {
+        var a = [];
+        for (var i = 1; i <= 100; i++) {
+          a.push({id: i, title: '这是第'+i+'条数据'});
+        }
+        return a;
+      }();
+      //填充内容
+      var fillContent = function(page){
+        var data = _data.slice((page - 1) * 10, page * 10), contentArr = [];
+        for (var i = 0, l = data.length, d; i < l, d = data[i]; i++){
+          contentArr.push('<p class="m5">'+ d.title+'</p>');
+        }
+        $("#pager_content").html(contentArr.join(''));
+      };
+      //初始化插件
+      var page = ST.getHash('page');//获取页面hash
+      var pager = new ST.Pager("pager", {dataNum: _data.length, pageSize: 10, pageHash: true}, function (page) {
+        fillContent(page);
+      });
+      fillContent(page);
+    }
+  });
+  ST.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>BeeUI 示例文档</title>
+    <link rel="stylesheet" href="../../dest/css/doc_demo.css"/>
+    <link rel="stylesheet" href="../../dest/css/prism.css"/>
+    <link rel="stylesheet" href="../../dest/css/beeui.min.css"/>
+</head>
+<body>
+
+<div class="doc-header">
+    <div class="doc-inner">
+        <h1 class="doc-logo"><a href="#">BeeUI（1.0.0）</a></h1>
+        <div class="doc-navbar">
+    <ul class="doc-nav">
+        <li class=""><a href="../element/element.html">元件</a></li>
+        <li class=""><a href="../component/component.html">组件</a></li>
+        <li class=""><a href="../layout/index.html" target="_blank">布局</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+<!--header-->
+
+<div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-sticker">
+            <div class="doc-toc"></div>
+        </div>
+    </div>
+    <!--sidebar-->
+    <div class="doc-content">
+        <h2>dialog（弹窗）</h2>
+<p>弹窗组件样式。</p>
+<h3>结构</h3>
+<pre><code class="language-markup">&lt;div class=&quot;dialog&quot;&gt;
+    &lt;div class=&quot;dialog-inner&quot;&gt;
+        &lt;div class=&quot;dialog-hd&quot;&gt;
+            &lt;div class=&quot;dialog-title&quot;&gt;title&lt;/div&gt;
+            &lt;a class=&quot;dialog-close&quot; href=&quot;javascript:;&quot;&gt;&amp;times;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dialog-bd&quot;&gt;
+            &lt;div class=&quot;dialog-container&quot;&gt;
+                内容
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dialog-ft&quot;&gt;
+            &lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;确定&lt;/a&gt;
+            &lt;a class=&quot;btn btn-gray&quot; href=&quot;javascript:;&quot;&gt;取消&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="dialog">
+    <div class="dialog-inner">
+        <div class="dialog-hd">
+            <div class="dialog-title">title</div>
+            <a class="dialog-close" href="javascript:;">&times;</a>
+        </div>
+        <div class="dialog-bd">
+            <div class="dialog-container">
+                内容
+            </div>
+        </div>
+        <div class="dialog-ft">
+            <a class="btn" href="javascript:;">确定</a>
+            <a class="btn btn-gray" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+
+<h3>形态</h3>
+<p>默认的弹窗样式。</p>
+<div class="dialog">
+    <div class="dialog-inner">
+        <div class="dialog-hd">
+            <div class="dialog-title">title</div>
+            <a class="dialog-close" href="javascript:;">&times;</a>
+        </div>
+        <div class="dialog-bd">
+            <div class="dialog-container">
+                内容
+            </div>
+        </div>
+        <div class="dialog-ft">
+            <a class="btn" href="javascript:;">确定</a>
+            <a class="btn btn-gray" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+
+<p>无标题的弹窗样式。</p>
+<div class="dialog dialog-mn dialog-notitle">
+    <div class="dialog-inner">
+        <a class="dialog-close" href="javascript:;">&times;</a>
+        <div class="dialog-bd">
+            <div class="dialog-container">
+                宽度：380px，高度：自适应，外边距：20px，标题：无
+            </div>
+        </div>
+        <div class="dialog-ft">
+            <a class="btn" href="javascript:;">确定</a>
+            <a class="btn btn-gray" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+
+<h3>大小</h3>
+<ul>
+<li>dialog-mn</li>
+<li>dialog-sm</li>
+<li>dialog</li>
+<li>dialog-lg</li>
+<li>dialog-lgt</li>
+</ul>
+<h3>皮肤</h3>
+<ul>
+<li>dialog 默认</li>
+<li>dialog-white 白色</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;dialog dialog-mn dialog-notitle&quot;&gt;
+    &lt;div class=&quot;dialog-inner&quot;&gt;
+        &lt;a class=&quot;dialog-close&quot; href=&quot;javascript:;&quot;&gt;&amp;times;&lt;/a&gt;
+        &lt;div class=&quot;dialog-bd&quot;&gt;
+            &lt;div class=&quot;dialog-container&quot;&gt;
+                宽度：380px，高度：自适应，外边距：20px，标题：无
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dialog-ft&quot;&gt;
+            &lt;a class=&quot;btn&quot; href=&quot;javascript:;&quot;&gt;确定&lt;/a&gt;
+            &lt;a class=&quot;btn btn-gray&quot; href=&quot;javascript:;&quot;&gt;取消&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="dialog dialog-mn dialog-notitle">
+    <div class="dialog-inner">
+        <a class="dialog-close" href="javascript:;">&times;</a>
+        <div class="dialog-bd">
+            <div class="dialog-container">
+                宽度：380px，高度：自适应，外边距：20px，标题：无
+            </div>
+        </div>
+        <div class="dialog-ft">
+            <a class="btn" href="javascript:;">确定</a>
+            <a class="btn btn-gray" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+    </div>
+    <!--content-->
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <div class="doc-inner"></div>
+</div>
+<!--footer-->
+
+<script src="../../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../../dest/js/jquery.toc.min.js"></script>
+<script src="../../dest/js/jquery.sticky.js"></script>
+<script src="../../dest/js/prism.js"></script>
+<script src="../../dest/js/doc_demo.js"></script>
+
+</body>
+</html>

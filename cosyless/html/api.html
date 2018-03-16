@@ -1,0 +1,1502 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>cosyless：一个舒适的LESS框架</title>
+  <link rel="stylesheet" href="../dest/css/doc-reference.min.css"/>
+</head>
+<body>
+
+<div class="doc-sidebar">
+  <a class="doc-close" href="javascript:;"><span>关闭</span></a>
+  <div class="toc toc-default"></div>
+</div>
+<!--doc-sidebar-->
+
+<div class="doc-header">
+  <h1>cosyless</h1>
+  <p>一个舒适的 LESS 框架，一种更好的 CSS 书写方式</p>
+</div>
+<!--doc-header-->
+
+<div class="doc-navbar">
+  <ul class="nav doc-nav">
+    <li><a href="index.html">使用</a></li>
+    <li>*</li>
+    <li class="active"><a href="api.html">API</a></li>
+    <li>*</li>
+    <li><a href="changelog.html">更新日志</a></li>
+  </ul>
+</div>
+<!--doc-navbar-->
+
+<div class="doc-container">
+
+  <div class="doc-caption">
+    <h2>global</h2>
+    <p>全局设置样式；包括 reset、全局颜色变量、全局状态、全局大小...</p>
+  </div>
+
+  <div class="doc-panel">
+    <h3>reset</h3>
+    <p>浏览器用户代理样式表（user agent stylesheet）重置。</p>
+
+    <pre class="prettyprint">
+      body,
+      input, textarea, button, select,
+      pre, code {
+      //    苹果丽黑，微软雅黑，Tahoma（windows XP 英文版系统默认字体），Arial，
+      //    宋体（\5b8b\4f53，windows XP 中文版系统默认字体），无衬线体
+          font-family: 'Hiragino Sans GB', 'Microsoft YaHei', Tahoma, Arial, '\5b8b\4f53', sans-serif;
+
+          font-size: 75%;   // 12px/16px（default）
+
+          line-height: 1.5;   // 18px/12px（default）
+      }
+    </pre>
+
+    <pre class="prettyprint">
+      // 重置常用 HTML 标签 margin 属性值
+      body,
+      h1, h2, h3, h4, h5, h6,
+      p,
+      ul, ol, dl, dd,
+      form, fieldset, input, textarea, button, select,
+      pre,
+      blockquote,
+      hr {
+          margin: 0;
+      }
+    </pre>
+
+    <pre class="prettyprint">
+      // 重置常用 HTML 标签 padding 属性值
+      fieldset, legend, button,
+      ul, ol {
+          padding: 0;
+      }
+    </pre>
+
+    <pre class="prettyprint">
+      // 重置常用 HTML 标签 border 属性值
+      frame, iframe,
+      img,
+      hr,
+      fieldset {
+          border: none;
+      }
+    </pre>
+
+    <pre class="prettyprint">
+      body {
+          overflow-x: hidden;
+
+          color: #333;    // 全局默认值，可根据项目需求重置
+          background-color: #fff; // 全局默认值，可根据项目需求重置
+      }
+
+      a {
+          text-decoration: none;
+      }
+
+      object {
+        vertical-align: middle;
+      }
+
+      // 表单
+      // ---------------------------------
+      input, textarea, button, select {
+          font-size: 1em;
+      }
+      input, button {
+          overflow: visible;
+          *zoom: 1;
+      }
+      textarea {
+          resize: none;
+      }
+
+    // 表格
+    // ---------------------------------
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    // 列表
+    // ---------------------------------
+    ul, ol {
+        list-style: none;
+    }
+
+    // 代码
+    // ---------------------------------
+    pre,
+    code {
+      font-size: 100%;
+    }
+    </pre>
+
+    <p>其他参考：</p>
+    <ul class="typo-ul">
+      <li><a href="http://getbootstrap.com/css/">getbootstrap.com</a></li>
+      <li><a href="http://css-class.com/test/css/defaults/UA-style-sheet-defaults.htm">css-class.com</a></li>
+      <li><a href="http://www.iecss.com/">www.iecss.com</a></li>
+      <li><a href="http://www.cssreset.com/">www.cssreset.com</a></li>
+      <li><a href="http://html5doctor.com/html-5-reset-stylesheet/">html5doctor.css</a></li>
+      <li><a href="http://necolas.github.io/normalize.css/">normalize.css</a></li>
+
+      <li><a href="http://html5test.com/">_html5test.com</a></li>
+      <li><a href="http://html5doctor.com/">_html5doctor.com</a></li>
+    </ul>
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>color</h3>
+    <p>全局颜色变量</p>
+
+    <pre class="prettyprint">
+      @white: #fff;
+      @black-10: darken(@white, 10%);
+      @black-20: darken(@white, 20%);
+      @black-30: darken(@white, 30%);
+      @black-40: darken(@white, 40%);
+      @black-50: darken(@white, 50%);
+      @black-60: darken(@white, 60%);
+      @black-70: darken(@white, 70%);
+      @black-80: darken(@white, 80%);
+      @black-90: darken(@white, 90%);
+      @black: #000;
+
+      // RGB
+      @red: #f00;
+      @green: #0f0;
+      @blue: #00f;
+
+      // RG & RB & GB
+      @cyan: #066;
+      @yellow: #ff0;
+
+      @orange: #f90;
+      @purple: #90f;
+      @pink: #f09;
+    </pre>
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>state</h3>
+    <p>全局状态</p>
+
+    <pre class="prettyprint">
+      // 正常 状态
+
+      // 鼠标经过 状态
+      //&:hover {}
+      .hover {}
+
+      // 鼠标按下/选中 状态
+      //&:active {}
+      .active,    // 鼠标按下
+      .current,   // 选中，单个
+      .selected   // 选中，多个
+      {}
+
+      // 禁用 状态
+      //&:disabled {}
+      .disabled {
+          cursor: default;
+
+          .opacity(50);
+
+          &:hover,
+          &.hover {
+              cursor: default;
+          }
+
+          &:active,
+          &.active {}
+      }
+
+      // 获得焦点 状态
+      //&:focus {}
+
+      // 启用（表单） 状态
+      //&:enabled {}
+
+      // 选中（表单） 状态
+      //&:checked {}
+
+      // 只读（表单） 状态
+      //&:readonly {}
+
+
+      // 模块状态
+      //.info {}
+      //.warning {}
+      //.error {}
+      //.success {}
+      //.loading {}
+    </pre>
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>size</h3>
+    <p>全局大小</p>
+
+    <pre class="prettyprint">
+      // Default（默认的）
+
+      // mini（微型的）
+      &.mn {}
+
+      // smallest（最小的）
+      &.smt {}
+
+      // small（小的）
+      &.sm {}
+
+      // large（大的）
+      &.lg {}
+
+      // largest（最大的）
+      &.lgt {}
+
+
+      // shortest（最短的）
+      &.shortest {}
+
+      // short（短的）
+      &.short {}
+
+      // long（长的）
+      &.long {}
+
+      // longest（最长的）
+      &.longest {}
+    </pre>
+
+  </div>
+
+  <!-- end -->
+
+  <div class="doc-caption">
+    <h2>fix</h2>
+    <p>常用 CSS 浏览器 hack 样式（修复）</p>
+  </div>
+
+  <div class="doc-panel">
+    <h3>clearfix</h3>
+    <p>清除浮动</p>
+
+    <pre class="prettyprint">
+      .clearfix {
+
+      //  IE 8及以上、Chrome、Firefox 使用 伪类 清除浮动
+        &:before,
+        &:after {
+          content: " ";
+          display: table;
+        }
+
+        &:after {
+          clear: both;
+        }
+
+      //  IE 6 ~ IE 7 触发 IE hasLayout 清除浮动
+        *zoom: 1;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 用法一
+      class="clearfix"
+
+      // 用法二
+      .example { .clearfix(); }
+    </pre>
+
+    <p>参考网站：</p>
+    <ul class="typo-ul">
+      <li><a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro-clearfix-hack</a></li>
+    </ul>
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>float</h3>
+    <p>清除浮动双边距</p>
+
+    <pre class="prettyprint">
+      .pull-left,
+      .pull-right {
+        *display: inline;
+        *zoom: 1;
+      }
+    </pre>
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>inline-block</h3>
+    <p>行块元素转换</p>
+
+    <pre class="prettyprint">
+      .inline-block(@marginRight: 3px) {
+      //  IE 8 及以上
+        display: inline-block;
+      //  IE 6 ~ IE 7（不支持行块显示，转换为行内元素并添加右外边距，尽可能保持行块元素跨浏览器显示一致）
+        *display: inline;
+        *zoom: 1;
+
+        *margin-right: @marginRight;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+    .example { .inline-block(); }
+    </pre>
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>minfix</h3>
+    <p>最小宽高值转换</p>
+
+    <pre class="prettyprint">
+      .min-width(@width) {
+      //  IE 8 及以上
+        min-width: @width;
+      //  IE 6 ~ IE 7（针对 IE7 hack）
+        width: auto !important;
+      //  IE 6 ~ IE 7（针对 IE6 hack）
+        width: @width;
+
+      //  方案二
+      //  min-width: @width;
+      //  _width: @width;
+      }
+
+      .min-height(@height) {
+        min-height: @height;
+        height: auto !important;
+        height: @height;
+
+      //  方案二
+      //  min-height: @height;
+      //  _height: @height;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .min-width(400px); }
+    </pre>
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>transparent</h3>
+    <p>背景色透明转换</p>
+
+    <pre class="prettyprint">
+      .transparent(@r, @g, @b, @a) {
+        @argb: argb(rgba(@r, @g, @b, @a));
+
+        background: e('rgb(@{r}, @{g}, @{b})') transparent;
+      //  For IE 9 及以上
+        background: rgba(@r, @g, @b, @a);
+
+      //  For IE 5.5 ~ IE 7
+        filter: e('progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argb}, endColorstr=@{argb})');
+      //  For IE 8 ~ IE 9
+        -ms-filter: e('"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argb}, endColorstr=@{argb})"');
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .transparent(0, 0, 0, .5); }
+    </pre>
+
+    <p>参考网站：</p>
+    <ul class="typo-ul">
+      <li><a href="http://colmjude.com/blog/ie-transparent-backgrounds">ie-transparent-backgrounds</a></li>
+    </ul>
+
+  </div>
+
+  <!-- end -->
+
+  <div class="doc-caption">
+    <h2>css3</h2>
+    <p>常用 CSS3 浏览器兼容样式（兼容）</p>
+  </div>
+
+  <div class="doc-panel">
+    <h3>border-radius</h3>
+    <p>CSS3 边框圆角</p>
+    <pre class="prettyprint">
+      .border-radius(...) {
+
+          & when (@type = mobile) {
+              -ms-border-radius: @arguments;
+              -o-border-radius: @arguments;
+          }
+
+          & when (@type = desktop) {
+              -moz-border-radius: @arguments;
+          }
+
+          -webkit-border-radius: @arguments;
+          border-radius: @arguments;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .border-radius(4px 3px 2px 1px); }
+    </pre>
+
+    <p>生成结果：</p>
+    <pre class="prettyprint">
+      // @type = webkit
+      .example {
+        -webkit-border-radius: 4px 3px 2px 1px;
+        border-radius: 4px 3px 2px 1px;
+      }
+
+      // @type = desktop
+      .example {
+        -moz-border-radius: 4px 3px 2px 1px;
+        -webkit-border-radius: 4px 3px 2px 1px;
+        border-radius: 4px 3px 2px 1px;
+      }
+
+      // @type = mobile
+      .example {
+        -ms-border-radius: 4px 3px 2px 1px;
+        -o-border-radius: 4px 3px 2px 1px;
+        -moz-border-radius: 4px 3px 2px 1px;
+        -webkit-border-radius: 4px 3px 2px 1px;
+        border-radius: 4px 3px 2px 1px;
+      }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>box-shadow</h3>
+    <p>CSS3 盒阴影</p>
+    <pre class="prettyprint">
+      .box-shadow(...) {
+
+          & when (@type = mobile) {
+              -ms-box-shadow+: @arguments;
+              -o-box-shadow+: @arguments;
+          }
+
+          & when (@type = desktop) {
+              -moz-box-shadow+: @arguments;
+          }
+
+          -webkit-box-shadow+: @arguments;
+          box-shadow+: @arguments;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+    .example {
+        .box-shadow(4px 3px 2px #fff);
+        .box-shadow(inset 4px 3px 2px #fff);
+    }
+    </pre>
+
+    <p>生成结果：</p>
+    <pre class="prettyprint">
+      // @type = webkit
+      .example {
+            -webkit-box-shadow: 4px 3px 2px #fff, inset 4px 3px 2px #fff;
+            box-shadow: 4px 3px 2px #fff, inset 4px 3px 2px #fff;
+      }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>gradient</h3>
+    <p>CSS3 渐变</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > gradient.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 垂直线性渐变
+      #gradient > .vertical(#fff, 0%, #ccc, 100%);
+
+      // 其他用法
+      查阅 cosyless > css3 > gradient.less 内使用示例
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>box-sizing</h3>
+    <p>CSS3 盒模型</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > box-sizing.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .box-sizing(border-box); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>background-clip</h3>
+    <p>CSS3 背景裁剪</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > background-clip.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .background-clip(padding-box); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>opacity</h3>
+    <p>CSS3 不透明度</p>
+    <pre class="prettyprint">
+      .opacity(@value) {
+          opacity: @value / 100;
+          filter: e('progid:DXImageTransform.Microsoft.Alpha(opacity=@{value})');
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .opacity(50); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>text-size-adjust</h3>
+    <p>CSS3 文字大小调整</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > text-size-adjust.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .text-size-adjust(none); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>input-placeholder</h3>
+    <p>CSS3 输入控件占位符样式</p>
+    <pre class="prettyprint">
+      .input-placeholder(@color) {
+
+          & when (@type = mobile) {
+              ::-ms-input-placeholder { color: @color; }
+              ::-o-input-placeholder { color: @color; }
+          }
+
+          & when (@type = desktop) {
+              ::-moz-input-placeholder { color: @color; }
+          }
+
+          ::-webkit-input-placeholder { color: @color; }
+          ::input-placeholder { color: @color; }
+
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // example
+      .input-placeholder(#999);
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>selection</h3>
+    <p>CSS3 鼠标选中样式</p>
+    <pre class="prettyprint">
+      .selection(@color, @backgroundColor) {
+
+          & when (@type = mobile) {
+              ::-ms-selection {
+                  color: @color;
+                  background-color: @backgroundColor;
+              }
+              ::-o-selection {
+                  color: @color;
+                  background-color: @backgroundColor;
+              }
+          }
+
+          & when (@type = desktop) {
+              ::-moz-selection {
+                  color: @color;
+                  background-color: @backgroundColor;
+              }
+          }
+
+          ::-webkit-selection {
+              color: @color;
+              background-color: @backgroundColor;
+          }
+          ::selection {
+              color: @color;
+              background-color: @backgroundColor;
+          }
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // example
+     .selection(#fff, #f00);
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>animation</h3>
+    <p>CSS3 动画</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > animations > animation.less
+    </pre>
+    <table class="typo-table">
+      <thead>
+      <tr>
+        <th>混入类</th>
+        <th>说明</th>
+        <th>使用示例</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>.animation();</td>
+        <td>动画</td>
+        <td>.animation(name duration timing-function delay iteration-count direction fill-mode);</td>
+      </tr>
+      <tr>
+        <td>.animation-name();</td>
+        <td>动画名称（关键帧名称）</td>
+        <td>.animation-name(test);</td>
+      </tr>
+      <tr>
+        <td>.animation-duration();</td>
+        <td>动画持续时间</td>
+        <td>.animation-duration(2s);</td>
+      </tr>
+      <tr>
+        <td>.animation-timing-function();</td>
+        <td>动画效果（动画速率函数）</td>
+        <td>.animation-timing-function(ease);</td>
+      </tr>
+      <tr>
+        <td>.animation-delay();</td>
+        <td>动画延迟时间</td>
+        <td>.animation-delay(.5s);</td>
+      </tr>
+      <tr>
+        <td>.animation-iteration-count();</td>
+        <td>动画循环次数</td>
+        <td>.animation-iteration-count(infinite);</td>
+      </tr>
+      <tr>
+        <td>.animation-direction();</td>
+        <td>动画方向</td>
+        <td>.animation-direction(reverse);</td>
+      </tr>
+      <tr>
+        <td>.animation-fill-mode();</td>
+        <td>动画模式</td>
+        <td>.animation-fill-mode(forwards);</td>
+      </tr>
+      <tr>
+        <td>.animation-play-state();</td>
+        <td>动画播放状态</td>
+        <td>.animation-play-state(paused);</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="doc-panel">
+    <h3>keyframes</h3>
+    <p>CSS3 动画关键帧</p>
+    <pre class="prettyprint">
+      .keyframes(@name, @rules) {
+
+          & when (@type = mobile) {
+              @-ms-keyframes @name { @rules(); }
+              @-o-keyframes @name { @rules(); }
+          }
+
+          & when (@type = desktop) {
+              @-moz-keyframes @name { @rules(); }
+          }
+
+          @-webkit-keyframes @name { @rules(); }
+          @keyframes @name { @rules(); }
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .keyframes(test, {
+          from {
+              color: #fff;
+          }
+          to {
+              color: #eee;
+          }
+      });
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>transform</h3>
+    <p>CSS3 转换</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > transforms > transform.less
+    </pre>
+
+    <table class="typo-table">
+      <thead>
+      <tr>
+        <th>混入类</th>
+        <th>说明</th>
+        <th>使用示例</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>.transform();</td>
+        <td>转换</td>
+        <td>.transform(.rotate(360deg) .scale(1.2,1.2));</td>
+      </tr>
+      <tr>
+        <td>.transform-origin();</td>
+        <td>转换原点</td>
+        <td>.transform-origin(left top);</td>
+      </tr>
+      <tr>
+        <td>.transform-style();</td>
+        <td>转换呈现</td>
+        <td>.transform-style(preserve-3d);</td>
+      </tr>
+      <tr>
+        <td>.rotate();</td>
+        <td>旋转</td>
+        <td>.rotate(45deg);</td>
+      </tr>
+      <tr>
+        <td>.scale();</td>
+        <td>缩放</td>
+        <td>.scale(0.8);</td>
+      </tr>
+      <tr>
+        <td>.skew();</td>
+        <td>倾斜</td>
+        <td>.skew(45deg);</td>
+      </tr>
+      <tr>
+        <td>.translate();</td>
+        <td>位移</td>
+        <td>.translate(100px);</td>
+      </tr>
+      <tr>
+        <td>.matrix();</td>
+        <td>矩阵</td>
+        <td>.matrix(1,0.4,0,1,0,0);</td>
+      </tr>
+      <tr>
+        <td>.perspective();</td>
+        <td>透视</td>
+        <td>.perspective(500px);</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="doc-panel">
+    <h3>backface-visibility</h3>
+    <p>CSS3 背面可见</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > transforms > backface-visibility.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .backface-visibility(hidden); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>perspective-origin</h3>
+    <p>CSS3 透视原点</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > transforms > perspective-origin.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .perspective-origin(right top); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>transition</h3>
+    <p>CSS3 过渡</p>
+    <pre class="prettyprint">
+      查阅 cosyless > css3 > transitions > transition.less
+    </pre>
+    <table class="typo-table">
+      <thead>
+      <tr>
+        <th>混入类</th>
+        <th>说明</th>
+        <th>使用示例</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>.transition();</td>
+        <td>过渡</td>
+        <td>.transition(property duration timing-function delay);</td>
+      </tr>
+      <tr>
+        <td>.transition-property();</td>
+        <td>过渡属性</td>
+        <td>.transition-property(all);</td>
+      </tr>
+      <tr>
+        <td>.transition-duration();</td>
+        <td>过渡持续时间</td>
+        <td>.transition-duration(1s);</td>
+      </tr>
+      <tr>
+        <td>.transition-timing-function();</td>
+        <td>过渡效果（速率函数）</td>
+        <td>.transition-timing-function(ease);</td>
+      </tr>
+      <tr>
+        <td>.transition-delay();</td>
+        <td>过渡延迟时间</td>
+        <td>.transition-delay(.5s);</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- end -->
+
+  <div class="doc-caption">
+    <h2>tools</h2>
+    <p>常用 CSS 开发工具集</p>
+  </div>
+
+  <div class="doc-panel">
+    <h3>grid</h3>
+    <p>Grid（固定列宽） 栅格系统</p>
+    <pre class="prettyprint">
+      查阅 cosyless > tools > grid > grid.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 变量说明
+      @gridWidth: 960px;  // 栅格总宽度
+      @spanNumber: 12;    // 栅格列数
+      @spanMargin: 10px;  // 栅格列外间距  margin-left
+
+      // 创建 grid 栅格
+      .createGrid(@gridWidth: 960px, @spanNumber: 12, @spanMargin: 10px);
+    </pre>
+
+    <table class="typo-table">
+      <thead>
+      <tr>
+        <th>Class</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>grid</td>
+        <td>固定宽度栅格系统布局环境（外包容器）。</td>
+      </tr>
+      <tr>
+        <td>row</td>
+        <td>固定宽度布局行。</td>
+      </tr>
+      <tr>
+        <td>span</td>
+        <td>固定宽度布局列。</td>
+      </tr>
+      <tr>
+        <td>span-*</td>
+        <td>固定宽度布局列宽，*号可选值为从一起至创建流体栅格的列数值止的正整数。</td>
+      </tr>
+      <tr>
+        <td>offset-*</td>
+        <td>固定宽度布局偏移值，*号可选值同上。</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="doc-demo">
+
+    <div class="grid">
+      <div class="row">
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+      </div>
+      <div class="row">
+        <div class="span span-2">span-2</div>
+        <div class="span span-2">span-2</div>
+        <div class="span span-2">span-2</div>
+      </div>
+      <div class="row">
+        <div class="span span-3">span-3</div>
+        <div class="span span-3">span-3</div>
+      </div>
+      <div class="row">
+        <div class="span span-3 offset-3">span-3 offset-3</div>
+      </div>
+    </div>
+    <!--grid-->
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>fluid</h3>
+    <p>Fluid（流体） 栅格系统</p>
+    <pre class="prettyprint">
+      查阅 cosyless > tools > grid > fluid.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 变量说明
+      @spanNumber: 12;    // 列数
+      @spanWidth: 4;      // 列宽比（相对于列外间距）
+      @spanMargin: 1;     // 列外间距比
+
+      // 创建　fluid 栅格
+      .createFluid(@spanNumber: 12, @spanWidth: 4, @spanMargin: 1);
+    </pre>
+
+    <table class="typo-table">
+      <thead>
+      <tr>
+        <th>Class</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>fluid</td>
+        <td>流体栅格系统布局环境（外包容器）。</td>
+      </tr>
+      <tr>
+        <td>row</td>
+        <td>流体布局行。</td>
+      </tr>
+      <tr>
+        <td>span</td>
+        <td>流体布局列。</td>
+      </tr>
+      <tr>
+        <td>span-*</td>
+        <td>流体布局列宽，*号可选值为从一起至创建流体栅格的列数值止的正整数。</td>
+      </tr>
+      <tr>
+        <td>offset-*</td>
+        <td>流体布局偏移值，*号可选值同上。</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="doc-demo">
+
+    <div class="fluid">
+      <div class="row">
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+        <div class="span span-1">span-1</div>
+      </div>
+      <div class="row">
+        <div class="span span-2">span-2</div>
+        <div class="span span-2">span-2</div>
+        <div class="span span-2">span-2</div>
+        <div class="span span-2">span-2</div>
+        <div class="span span-2">span-2</div>
+        <div class="span span-2">span-2</div>
+      </div>
+      <div class="row">
+        <div class="span span-3">span-3</div>
+        <div class="span span-3">span-3</div>
+        <div class="span span-3">span-3</div>
+        <div class="span span-3">span-3</div>
+      </div>
+      <div class="row">
+        <div class="span span-3 offset-3">span-3 offset-3</div>
+      </div>
+    </div>
+    <!--fluid-->
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>metro</h3>
+    <p>Metro（固定宽高） 栅格系统</p>
+    <pre class="prettyprint">
+      查阅 cosyless > tools > grid > metro.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 变量说明
+      @tileWidth: 120px;  // 瓦片宽度
+      @tileHeight: 120px; // 瓦片高度
+      @tileMargin: 5px;   // 瓦片外边距  margin-left || margin-top 。如需要 margin 可使用 metro@2.less
+
+      // 创建 metro 栅格
+      .createMetro(@tileWidth: 120px, @tileHeight: 120px, @tileMargin: 5px);
+    </pre>
+
+    <table class="typo-table">
+      <thead>
+      <tr>
+        <th>Class</th>
+        <th>说明</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>metro</td>
+        <td>Metro 风格栅格系统布局环境（外包容器）。</td>
+      </tr>
+      <tr>
+        <td>tile-group</td>
+        <td>瓦片组容器。</td>
+      </tr>
+      <tr>
+        <td>tile-group-title</td>
+        <td>瓦片组标题容器。</td>
+      </tr>
+      <tr>
+        <td>tile-strip</td>
+        <td>瓦片容器条（包裹多个tile的容器，可横向、纵向）。</td>
+      </tr>
+      <tr>
+        <td>tile</td>
+        <td>瓦片单元。</td>
+      </tr>
+      <tr>
+        <td>half-tile</td>
+        <td>瓦片单元的一半，不带 margin 值。</td>
+      </tr>
+      <tr>
+        <td>one-tile</td>
+        <td>同 tile，但不带 margin 值。</td>
+      </tr>
+      <tr>
+        <td>tile-title</td>
+        <td>瓦片标题容器。</td>
+      </tr>
+      <tr>
+        <td>*-wide</td>
+        <td>瓦片宽度（wide）选项，*号可选值有：half、one、two、three、four、five；除 half 之外，其他选项可使用在 瓦片组（tile-group)节点上。</td>
+      </tr>
+      <tr>
+        <td>*-tall</td>
+        <td>瓦片高度（tall）选项，*号选项同上。</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="doc-demo">
+
+    <div class="metro">
+
+      <div class="tile-group four-wide">
+        <div class="tile-group-title">tile-group-title</div>
+
+        <div class="tile two-wide two-tall bg-black-10">
+          <div class="tile-title">tile-title</div>
+        </div>
+
+        <div class="tile two-wide bg-black-10"></div>
+        <div class="tile one-wide bg-black-10"></div>
+
+        <div class="tile-strip one-wide">
+          <div class="tile half-tall bg-black-10"></div>
+          <div class="tile half-tile bg-black-10"></div>
+          <div class="tile half-tile bg-black-10"></div>
+        </div>
+      </div>
+
+      <div class="tile-group one-wide">
+        <div class="tile-group-title">tile-group-title</div>
+
+        <div class="tile one-wide bg-black-10"></div>
+        <div class="tile-strip one-wide">
+          <div class="tile half-tile one-tall bg-black-10"></div>
+          <div class="tile half-tile bg-black-10"></div>
+          <div class="tile half-tile bg-black-10"></div>
+        </div>
+      </div>
+
+    </div>
+    <!--metro-->
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>break</h3>
+    <p>文本换行处理</p>
+    <pre class="prettyprint">
+      .break-word() {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+      }
+
+      // 以“字母”作为换行依据
+      .break-letter() {
+          white-space: pre-wrap;
+          word-break: break-all;
+      }
+
+      // 强制不换行
+      .nowrap() {
+          white-space: nowrap;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .break-word(); }
+      .example { .break-letter(); }
+      .example { .nowrap(); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>replace</h3>
+    <p>隐藏文本（图片取代）</p>
+    <pre class="prettyprint">
+      .replace() {
+          overflow: hidden;
+          *zoom: 1;
+
+          text-indent: -200%;
+          letter-spacing: -200%;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      .example { .replace(); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>hidden</h3>
+    <p>文本溢出容器隐藏</p>
+    <pre class="prettyprint">
+      .hidden() {
+          overflow: hidden;
+          *zoom: 1;
+      }
+
+      // 单行文本溢出隐藏
+      .hidden-nowrap {
+          .hidden();
+          white-space: nowrap;
+      }
+
+      // 单行文本溢出隐藏（以省略号形式）
+      .hidden-nowrap-ellipsis {
+          .hidden-nowrap();
+          text-overflow: ellipsis;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 方式一
+      class="hidden-nowrap"
+      class="hidden-nowrap-ellipsis"
+
+      // 方式一
+      .example { .hidden-nowrap(); }
+      .example { .hidden-nowrap-ellipsis(); }
+      .example { .hidden-ellipsis(#666, #fff); }
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>float</h3>
+    <p>浮动</p>
+    <pre class="prettyprint">
+      .pull-left {
+          float: left;
+      }
+
+      .pull-right {
+          float: right;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 左浮动
+      class="pull-left"
+      // 右浮动
+      class="pull-right"
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>display</h3>
+    <p>显示与隐藏</p>
+    <pre class="prettyprint">
+      .block,
+      .show,
+      .on {
+          display: block;
+      }
+
+      .none,
+      .hide,
+      .off {
+          display: none;
+      }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 显示
+      class="show"
+      // 隐藏
+      class="hide"
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>typo</h3>
+    <p>网页排版样式</p>
+    <pre class="prettyprint">
+      查阅 cosyless > tools > typo.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      class="typo-ul"
+      class="typo-ol"
+      class="typo-dl"
+
+      class="typo-ul-ie"
+      class="typo-ol-ie"
+      class="typo-dl-ie"
+
+      class="typo-table"
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>background-color</h3>
+    <p>常用背景色</p>
+    <pre class="prettyprint">
+      .bg-white { background-color: @white; }
+      .bg-black-10 { background-color: @black-10; }
+      .bg-black-20 { background-color: @black-20; }
+      .bg-black-30 { background-color: @black-30; }
+      .bg-black-40 { background-color: @black-40; }
+      .bg-black-50 { background-color: @black-50; }
+      .bg-black-60 { background-color: @black-60; }
+      .bg-black-70 { background-color: @black-70; }
+      .bg-black-80 { background-color: @black-80; }
+      .bg-black-90 { background-color: @black-90; }
+      .bg-black { background-color: @black; }
+
+      .bg-red { background-color: @red; }
+      .bg-green { background-color: @green; }
+      .bg-blue { background-color: @blue; }
+
+      .bg-cyan { background-color: @cyan; }
+      .bg-yellow { background-color: @yellow; }
+
+      .bg-orange { background-color: @orange; }
+      .bg-purple { background-color: @purple; }
+      .bg-pink { background-color: @pink; }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      class="bg-black"
+    </pre>
+  </div>
+  <div class="doc-demo">
+
+    <div class="metro bg">
+      <div class="tile-strip">
+        <div class="tile half-tile bg-white"><div class="tile-title">#ffffff</div></div>
+        <div class="tile half-tile bg-black-10"><div class="tile-title">#e6e6e6</div></div>
+        <div class="tile half-tile bg-black-20"><div class="tile-title">#cccccc</div></div>
+        <div class="tile half-tile bg-black-30"><div class="tile-title">#b3b3b3</div></div>
+        <div class="tile half-tile bg-black-40"><div class="tile-title">#999999</div></div>
+        <div class="tile half-tile bg-black-50"><div class="tile-title">#808080</div></div>
+        <div class="tile half-tile bg-black-60"><div class="tile-title">#666666</div></div>
+        <div class="tile half-tile bg-black-70"><div class="tile-title">#4d4d4d</div></div>
+        <div class="tile half-tile bg-black-80"><div class="tile-title">#333333</div></div>
+        <div class="tile half-tile bg-black-90"><div class="tile-title">#191919</div></div>
+        <div class="tile half-tile bg-black"><div class="tile-title">#000000</div></div>
+      </div>
+      <div class="tile-strip">
+        <div class="tile half-tile bg-red"><div class="tile-title">#ff0000</div></div>
+        <div class="tile half-tile bg-green"><div class="tile-title">#00ff00</div></div>
+        <div class="tile half-tile bg-blue"><div class="tile-title">#0000ff</div></div>
+        <div class="tile half-tile bg-cyan"><div class="tile-title">#006666</div></div>
+        <div class="tile half-tile bg-yellow"><div class="tile-title">#ffff00</div></div>
+        <div class="tile half-tile bg-orange"><div class="tile-title">#ff9900</div></div>
+        <div class="tile half-tile bg-purple"><div class="tile-title">#9900ff</div></div>
+        <div class="tile half-tile bg-pink"><div class="tile-title">#ff0099</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="doc-panel">
+    <h3>color</h3>
+    <p>常用文本颜色</p>
+    <pre class="prettyprint">
+      .text-white { color: @white; }
+      .text-black { color: @black; }
+      .text-gray { color: @black-50; }
+
+      .text-red { color: @red; }
+      .text-green { color: @green; }
+      .text-blue { color: @blue; }
+
+      .text-cyan { color: @cyan; }
+      .text-yellow { color: @yellow; }
+
+      .text-orange { color: @orange; }
+      .text-purple { color: @purple; }
+      .text-pink { color: @pink; }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      class="text-black"
+    </pre>
+  </div>
+  <div class="doc-demo">
+    <span class="text-white bg-black-10">text-white</span>
+    <span class="text-black">text-black</span>
+    <span class="text-gray">text-gray</span>
+    <span class="text-red">text-red</span>
+    <span class="text-green">text-green</span>
+    <span class="text-blue">text-blue</span>
+    <span class="text-cyan">text-cyan</span>
+    <span class="text-yellow">text-yellow</span>
+    <span class="text-orange">text-orange</span>
+    <span class="text-purple">text-purple</span>
+    <span class="text-pink">text-pink</span>
+  </div>
+
+  <div class="doc-panel">
+    <h3>align</h3>
+    <p>文本对齐方式</p>
+    <pre class="prettyprint">
+      .text-left { text-align: left; }
+      .text-center { text-align: center; }
+      .text-right { text-align: right; }
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      class="text-left"
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>margin</h3>
+    <p>常用外边距值（5~50, 5的倍数递增）</p>
+    <pre class="prettyprint">
+      查阅 cosyless > tools > margin.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 右外边距5px
+      class="mr5"
+      // 左外边距5px
+      class="ml5"
+      // 上外边距50px
+      class="mt50"
+      // 下外边距35px
+      class="mb35"
+    </pre>
+  </div>
+
+  <div class="doc-panel">
+    <h3>padding</h3>
+    <p>常用内边距值（5~50, 5的倍数递增）</p>
+    <pre class="prettyprint">
+      查阅 cosyless > tools > padding.less
+    </pre>
+
+    <p>使用示例：</p>
+    <pre class="prettyprint">
+      // 上下左右内边距5px
+      class="p5"
+    </pre>
+  </div>
+
+</div>
+<!--doc-container-->
+
+
+<script src="../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../dest/js/easing.js"></script>
+<script src="../dest/js/jquery.toc.min.js"></script>
+<script src="../dest/js/jquery.ui.totop.min.js"></script>
+<script src="../dest/js/prettify.js"></script>
+<script src="../dest/js/reference_config.js"></script>
+
+</body>
+</html>

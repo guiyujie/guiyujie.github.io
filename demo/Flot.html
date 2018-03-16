@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>flot</title>
+<script type="text/javascript" src="../public/js/jquery-min.js"></script>
+<!--lte ie8 need excanvas.js -->
+<!--[if lte IE 8]>
+<script language="javascript" type="text/javascript" src="../public/js/flot/excanvas.min.js"></script><![endif]-->
+<script type="text/javascript" src="../public/js/flot/jquery.flot.js"></script>
+</head>
+<body>
+<div id="placeholder" style="width:500px;height:400px;"></div>
+<p></p>
+<div id="placeholder1" style="width:500px;height:400px;"></div>
+          
+<script type="text/javascript">
+    var d1 = [];
+for (var i = 0; i < 14; i += 0.5) {
+    d1.push([i, Math.sin(i)]);
+}
+//点阵(x,y)
+var d2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
+
+//点阵(x,y),空
+var d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
+
+$.plot("#placeholder", [{
+    data:d1,
+    yaxis:2,
+    color:"green",
+    label:"a = 3"
+},d2,d3],{
+
+    series: {
+      lines: { show: true },
+      points: { show: true }
+    },
+	legend: {
+		labelFormatter:function(s,obj){
+			return "【"+s+"】";
+		},
+		backgroundColor:"#ccc",
+		backgroundOpacity:0.5,
+		position: "ne"
+	},
+	//双轴设置
+	xaxes: [{ position: "bottom" } ],
+	yaxes: [{position: "left", min: 0 },{position: "right", min: 0 } ]
+	/*
+	//x轴设置
+	xaxis:{
+		position: "bottom",
+		min: 0,
+		max: 10
+	},
+	//y轴设置
+	yaxis: {
+		position: "left",
+		min: 0,
+		max: 10
+		
+	}
+	*/
+});
+
+
+/*timeline*/
+
+// We use an inline data source in the example, usually data would
+// be fetched from a server
+
+var data = [],
+	totalPoints = 300;
+
+function getRandomData() {
+
+	if (data.length > 0)
+		data = data.slice(1);
+
+	// Do a random walk
+
+	while (data.length < totalPoints) {
+
+		var prev = data.length > 0 ? data[data.length - 1] : 50,
+			y = prev + Math.random() * 10 - 5;
+
+		if (y < 0) {
+			y = 0;
+		} else if (y > 100) {
+			y = 100;
+		}
+
+		data.push(y);
+	}
+
+	// Zip the generated y values with the x values
+
+	var res = [];
+	for (var i = 0; i < data.length; ++i) {
+		res.push([i, data[i]])
+	}
+
+	return res;
+}
+
+// Set up the control widget
+
+var updateInterval = 200;
+
+var plot = $.plot("#placeholder1", [ getRandomData() ], {
+	series: {
+		shadowSize: 0	// Drawing is faster without shadows
+	},
+	yaxis: {
+		min: 0,
+		max: 100
+	},
+	xaxis: {
+		min: 0,
+		max: 100
+	}
+});
+
+function update() {
+
+	plot.setData([getRandomData()]);
+
+	// Since the axes don't change, we don't need to call plot.setupGrid()
+
+	plot.draw();
+	setTimeout(update, updateInterval);
+}
+
+update();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>ST_admin.css 示例文档</title>
+    <link rel="stylesheet" href="../../dest/css/doc_demo.css"/>
+    <link rel="stylesheet" href="../../dest/css/prism.css"/>
+    <link rel="stylesheet" href="../../dest/css/ST_admin.min.css"/>
+</head>
+<body>
+
+<div class="doc-header">
+    <div class="doc-inner">
+        <h1 class="doc-logo"><a href="#">ST_admin.css</a></h1>
+        <div class="doc-navbar">
+    <ul class="doc-nav">
+        <li class=""><a href="../misc/misc.html">Misc</a></li>
+        <li class="divider"></li>
+        <li class=""><a href="../element/element.html">Element</a></li>
+        <li class="active"><a href="../component/component.html">Component</a></li>
+        <li class="divider"></li>
+        <li class=""><a href="../layout/index.html">Layout</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+<!--header-->
+
+<div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-sticker">
+            <div class="doc-toc"></div>
+        </div>
+    </div>
+    <!--sidebar-->
+    <div class="doc-content">
+        
+<div class="doc-section">
+    <h2>btn-group（按钮组）</h2>
+<p>按钮组样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;button&lt;/a&gt;
+    &lt;a class=&quot;btn active&quot; href=&quot;#&quot;&gt;button&lt;/a&gt;
+    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;button&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<div class="btn-group">
+    <a class="btn" href="#">button</a>
+    <a class="btn active" href="#">button</a>
+    <a class="btn" href="#">button</a>
+</div>
+</div>
+
+<div class="doc-section">
+    <h2>alert</h2>
+<p>警示消息提示组件样式。</p>
+<h3>组件状态</h3>
+<p>组件状态可选值有：</p>
+<ul>
+<li>info</li>
+<li>warning</li>
+<li>error</li>
+<li>success</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;alert alert-info&quot;&gt;
+    &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;alert-inner&quot;&gt;info&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="alert alert-info">
+    <i class="icon"></i>
+    <div class="alert-inner">info</div>
+</div>
+
+<div class="alert alert-warning">
+    <i class="icon"></i>
+    <div class="alert-inner">warning</div>
+</div>
+
+<div class="alert alert-error">
+    <i class="icon"></i>
+    <div class="alert-inner">error</div>
+</div>
+
+<div class="alert alert-success">
+    <i class="icon"></i>
+    <div class="alert-inner">success</div>
+</div>
+
+<h3>full 模式</h3>
+<pre><code class="language-markup">&lt;div class=&quot;alert alert-full&quot;&gt;
+    &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;alert-inner&quot;&gt;full&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="alert alert-full">
+    <i class="icon"></i>
+    <div class="alert-inner">full</div>
+</div>
+
+<h3>closable 模式</h3>
+<pre><code class="language-markup">&lt;div class=&quot;alert alert-closable&quot;&gt;
+    &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;alert-inner&quot;&gt;closable&lt;/div&gt;
+    &lt;a class=&quot;close&quot; href=&quot;#&quot;&gt;&amp;times;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<div class="alert alert-closable">
+    <i class="icon"></i>
+    <div class="alert-inner">closable</div>
+    <a class="close" href="#">&times;</a>
+</div>
+
+<h3>multiline 模式</h3>
+<pre><code class="language-markup">&lt;div class=&quot;alert alert-closable alert-multiline&quot;&gt;
+    &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;alert-inner&quot;&gt;multiline&lt;/div&gt;
+    &lt;a class=&quot;close&quot; href=&quot;#&quot;&gt;&amp;times;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<div class="alert alert-closable alert-multiline">
+    <i class="icon"></i>
+    <div class="alert-inner">multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline </div>
+    <a class="close" href="#">&times;</a>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>notice</h2>
+<p>通知消息提示组件样式。</p>
+<h3>组件状态</h3>
+<ul>
+<li>info</li>
+<li>warning</li>
+<li>error</li>
+<li>success</li>
+<li>loading</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;notice notice-info&quot;&gt;
+    &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;notice-inner&quot;&gt;info&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="notice notice-info">
+    <i class="icon"></i>
+    <div class="notice-inner">info</div>
+</div>
+
+<div class="notice notice-warning">
+    <i class="icon"></i>
+    <div class="notice-inner">warning</div>
+</div>
+
+<div class="notice notice-error">
+    <i class="icon"></i>
+    <div class="notice-inner">error</div>
+</div>
+
+<div class="notice notice-success">
+    <i class="icon"></i>
+    <div class="notice-inner">success</div>
+</div>
+
+<div class="notice notice-loading">
+    <i class="icon"></i>
+    <div class="notice-inner">loading</div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>tooltip</h2>
+<p>辅助消息提示组件样式。</p>
+<h3>方向</h3>
+<p>tooltip 组件方向可选值有：</p>
+<ul>
+<li>nw（NorthWest）</li>
+<li>n（North）</li>
+<li>ne（NorthEast）</li>
+<li>w（West）</li>
+<li>e（East）</li>
+<li>sw（SouthWest）</li>
+<li>s（South）</li>
+<li>se（SouthEast）</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;tooltip tooltip-gray&quot;&gt;
+    &lt;div class=&quot;tooltip-arrow n&quot;&gt;
+        &lt;div class=&quot;tooltip-arrow-before&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tooltip-arrow-after&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tooltip-inner&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow nw">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">NorthWest</div>
+</div>
+
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow n">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">North</div>
+</div>
+
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow ne">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">NorthEast</div>
+</div>
+
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow w">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">West</div>
+</div>
+
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow e">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">East</div>
+</div>
+
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow sw">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">SouthWest</div>
+</div>
+
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow s">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">South</div>
+</div>
+
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow se">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">SouthEast</div>
+</div>
+
+
+<h3>皮肤</h3>
+<p>tooltip 组件皮肤可选值有：</p>
+<ul>
+<li>tooltip-gray</li>
+<li>tooltip-black</li>
+<li>tooltip-blue</li>
+<li>tooltip-green</li>
+<li>tooltip-yellow</li>
+<li>tooltip-darkyellow</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;tooltip tooltip-gray&quot;&gt;
+    &lt;div class=&quot;tooltip-arrow n&quot;&gt;
+        &lt;div class=&quot;tooltip-arrow-before&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tooltip-arrow-after&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tooltip-inner&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="tooltip tooltip-gray">
+    <div class="tooltip-arrow n">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">gray</div>
+</div>
+
+<div class="tooltip tooltip-black">
+    <div class="tooltip-arrow n">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">black</div>
+</div>
+
+<div class="tooltip tooltip-blue">
+    <div class="tooltip-arrow n">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">blue</div>
+</div>
+
+<div class="tooltip tooltip-green">
+    <div class="tooltip-arrow n">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">green</div>
+</div>
+
+<div class="tooltip tooltip-yellow">
+    <div class="tooltip-arrow n">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">yellow</div>
+</div>
+
+<div class="tooltip tooltip-darkyellow">
+    <div class="tooltip-arrow n">
+        <div class="tooltip-arrow-before"></div>
+        <div class="tooltip-arrow-after"></div>
+    </div>
+    <div class="tooltip-inner">darkyellow</div>
+</div>
+
+
+
+</div>
+
+<div class="doc-section">
+    <h2>dialog（弹窗）</h2>
+<p>弹窗组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;dialog&quot;&gt;
+    &lt;div class=&quot;dialog-head&quot;&gt;
+        &lt;div class=&quot;dialog-title&quot;&gt;标题&lt;/div&gt;
+        &lt;a class=&quot;close&quot; href=&quot;#&quot;&gt;&amp;times;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dialog-body&quot;&gt;
+        内容
+    &lt;/div&gt;
+    &lt;div class=&quot;dialog-foot&quot;&gt;
+        &lt;a class=&quot;btn btn-blue&quot; href=&quot;/&quot;&gt;确认&lt;/a&gt;
+        &lt;a class=&quot;btn&quot; href=&quot;/&quot;&gt;取消&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="dialog" style="width: 220px">
+    <div class="dialog-head">
+        <div class="dialog-title">标题</div>
+        <a class="close" href="#">&times;</a>
+    </div>
+    <div class="dialog-body">
+        内容
+    </div>
+    <div class="dialog-foot">
+        <a class="btn btn-blue" href="/">确认</a>
+        <a class="btn" href="/">取消</a>
+    </div>
+</div>
+
+<h3>状态</h3>
+<p>dialog 组件可选状态值有：</p>
+<ul>
+<li>success</li>
+<li>warning</li>
+</ul>
+<pre><code class="language-markup">&lt;div class=&quot;dialog&quot;&gt;
+    &lt;div class=&quot;dialog-head&quot;&gt;
+        &lt;div class=&quot;dialog-title&quot;&gt;标题&lt;/div&gt;
+        &lt;a class=&quot;close&quot; href=&quot;#&quot;&gt;&amp;times;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dialog-body&quot;&gt;
+        &lt;div class=&quot;dialog-prompt prompt-success&quot;&gt;
+            &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+            &lt;div class=&quot;dialog-inner&quot;&gt;
+                prompt-success
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dialog-foot&quot;&gt;
+        &lt;a class=&quot;btn btn-blue&quot; href=&quot;/&quot;&gt;确认&lt;/a&gt;
+        &lt;a class=&quot;btn&quot; href=&quot;/&quot;&gt;取消&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="dialog" style="width: 220px">
+    <div class="dialog-head">
+        <div class="dialog-title">标题</div>
+        <a class="close" href="#">&times;</a>
+    </div>
+    <div class="dialog-body">
+        <div class="dialog-prompt prompt-success">
+            <i class="icon"></i>
+            <div class="dialog-inner">
+                prompt-success
+            </div>
+        </div>
+    </div>
+    <div class="dialog-foot">
+        <a class="btn btn-blue" href="/">确认</a>
+        <a class="btn" href="/">取消</a>
+    </div>
+</div>
+
+<div class="dialog" style="width: 220px">
+    <div class="dialog-head">
+        <div class="dialog-title">标题</div>
+        <a class="close" href="#">&times;</a>
+    </div>
+    <div class="dialog-body">
+        <div class="dialog-prompt prompt-warning">
+            <i class="icon"></i>
+            <div class="dialog-inner">
+                prompt-success
+            </div>
+        </div>
+    </div>
+    <div class="dialog-foot">
+        <a class="btn btn-blue" href="/">确认</a>
+        <a class="btn" href="/">取消</a>
+    </div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>dropdown（下拉菜单）</h2>
+<p>下拉菜单组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;input type=&quot;hidden&quot;  value=&quot;&quot;/&gt;
+  &lt;a class=&quot;dropdown-toggle&quot; href=&quot;javascript:;&quot;&gt;
+    &lt;span class=&quot;dropdown-label&quot;&gt;label&lt;/span&gt;
+    &lt;span class=&quot;dropdown-arrow&quot;&gt;&lt;i class=&quot;icon i-chevron-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<div class="dropdown">
+  <input type="hidden"  value=""/>
+  <a class="dropdown-toggle" href="javascript:;">
+    <span class="dropdown-label">label</span>
+    <span class="dropdown-arrow"><i class="icon i-chevron-down"></i></span>
+  </a>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>calendar（日历）</h2>
+<p>日历组件样式。</p>
+<h3>查看 JavaScript 插件使用方法。</h3>
+
+</div>
+
+<div class="doc-section">
+    <h2>spinner（微调器）</h2>
+<p>微调器组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;spinner&quot;&gt;
+    &lt;div class=&quot;spinner-label&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;1&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spinner-btn&quot;&gt;
+        &lt;a class=&quot;spinner-prev&quot; href=&quot;#&quot;&gt;prev&lt;/a&gt;
+        &lt;a class=&quot;spinner-next&quot; href=&quot;#&quot;&gt;next&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="spinner">
+    <div class="spinner-label">
+        <input type="text" value="1"/>
+    </div>
+    <div class="spinner-btn">
+        <a class="spinner-prev" href="#">prev</a>
+        <a class="spinner-next" href="#">next</a>
+    </div>
+</div>
+</div>
+
+<div class="doc-section">
+    <h2>nav（导航）</h2>
+<p>导航组件样式。</p>
+<h3>nav-tabs</h3>
+<p>选项卡导航样式。</p>
+<pre><code class="language-markup">&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;item01&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item02&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#">item01</a></li>
+    <li><a href="#">item02</a></li>
+</ul>
+
+<h4>皮肤</h4>
+<p>nav-tabs 皮肤可选值有：</p>
+<ul>
+<li>nav-blue</li>
+</ul>
+<ul class="nav nav-tabs nav-blue">
+    <li class="active"><a href="#">item01</a></li>
+    <li><a href="#">item02</a></li>
+</ul>
+
+
+<h3>nav-pills</h3>
+<pre><code class="language-markup">&lt;ul class=&quot;nav nav-pills&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;item01&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item02&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul class="nav nav-pills">
+    <li class="active"><a href="#">item01</a></li>
+    <li><a href="#">item02</a></li>
+</ul>
+
+<h3>nav-inline</h3>
+<pre><code class="language-markup">&lt;ul class=&quot;nav nav-inline&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;item01&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item02&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul class="nav nav-inline">
+    <li class="active"><a href="#">item01</a></li>
+    <li><a href="#">item02</a></li>
+</ul>
+
+
+<h3>nav-menu</h3>
+<ul class="nav nav-menu">
+    <li class="menu-on">
+        <a class="dropdown-toggle" href="#"><i class="icon i-off"></i>一级菜单_1</a>
+        <ul class="dropdown-menu">
+            <li class="menu-on">
+                <a class="dropdown-toggle" href="#"><i class="icon i-arrow-right"></i>二级菜单_1</a>
+                <ul class="dropdown-submenu">
+                    <li><a href="#">三级菜单_1</a></li>
+                    <li class="active"><a href="#">三级菜单_2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="menu-on">
+        <a class="dropdown-toggle" href="#"><i class="icon i-off"></i>一级菜单_2</a>
+        <ul class="dropdown-menu">
+            <li class="active"><a href="#">三级菜单_3</a></li>
+            <li><a href="#">三级菜单_4</a></li>
+        </ul>
+    </li>
+</ul>
+
+</div>
+
+<div class="doc-section">
+    <h2>pagination（分页）</h2>
+<p>分页组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;pagination&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;上一页&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;total&quot;&gt;共&lt;span&gt;10&lt;/span&gt;页&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;下一页&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+<div class="pagination">
+    <ul>
+        <li><a href="#">上一页</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li class="total">共<span>10</span>页</li>
+        <li><a href="#">下一页</a></li>
+    </ul>
+</div>
+
+<h3>大小</h3>
+<div class="pagination pagination-smallest">
+    <ul>
+        <li><a href="#">上一页</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">下一页</a></li>
+    </ul>
+</div>
+
+<div class="pagination pagination-small">
+    <ul>
+        <li><a href="#">上一页</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">下一页</a></li>
+    </ul>
+</div>
+
+<h3>php 结构分页</h3>
+<pre><code class="language-markup">&lt;div class=&quot;paging&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;上一页&lt;/a&gt;
+    &lt;a class=&quot;current&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;
+    &lt;span&gt;共 10 页&lt;/span&gt;
+    &lt;a href=&quot;#&quot;&gt;下一页&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<div class="paging">
+    <a href="#">上一页</a>
+    <a class="current" href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <span>共 10 页</span>
+    <a href="#">下一页</a>
+</div>
+</div>
+
+<div class="doc-section">
+    <h2>rating（评级）</h2>
+<p>评级组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;rating&quot;&gt;
+    &lt;div class=&quot;rating-inner&quot;&gt;
+        &lt;div class=&quot;rating-star&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rating-hover&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rating-active&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;rating-text&quot;&gt;1星级&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="rating">
+    <div class="rating-inner">
+        <div class="rating-star"></div>
+        <div class="rating-hover"></div>
+        <div class="rating-active"></div>
+    </div>
+    <div class="rating-text">1星级</div>
+</div>
+
+<h3>大小</h3>
+<div class="rating rating-small">
+    <div class="rating-inner">
+        <div class="rating-star"></div>
+        <div class="rating-hover"></div>
+        <div class="rating-active"></div>
+    </div>
+    <div class="rating-text">1星级</div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>dataselect（数据选择）</h2>
+<h3>形态</h3>
+<p>listing 形态数据选择组件样式。</p>
+<div class="dataSelect-listing">
+    <div class="dataSelect-source">
+        <div class="dataSelect-search">
+            <form class="form-inline" action="" method="">
+                <input class="input" type="text"/>
+                <button class="btn" type="submit">search</button>
+            </form>
+        </div>
+        <div class="dataSelect-list">
+            <ul>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+            </ul>
+        </div>
+        <div class="dataSelect-pager">
+            <div class="pagination pagination-smallest">
+                <ul>
+                    <li><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dataSelect-btn">
+        <a class="btn" href="javascript:;">&rArr;</a>
+    </div>
+    <div class="dataSelect-selected">
+        <div class="dataSelect-search">
+            您已选择：
+        </div>
+        <div class="dataSelect-list">
+            <ul>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+            </ul>
+        </div>
+        <div class="dataSelect-pager">
+            <div class="pagination pagination-smallest">
+                <ul>
+                    <li><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>area 形态数据选择组件样式。</p>
+<div class="dataSelect-listing dataSelect-area">
+    <div class="dataSelect-source">
+        <div class="dataSelect-search">
+            <form class="form-inline" action="" method="">
+                <input class="input" type="text"/>
+                <button class="btn" type="submit">search</button>
+            </form>
+        </div>
+        <div class="dataSelect-list">
+            <ul>
+                <li>
+                    <a href="#">item 01</a>
+                    <ul>
+                        <li><a href="#">subitem 01</a></li>
+                        <li><a href="#">subitem 02</a></li>
+                        <li><a href="#">subitem 03</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+            </ul>
+        </div>
+        <div class="dataSelect-pager">
+            <div class="pagination pagination-smallest">
+                <ul>
+                    <li><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dataSelect-btn">
+        <a class="btn" href="javascript:;">&rArr;</a>
+    </div>
+    <div class="dataSelect-selected">
+        <div class="dataSelect-search">
+            您已选择：
+        </div>
+        <div class="dataSelect-list">
+            <ul>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+                <li><a href="#">item 01</a></li>
+            </ul>
+        </div>
+        <div class="dataSelect-pager">
+            <div class="pagination pagination-smallest">
+                <ul>
+                    <li><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>upload（上传控件）</h2>
+<p>上传控件样式。</p>
+<h3>查看 JavaScript 插件使用方法。</h3>
+
+</div>
+
+<div class="doc-section">
+    <h2>authcode（验证码）</h2>
+<p>验证码组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;authcode&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;#&quot; alt=&quot;&quot;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<div class="authcode">
+    <a href="#">
+        <img src="#" alt=""/>
+    </a>
+</div>
+</div>
+
+<div class="doc-section">
+    <h2>placeholder（占位符）</h2>
+<p>占位符组件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;placeholder placeholder-upload&quot;&gt;
+    &lt;div class=&quot;placeholder-inner&quot;&gt;
+        &lt;div class=&quot;placeholder-content&quot;&gt;
+            &lt;div class=&quot;placeholder-image&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;placeholder-text&quot;&gt;
+                占位符
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="placeholder placeholder-upload">
+    <div class="placeholder-inner">
+        <div class="placeholder-content">
+            <div class="placeholder-image"></div>
+            <div class="placeholder-text">
+                占位符
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    </div>
+    <!--content-->
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <div class="doc-inner"></div>
+</div>
+<!--footer-->
+
+<script src="../../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../../dest/js/jquery.toc.min.js"></script>
+<script src="../../dest/js/jquery.sticky.js"></script>
+<script src="../../dest/js/prism.js"></script>
+<script src="../../dest/js/doc_demo.js"></script>
+
+</body>
+</html>

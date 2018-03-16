@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>表单验证DEMO</title>
+  <link rel="stylesheet" href="../public/css/ST_admin.css"/>
+  <style type="text/css">
+    pre{background-color: #fff}
+  </style>
+  <script src="../public/js/jquery-min.js"></script>
+  <script src="../public/js/ZeroClipboard/jquery.zclip.min.js"></script>
+  <script src="../public/js/ST.Config.js"></script>
+</head>
+<body class="admin-frame">
+<div class="m50" id="_demo">
+  <div class="alert alert-info">
+    <i class="icon"></i>
+    表单配置 <a class="fn_trigger" data-source="_code21" data-cmd="showCode" href="" title="查看代码">[code]</a>
+    <pre id="_code21" data-title="表单配置" style="display: none">
+&lt;!--HTML部分--&gt;
+&lt;form action="" method="post" <code>onsubmit="return false;" stverify="true"</code> erroappend="true" dynamicForm="true" ajaxpost="true" beforeSubFun="_beforeSubFun" SubFun="_SubFun" afterSubFun="_afterSubFun" errorFun="_errorFun" confirm="true"&gt;
+&lt;!--
+  onsubmit="return false;"    阻止默认事件（必须）
+  stverify="true"             标记验证表单（必须）
+  erroappend="true"           元素后附加错误信息
+  dynamicForm="true"          动态表单
+  ajaxpost="true"             ajax提交
+  beforeSubFun="_beforeSubFun"定义验证前执行的方法
+  SubFun="_SubFun"            定义验证成功后提交前执行的方法
+  afterSubFun="_afterSubFun"  定义验证成功后提交后执行的方法
+  errorFun="_errorFun"        定义ajax提交失败后执行的方法
+  confirm="true"              是否在提交前显示确认框
+  conftmp="form_confmsg_temp" 确认框模板
+  confmsg="确认提交吗？"       确认框内容
+--&gt;
+  <code>...</code>
+&lt;/form&gt;
+
+&lt;!--JS部分--&gt;
+&lt;script src="__YOURPATH__/js/ST.Verify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $.extend(ST,{
+    _beforeSubFun:function(){
+      alert('验证前执行的方法!返回true才能验证');
+      return true;
+    },
+    _SubFun:function(){
+      alert('验证成功后提交前执行的方法!返回true才能提交');
+      return true;
+    },
+    _afterSubFun:function(){
+      alert('验证成功后提交后执行的方法!');
+    },
+    _errorFun:function(){
+      alert('ajax提交失败后执行的方法!');
+    }
+  });
+&lt;/script&gt;
+    </pre>
+  </div>
+  <form action="" method="post" onsubmit="return false;" stverify="true" erroappend="true" dynamicForm="true" ajaxpost="true" beforeSubFun="_beforeSubFun" SubFun="_SubFun" afterSubFun="_afterSubFun" errorFun="_errorFun" confirm="true" conftmp="form_confmsg_temp" confmsg="确认提交吗？">
+    <table class="table table-listing mt10">
+    </thead>
+      <tbody>
+      <tr>
+        <td class="right span4">必填 <a class="fn_trigger" data-source="_code0" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td><input class="input input-small" type="text" name="whatever" opt="rq"/>
+          <pre id="_code0" data-title="必填" style="display: none">
+&lt;!--在属性opt中配置验证项--&gt;
+&lt;input class="input input-small" type="text" name="whatever" <code>opt="rq"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">自定义错误提示<a class="fn_trigger" data-source="_code1" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td><input class="input input-small" type="text" name="whatever" opt="rq email" emsg="快来填吧 email格式错误了哦"/>
+          <pre id="_code1" data-title="自定义错误提示" style="display: none">
+&lt;!--在属性emsg中配置自定义错误提示，多个用空格隔开，与opt属性中的验证项对应--&gt;
+&lt;input class="input input-small" type="text" name="whatever" opt="rq" <code>emsg="快来填吧 email格式错误了哦"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">placeholder <a class="fn_trigger" data-source="_code2" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td><input class="input input-small" type="text" name="whatever" opt="rq" placeholder="默认提示"/>
+          <pre id="_code2" data-title="placeholder" style="display: none">&lt;input class="input input-small" type="text" name="whatever" opt="rq" <code>placeholder="默认提示"</code>/&gt;</pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">默认提示 <a class="fn_trigger" data-source="_code3" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td><input class="input input-small" type="text" name="whatever" opt="rq"/>
+          <div verify="1" class="inline">
+            <div class="alert alert-info">
+              <i class="icon"></i>
+              <span> 这是默认提示</span>
+            </div>
+          </div>
+          <pre id="_code3" data-title="默认提示" style="display: none">
+&lt;input class="input input-small" type="text" name="whatever" opt="rq"/&gt;
+&lt;!--在同级div上加verify="1"可指定为默认提示--&gt;
+&lt;div <code>verify="1"</code> class="inline"&gt;
+  &lt;div class="alert alert-info"&gt;
+    &lt;i class="icon"&gt;&lt;/i&gt;
+    &lt;span&gt; 这是默认提示&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">验证成功后提示 <a class="fn_trigger" data-source="_code4" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td><input class="input input-small" type="text" name="whatever" opt="rq" succmsg="验证成功！"/>
+          <pre id="_code4" data-title="验证成功后提示" style="display: none">
+&lt;!--在属性succmsg中配置--&gt;
+&lt;input class="input input-small" type="text" name="whatever" opt="rq" <code>succmsg="验证成功！"</code>/&gt;</pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">email(非必填) <a class="fn_trigger" data-source="_code5" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-small" type="text" name="whatever" opt="nrq email"/>
+          <pre id="_code5" data-title="email(非必填)" style="display: none">
+&lt;!--非必填但一旦填写则需验证，如：opt='nrq email'（nrq要写前面）--&gt;
+&lt;input class="input input-small" type="text" name="whatever" <code>opt="nrq email"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">单选 <a class="fn_trigger" data-source="_code6" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <label for="radio1">
+            <input id="radio1" type="radio" name="radioGroup" opt="nrq"/>
+            radio1
+          </label>
+          <label for="radio2">
+            <input id="radio2" type="radio" name="radioGroup" opt="radio"/>
+            radio2
+          </label>
+          <pre id="_code6" data-title="单选" style="display: none">
+&lt;label for="radio1"&gt;
+  &lt;!--同组radio需添加opt="nrq"--&gt;
+  &lt;input id="radio1" type="radio" name="radioGroup" <code>opt="nrq"</code>/&gt;
+  radio1
+&lt;/label>
+&lt;label for="radio2"&gt;
+  &lt;!--只需要在一个radio上添加opt="radio" (注：旧版为rdck)--&gt;
+  &lt;input id="radio2" type="radio" name="radioGroup" <code>opt="radio"</code>/&gt;
+  radio2
+&lt;/label>
+          </pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">至少选N项 <a class="fn_trigger" data-source="_code7" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td><label for="checkbox1">
+          <input id="checkbox1" type="checkbox" name="whatever" group="checkboxGroup" opt="nrq"/>
+          checkbox1
+        </label>
+          <label for="checkbox2">
+            <input id="checkbox2" type="checkbox" name="whatever" group="checkboxGroup" opt="least"/>
+            checkbox2
+          </label>
+          <pre id="_code7" data-title="至少选N项" style="display: none">
+&lt;!--对input:text同样适用--&gt;
+&lt;label for="checkbox1"&gt;
+  &lt;!--同组input需添加opt="nrq"--&gt;
+  &lt;input id="checkbox1" type="checkbox" name="whatever" <code>group="checkboxGroup" opt="nrq"</code>/&gt;
+  checkbox1
+&lt;/label>
+  &lt;!--仅需要在一个input上添加opt="least" (注：旧版为partrq)--&gt;
+  &lt;!--在属性num中定义至少选择的项数--&gt;
+&lt;label for="checkbox2"&gt;
+  &lt;input id="checkbox2" type="checkbox" name="whatever" <code>group="checkboxGroup" opt="least" num="1"</code>/&gt;
+  checkbox2
+&lt;/label&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">整数 <a class="fn_trigger" data-source="_code8" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-mini" type="text" name="whatever" opt="rq int">
+          <pre id="_code8" data-title="整数" style="display: none">
+&lt;input class="input input-mini" type="text" name="whatever" <code>opt="rq int"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">正整数 <a class="fn_trigger" data-source="_code9" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-mini" type="text" name="whatever" opt="rq int" sign="+"/>
+          <pre id="_code9" data-title="正整数" style="display: none">
+&lt;!--在属性sign配置符号（+ 整数 -负数）--&gt;
+&lt;input class="input input-mini" type="text" name="whatever" <code>opt="rq int" sign="+"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">非负整数 <a class="fn_trigger" data-source="_code10" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-mini" type="text" name="whatever" opt="rq int min" min="0"/>
+          <pre id="_code10" data-title="非负整数" style="display: none">
+&lt;!--与min配合使用（不是唯一方法，仅演示功能）--&gt;
+&lt;input class="input input-mini" type="text" name="whatever" <code>opt="rq int min" min="0"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">整数、N、n <a class="fn_trigger" data-source="_code11" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-mini" type="text" name="whatever" opt="rq int" ignore="N n"/>
+          <pre id="_code11" data-title="整数、N、n" style="display: none">
+&lt;!--ignore属性中的值将不受opt中验证规则限制，多个值用空格隔开--&gt;
+&lt;input class="input input-mini" type="text" name="whatever" opt="rq int" <code>ignore="N n"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">小数（保留1位） <a class="fn_trigger" data-source="_code12" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-mini" type="text" name="whatever" opt="rq dec" digits="1">
+          <pre id="_code12" data-title="小数（保留1位）" style="display: none">
+&lt;!--在属性digits中配置小数位数(范围用横线隔开，如：digits="1-2"）--&gt;
+&lt;!--在属性sign配置符号（+ 整数 -负数）--&gt;
+&lt;input class="input input-mini" type="text" name="whatever" <code>opt="rq dec" digits="1"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">最大值(100) <a class="fn_trigger" data-source="_code13" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-mini" type="text" name="whatever" opt="rq int max" max="100">
+          <pre id="_code13" data-title="最大值(100)" style="display: none">
+&lt;!--在属性max中配置最大值--&gt;
+&lt;!--通常与int或dec连用--&gt;
+&lt;input class="input input-mini" type="text" name="whatever" <code>opt="rq int max" max="100"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">最小值(0) <a class="fn_trigger" data-source="_code14" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-mini" type="text" name="whatever" opt="rq int min" min="0"/>
+          <pre id="_code14" data-title="最小值(0)" style="display: none">
+&lt;!--在属性min中配置最小值--&gt;
+&lt;!--通常与int或dec连用--&gt;
+&lt;input class="input input-mini" type="text" name="whatever" <code>opt="rq int min" min="0"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">字数范围（1-10） <a class="fn_trigger" data-source="_code15" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-small" type="text" name="whatever" opt="rq ml" ml="1-10" byteml="true"/>
+          <pre id="_code15" data-title="字数范围（1-10）" style="display: none">
+&lt;!--在属性ml中配置字数范围，默认是字符范围--&gt;
+&lt;!--如设置byteml="true",则将验证字节范围--&gt;
+&lt;input class="input input-mini" type="text" name="whatever" <code>opt="rq ml" ml="1-10" byteml="true"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">数值范围（1-100） <a class="fn_trigger" data-source="_code16" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+          <input class="input input-mini" type="text" name="whatever" opt="rq int range" range="0-100"/>
+          <pre id="_code16" data-title="数值范围（1-100）" style="display: none">
+&lt;!--在属性range中配置数值范围,用横线隔开--&gt;
+&lt;!--通常与int或dec连用--&gt;
+&lt;input class="input input-mini" type="text" name="whatever" <code>opt="rq int range" range="0-100"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">比较 <a class="fn_trigger" data-source="_code17" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td>
+        <span class="mr5">
+          <label for="compare1">A:</label>
+          <input class="input input-small" id="compare1" type="text" name="whatever" opt="rq"/>
+        </span>
+        <span>
+          <label for="compare2">B:</label>
+          <input class="input input-small" id="compare2" type="text" name="whatever" opt="rq compare" compare="compare1"/>
+        </span>
+          <pre id="_code17" data-title="比较" style="display:none">
+&lt;!--在属性operator中配置操作符，支持'=','!=','&gt;','&gt;=','&lt;','&lt;='--&gt;
+&lt;!--在属性compare中配置需要比较的文本框的id--&gt;
+&lt;!--与特定值比较时，可在属性compval中配置--&gt;
+&lt;span class="mr5"&gt;
+  &lt;label for="compare1"&gt;A:&lt;/label&gt;
+  &lt;input class="input input-small" id="compare1" type="text" name="whatever" opt="rq"/&gt;
+&lt;/span&gt;
+&lt;span&gt;
+  &lt;label for="compare2"&gt;B:&lt;/label&gt;
+  &lt;input class="input input-small" id="compare2" type="text" name="whatever" <code>opt="rq compare" compare="compare1"</code>/&gt;
+&lt;/span&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">ajax实时验证 <a class="fn_trigger" data-source="_code18" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td class="">
+          <input class="input input-small" type="text" name="whatever" opt="rq ajaxverify" ajaxVerify="http://my_require_url.url"/>
+          <pre id="_code18" data-title="ajax实时验证" style="display: none">
+&lt;!--在属性ajaxVerify中配置服务端请求地址--&gt;
+&lt;!--将以name属性值为键名，value属性值为键值发送请求--&gt;
+&lt;input class="input input-small" type="text" name="whatever" <code>opt="rq ajaxverify" ajaxVerify="http://my_require_url.url"</code>/&gt;
+          </pre>
+        </td>
+      </tr>
+      <tr class="even">
+        <td class="right span4">内置正则验证 <a class="fn_trigger" data-source="_code19" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td class="">
+          <input class="input input-small" type="text" name="whatever" opt="rq common"/>
+          <pre id="_code19" data-title="内置正则验证" style="display: none">
+&lt;!--可在ST.Regs.js中查找、增改相应的正则--&gt;
+&lt;input class="input input-small" type="text" name="whatever" <code>opt="rq common"</code>/&gt;
+          </pre>
+          <div verify="1" class="inline">
+            <div class="alert alert-info">
+              <i class="icon"></i>
+              <span> 请输入字母,数字或下划线！</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4">自定义正则验证 <a class="fn_trigger" data-source="_code20" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+        <td class="">
+          <input class="input input-small" type="text" name="whatever" opt="rq regexp" regexp="^123$" emsg=" 请输入123"/>
+          <pre id="_code20" data-title="自定义正则验证" style="display: none">
+&lt;!--在属性regexp中配置正则表达式--&gt;
+&lt;input class="input input-small" type="text" name="whatever" <code>opt="rq regexp" regexp="^123$"</code>/&gt;
+          </pre>
+          <div verify="1" class="inline">
+            <div class="alert alert-info">
+              <i class="icon"></i>
+              <span> 请输入123</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="right span4"></td>
+        <td>
+          <button class="btn btn-blue mr5" type="submit">提交</button>
+          <button class="btn" type="button" onclick="history.go(-1);">取消</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+<script src="../public/js/doc/prettify.js"></script>
+<script src="../public/js/ST_dev.js"></script>
+<script src="../public/js/ST.LRes.js"></script>
+<script src="../public/js/ST.Verify.js"></script>
+<script src="../public/js/demo/demo.js"></script>
+<script type="text/javascript">
+  ST.jsTemplates.push('common');
+  $.extend(ST,{
+    _beforeSubFun:function(){
+      alert('验证前执行的方法!返回true才能验证');
+      return true;
+    },
+    _SubFun:function(){
+      alert('验证成功后提交前执行的方法!返回true才能提交');
+      return true;
+    },
+    _afterSubFun:function(){
+      alert('验证成功后提交前执行的方法!');
+    },
+    _errorFun:function(){
+      alert('ajax提交失败后执行的方法!');
+    }
+  });
+  ST.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/*
+* 模块描述：baseUI 布局样式
+* 模块兼容：Chrome、Firefox、IE
+* 模块类型：扩展模块
+* 模块创建：@yinchuanwu
+* 更新时间：2014-03-27 13:48
+*/
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    *zoom: 1;
+}
+
+.doc-container {
+
+    .bui-h3 {
+        .clearfix();
+        height: 64px;
+        line-height: 64px;
+        padding: 10px 0;
+        background: url("../images/icon-scene.png") left center no-repeat;
+
+        .bui-icon {
+            float: left;
+            margin-right: 15px;
+        }
+        &:before {
+            display: none;
+        }
+    }
+
+}
+
+.bui-icon {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    background: url("../images/sprite_icon.png") no-repeat;
+}
+
+// e
+// --------------------------------------
+.icon-badge { .sprite-position(@e_badge); }
+.icon-btn { .sprite-position(@e_btn); }
+.icon-checkbox { .sprite-position(@e_checkbox); }
+.icon-close { .sprite-position(@e_close); }
+.icon-code { .sprite-position(@e_code); }
+.icon-divider { .sprite-position(@e_divider); }
+.icon-form { .sprite-position(@e_form); }
+.icon-icon { .sprite-position(@e_icon); }
+.icon-input { .sprite-position(@e_input); }
+.icon-label { .sprite-position(@e_label); }
+.icon-list { .sprite-position(@e_list); }
+.icon-overlay { .sprite-position(@e_overlay); }
+.icon-radio { .sprite-position(@e_radio); }
+.icon-table { .sprite-position(@e_table); }
+
+// c
+// --------------------------------------
+.icon-alert { .sprite-position(@c_alert); }
+.icon-authcode { .sprite-position(@c_authcode); }
+.icon-breadcrumb { .sprite-position(@c_breadcrumb); }
+.icon-btn-group { .sprite-position(@c_btn-group); }
+.icon-calendar { .sprite-position(@c_calendar); }
+.icon-colorpicker { .sprite-position(@c_colorpicker); }
+.icon-control { .sprite-position(@c_control); }
+.icon-datagrid { .sprite-position(@c_datagrid); }
+.icon-dataselect { .sprite-position(@c_dataselect); }
+.icon-datepicker { .sprite-position(@c_datepicker); }
+.icon-dialog { .sprite-position(@c_dialog); }
+.icon-dropdown { .sprite-position(@c_dropdown); }
+.icon-form-search { .sprite-position(@c_form-search); }
+.icon-input-group { .sprite-position(@c_input-group); }
+.icon-list-group { .sprite-position(@c_list-group); }
+.icon-menu { .sprite-position(@c_menu); }
+.icon-nav { .sprite-position(@c_nav); }
+.icon-navbar { .sprite-position(@c_navbar); }
+.icon-notice { .sprite-position(@c_notice); }
+.icon-page { .sprite-position(@c_page); }
+.icon-panel { .sprite-position(@c_panel); }
+.icon-placeholder { .sprite-position(@c_placeholder); }
+.icon-progress { .sprite-position(@c_progress); }
+.icon-qrcode { .sprite-position(@c_qrcode); }
+.icon-rank { .sprite-position(@c_rank); }
+.icon-rating { .sprite-position(@c_rating); }
+.icon-scrollbar { .sprite-position(@c_scrollbar); }
+.icon-slider { .sprite-position(@c_slider); }
+.icon-slides { .sprite-position(@c_slides); }
+.icon-spinner { .sprite-position(@c_spinner); }
+.icon-switch { .sprite-position(@c_switch); }
+.icon-tab { .sprite-position(@c_tab); }
+.icon-thumb { .sprite-position(@c_thumb); }
+.icon-timepicker { .sprite-position(@c_timepicker); }
+.icon-toolbar { .sprite-position(@c_toolbar); }
+.icon-tooltip { .sprite-position(@c_tooltip); }
+.icon-tree { .sprite-position(@c_tree); }
+.icon-upload { .sprite-position(@c_upload); }

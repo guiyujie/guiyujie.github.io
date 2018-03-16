@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>ST_admin.css 示例文档</title>
+    <link rel="stylesheet" href="../../dest/css/doc_demo.css"/>
+    <link rel="stylesheet" href="../../dest/css/prism.css"/>
+    <link rel="stylesheet" href="../../dest/css/ST_admin.min.css"/>
+</head>
+<body>
+
+<div class="doc-header">
+    <div class="doc-inner">
+        <h1 class="doc-logo"><a href="#">ST_admin.css</a></h1>
+        <div class="doc-navbar">
+    <ul class="doc-nav">
+        <li class=""><a href="../misc/misc.html">Misc</a></li>
+        <li class="divider"></li>
+        <li class="active"><a href="../element/element.html">Element</a></li>
+        <li class=""><a href="../component/component.html">Component</a></li>
+        <li class="divider"></li>
+        <li class=""><a href="../layout/index.html">Layout</a></li>
+    </ul>
+</div>
+    </div>
+</div>
+<!--header-->
+
+<div class="doc-container">
+    <div class="doc-sidebar">
+        <div class="doc-sticker">
+            <div class="doc-toc"></div>
+        </div>
+    </div>
+    <!--sidebar-->
+    <div class="doc-content">
+        
+<div class="doc-section">
+    <h2>btn（按钮）</h2>
+<p>按钮样式。</p>
+<h3>标签</h3>
+<p>常规下，作为按钮的 HTML 标签有：</p>
+<pre><code class="language-markup">&lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;button&lt;/button&gt;
+&lt;input class=&quot;btn&quot; type=&quot;submit&quot; value=&quot;button&quot;/&gt;
+&lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;button&lt;/a&gt;</code></pre>
+<p><button class="btn" type="button">button</button></p>
+<p><input class="btn" type="submit" value="button"/>
+<a class="btn" href="#">button</a></p>
+<h3>皮肤</h3>
+<p>按钮皮肤。可选值有：</p>
+<ul>
+<li>btn-blue 蓝色</li>
+</ul>
+<pre><code class="language-markup">&lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;button&lt;/a&gt;
+&lt;a class=&quot;btn btn-blue&quot; href=&quot;#&quot;&gt;button&lt;/a&gt;</code></pre>
+<p><a class="btn" href="#">button</a>
+<a class="btn btn-blue" href="#">button</a></p>
+<h3>大小</h3>
+<p>按钮大小。可选值有：</p>
+<ul>
+<li>btn-mini  微型的</li>
+<li>btn-smallest  最小的</li>
+<li>btn-small 小的</li>
+<li>btn-large 大的</li>
+<li>btn-largest   最大的</li>
+</ul>
+<pre><code class="language-markup">&lt;a class=&quot;btn btn-mini&quot; href=&quot;#&quot;&gt;mini&lt;/a&gt;
+&lt;a class=&quot;btn btn-smallest&quot; href=&quot;#&quot;&gt;smallest&lt;/a&gt;
+&lt;a class=&quot;btn btn-small&quot; href=&quot;#&quot;&gt;small&lt;/a&gt;
+&lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;default&lt;/a&gt;
+&lt;a class=&quot;btn btn-large&quot; href=&quot;#&quot;&gt;large&lt;/a&gt;
+&lt;a class=&quot;btn btn-largest&quot; href=&quot;#&quot;&gt;largest&lt;/a&gt;</code></pre>
+<p><a class="btn btn-mini" href="#">mini</a>
+<a class="btn btn-smallest" href="#">smallest</a>
+<a class="btn btn-small" href="#">small</a>
+<a class="btn" href="#">default</a>
+<a class="btn btn-large" href="#">large</a>
+<a class="btn btn-largest" href="#">largest</a></p>
+
+</div>
+
+<div class="doc-section">
+    <h2>input（输入）</h2>
+<p>输入控件样式。</p>
+<h3>标签</h3>
+<pre><code class="language-markup">&lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;textarea rows=&quot;5&quot; placeholder=&quot;placeholder&quot;&gt;&lt;/textarea&gt;</code></pre>
+<p><input class="input" type="text" placeholder="placeholder"/></p>
+<textarea rows="5" placeholder="placeholder"></textarea>
+
+<h3>大小</h3>
+<p>输入控件大小。可选值有：</p>
+<ul>
+<li>input-mini</li>
+<li>input-smallest</li>
+<li>input-small</li>
+<li>input-large</li>
+<li>input-largest</li>
+</ul>
+<pre><code class="language-markup">&lt;input class=&quot;input input-mini&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-smallest&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-small&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-large&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;
+&lt;input class=&quot;input input-largest&quot; type=&quot;text&quot; placeholder=&quot;placeholder&quot;/&gt;</code></pre>
+<p><input class="input input-mini" type="text" placeholder="placeholder"/></p>
+<p><input class="input input-smallest" type="text" placeholder="placeholder"/></p>
+<p><input class="input input-small" type="text" placeholder="placeholder"/></p>
+<p><input class="input" type="text" placeholder="placeholder"/></p>
+<p><input class="input input-large" type="text" placeholder="placeholder"/></p>
+<input class="input input-largest" type="text" placeholder="placeholder"/>
+
+</div>
+
+<div class="doc-section">
+    <h2>form（表单）</h2>
+<p>表单样式。</p>
+<h3>form-inline</h3>
+<p>内联表单样式。</p>
+<pre><code class="language-markup">&lt;form class=&quot;form-inline&quot; action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+    &lt;button class=&quot;btn&quot; type=&quot;submit&quot;&gt;search&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<form class="form-inline" action="" method="">
+    <input class="input" type="text"/>
+    <button class="btn" type="submit">submit</button>
+</form>
+
+
+<h3>form-search</h3>
+<p>搜索表单样式。</p>
+<pre><code class="language-markup">&lt;form class=&quot;form-search&quot; action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+    &lt;button class=&quot;btn&quot; type=&quot;submit&quot;&gt;search&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<form class="form-search" action="" method="">
+    <input class="input" type="text"/>
+    <button class="btn" type="submit">search</button>
+</form>
+
+</div>
+
+<div class="doc-section">
+    <h2>icon（图标）</h2>
+<p>图标样式。</p>
+<p><i class="icon i-off"></i>
+<i class="icon i-on"></i>
+<i class="icon i-arrow-left"></i>
+<i class="icon i-arrow-up"></i>
+<i class="icon i-arrow-right"></i>
+<i class="icon i-arrow-down"></i>
+<i class="icon i-chevron-up"></i>
+<i class="icon i-chevron-down"></i>
+<i class="icon i-close"></i></p>
+<p><i class="icon i-change"></i>
+<i class="icon i-build"></i>
+<i class="icon i-preview"></i>
+<i class="icon i-copy"></i>
+<i class="icon i-see"></i>
+<i class="icon i-export"></i>
+<i class="icon i-import"></i>
+<i class="icon i-publish"></i>
+<i class="icon i-audit"></i>
+<i class="icon i-generate"></i></p>
+<p><i class="icon i-add"></i>
+<i class="icon i-edit"></i>
+<i class="icon i-del"></i>
+<i class="icon i-empty"></i>
+<i class="icon i-competence"></i>
+<i class="icon i-move"></i>
+<i class="icon i-bind"></i>
+<i class="icon i-unbind"></i>
+<i class="icon i-visit"></i>
+<i class="icon i-set"></i></p>
+<p><i class="icon i-maintain"></i>
+<i class="icon i-agree"></i>
+<i class="icon i-reject"></i>
+<i class="icon i-user"></i>
+<i class="icon i-stop"></i>
+<i class="icon i-start"></i>
+<i class="icon i-effectiveness"></i>
+<i class="icon i-disabled"></i>
+<i class="icon i-ban"></i></p>
+<p><i class="icon i-sortup"></i>
+<i class="icon i-sortdown"></i>
+<i class="icon i-thsortup"></i>
+<i class="icon i-thsortdown"></i></p>
+<pre><code class="language-markup">&lt;i class=&quot;icon i-off&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;icon i-on&quot;&gt;&lt;/i&gt;
+...</code></pre>
+
+</div>
+
+<div class="doc-section">
+    <h2>table（表格）</h2>
+<p>表格样式。</p>
+<h3>标签</h3>
+<p>通常表格标签嵌套规则。</p>
+<pre><code class="language-markup">&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+        &lt;th&gt;th&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+        &lt;td&gt;td&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<table class="table">
+    <thead>
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>table-listing</h3>
+<p>listing 形态的表格。</p>
+<table class="table table-listing">
+    <thead class="thead-gray">
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>table-centered</h3>
+<p>文本居中的表格。</p>
+<table class="table table-listing table-centered">
+    <thead class="thead-gray">
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>table-hovered</h3>
+<p>有 hover 状态的表格。</p>
+<table class="table table-listing table-hovered">
+    <thead class="thead-gray">
+    <tr>
+        <th>th</th>
+        <th>th</th>
+        <th>th</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>td</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<p>右对齐且固定宽度的列。宽度可选值有：</p>
+<ul>
+<li>span1</li>
+<li>...</li>
+<li>span10</li>
+</ul>
+<table class="table table-listing">
+    <tbody>
+    <tr>
+        <td class="span4">span4</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td class="span4">span4</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<p>有背景颜色的行。颜色可选值：</p>
+<ul>
+<li>red       红色</li>
+<li>orange    橙色</li>
+<li>yellow    黄色</li>
+<li>green     绿色</li>
+<li>blue      蓝色</li>
+<li>gray      灰色</li>
+</ul>
+<table class="table table-listing">
+    <tbody>
+    <tr class="red">
+        <td>span4</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td>span4</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    <tr class="orange">
+        <td>span4</td>
+        <td>td</td>
+        <td>td</td>
+    </tr>
+    </tbody>
+</table>
+
+<p>嵌套表格，内表格可选值有：</p>
+<ul>
+<li>normal    无边框且无内边距</li>
+<li>noborder  无边框</li>
+</ul>
+<table class="table table-listing">
+    <tbody>
+    <tr>
+        <td class="span4">span4</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td class="span4">span4</td>
+        <td>td</td>
+    </tr>
+    <tr>
+        <td class="span4">span4</td>
+        <td>
+            <table class="table normal">
+                <tbody>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                <tr>
+                    <td>td</td>
+                    <td>td</td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</div>
+
+<div class="doc-section">
+    <h2>radio（选择）</h2>
+<p>选择控件样式。</p>
+<h3>radio</h3>
+<p>单选控件样式。</p>
+<pre><code class="language-markup">&lt;label class=&quot;radio&quot; for=&quot;r1&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;r&quot; id=&quot;r1&quot; checked=&quot;checked&quot;/&gt;
+  radio 01
+&lt;/label&gt;
+&lt;label class=&quot;radio&quot; for=&quot;r2&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;r&quot; id=&quot;r2&quot;/&gt;
+  radio 02
+&lt;/label&gt;</code></pre>
+<label class="radio" for="r1">
+  <input type="radio" name="r" id="r1" checked="checked"/>
+  radio 01
+</label>
+<label class="radio" for="r2">
+  <input type="radio" name="r" id="r2"/>
+  radio 02
+</label>
+
+<h3>checkbox</h3>
+<p>复选控件样式。</p>
+<pre><code class="language-markup">&lt;label class=&quot;checkbox&quot; for=&quot;c1&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;c&quot; id=&quot;c1&quot; checked=&quot;checked&quot;/&gt;
+  checkbox 01
+&lt;/label&gt;
+&lt;label class=&quot;checkbox&quot; for=&quot;c2&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;c&quot; id=&quot;c2&quot;/&gt;
+  checkbox 02
+&lt;/label&gt;</code></pre>
+<label class="checkbox" for="c1">
+  <input type="checkbox" name="c" id="c1" checked="checked"/>
+  checkbox 01
+</label>
+<label class="checkbox" for="c2">
+  <input type="checkbox" name="c" id="c2"/>
+  checkbox 02
+</label>
+
+</div>
+
+<div class="doc-section">
+    <h2>file（文件）</h2>
+<p>文件上传控件样式。</p>
+<pre><code class="language-markup">&lt;div class=&quot;file&quot;&gt;
+  &lt;input class=&quot;input&quot; type=&quot;text&quot;/&gt;
+  &lt;input class=&quot;btn&quot; type=&quot;button&quot; value=&quot;upload&quot;/&gt;
+  &lt;input class=&quot;file-mask&quot; type=&quot;file&quot;/&gt;
+&lt;/div&gt;</code></pre>
+<div class="file">
+  <input class="input" type="text"/>
+  <input class="btn" type="button" value="upload"/>
+  <input class="file-mask" type="file"/>
+</div>
+
+</div>
+
+<div class="doc-section">
+    <h2>control（表单布局）</h2>
+<p>表单布局样式。</p>
+<h3>control-group</h3>
+<p>表单元素控制组样式。</p>
+<pre><code class="language-markup">&lt;form action=&quot;&quot;&gt;
+    &lt;div class=&quot;control-group&quot;&gt;
+        &lt;div class=&quot;control-label&quot;&gt;
+            &lt;span class=&quot;required&quot;&gt;*&lt;/span&gt;字段：
+        &lt;/div&gt;
+        &lt;div class=&quot;controls&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;input&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;control-group&quot;&gt;
+        &lt;div class=&quot;controls&quot;&gt;
+            &lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;提交&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<form action="">
+    <div class="control-group">
+        <div class="control-label">
+            <span class="required">*</span>字段：
+        </div>
+        <div class="controls">
+            <input class="input" type="text" placeholder="input"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button class="btn" type="button">提交</button>
+        </div>
+    </div>
+</form>
+
+</div>
+
+    </div>
+    <!--content-->
+</div>
+<!--container-->
+
+<div class="doc-footer">
+    <div class="doc-inner"></div>
+</div>
+<!--footer-->
+
+<script src="../../dest/js/jquery-1.7.2.min.js"></script>
+<script src="../../dest/js/jquery.toc.min.js"></script>
+<script src="../../dest/js/jquery.sticky.js"></script>
+<script src="../../dest/js/prism.js"></script>
+<script src="../../dest/js/doc_demo.js"></script>
+
+</body>
+</html>

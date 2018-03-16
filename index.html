@@ -1,0 +1,833 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ST - JavaScript库</title>
+  <link href="public/css/ST_doc.css" rel="stylesheet">
+  <script type="text/javascript" src="public/js/jquery-min.js"></script>
+  <script>
+    var ST={PATH:{JS:"public/js/",JSTMP:"public/jsTemplate/",IMAGE:"public/images/", CSS:"public/css", PUBLIC:"public/", ROOT:""},CACHE:{},TODOLIST:[],todo:function(){}};
+  </script>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="inner clearfix">
+        <h1 class="logo pull-left"><a href="javascript:;">ST</a></h1>
+
+        <ul class="nav pull-right">
+            <li><a href="cosyless/html/index.html" target="_blank">cosyless</a></li>
+            <li class="active"><a href="JavaScript.html">JavaScript</a></li>
+            <li class="active"><a href="./api/docs/index.html">ST API</a></li>
+            <li><a href="http://192.168.5.251/DC-JS/lib/beeui2/release/1.0.0-pre/docs/index.html">beeui</a></li>
+            <li><a href="../demo/admin/">Demo</a></li>
+            <li><a href="../demo.zip">Download</a></li>
+        </ul>
+
+    </div>
+</div>
+<!--navbar-->
+
+<div class="overview">
+  <div class="inner">
+    <h2>JavaScript</h2>
+    <p>模块部分-插件，这一部分是在组价部分的基础上增加了交互效果的产物，使其组件可以动态显示、操作。</p>
+  </div>
+</div>
+<!--overview-->
+
+<div class="container">
+  <div class="aside">
+    <div class="toc" id="toc"></div>
+  </div>
+  <!--aside-->
+
+  <div class="content">
+
+    <h3 class="module-name">ST（基础框架）</h3>
+    <p>JS框架的使用</p>
+    <ol class="normal">
+      <li>在 <code>&lt;/head&gt;</code> 之前引入ST配置。</li>
+      <li>在 <code>&lt;/body&gt;</code> 之前引入ST框架并初始化。</li>
+    </ol>
+    <pre>
+    &lt;!doctype html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;ST JavaScript Framework User Example&lt;/title&gt;
+        &lt;!--引入jQuery库--&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;__YOURPATH__/js/jquery-min.js&quot;&gt;&lt;/script&gt;
+        &lt;!--ST配置--&gt;
+        &lt;script&gt;
+          var ST = {
+            // 资源路径
+            PATH: {
+              JS: &quot;__YOURPATH__/js/&quot;,           //JS路径
+              JSTMP: &quot;__YOURPATH__/jsTemplate/&quot;,//JS模板路径
+              IMAGE: &quot;__YOURPATH__/images/&quot;,    //图片路径
+              CSS: &quot;__YOURPATH__/css/&quot;,         //CSS路径
+              PUBLIC: &quot;__YOURPATH__/&quot;,
+              ROOT: &quot;&quot;,                         //网站根目录
+              VCODE: "",                        //验证码获取地址
+              EDITORCSS:''                      //百度编辑器CSS样式路径
+            },
+            // 数据缓存
+            CACHE: {},
+            // JS模板
+            JSTMP:{},
+            // 服务端使用的URL
+            ACTION: {
+              //上传地址
+              UPLOAD: "",
+              //百度编辑器上传地址
+              UPLOADUEDITOR: ""
+            },
+            //百度编辑器对象
+            EDITORS:[],
+            // 服务端输出的数据
+            PHPDATA: {},
+            // 初始化后执行的方法（ST.todoList()前执行）
+            TODOLIST: [],
+            // 页面空方法（用于HTML中执行ST方法，调用：ST.todo('方法名',参数1,...,参数N)）
+            todo: function () {
+            }
+          };
+        &lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        <code>...</code>
+        &lt;!--引入ST框架--&gt;
+        &lt;script src=&quot;__YOURPATH__/js/ST.js&quot;&gt;&lt;/script&gt;
+        &lt;!--引入语言包--&gt;
+        &lt;script src=&quot;__YOURPATH__/js/ST.LRes.js&quot;&gt;&lt;/script&gt;
+        &lt;!--引入ST插件（可选）--&gt;
+        <code>...</code>
+        &lt;script&gt;
+        // 引入页面需要的JS模板（不支持跨域）
+        ST.jsTemplates.push('common');
+        <code>...</code>
+        // 扩展页面请求url（可选）
+        $.extend(ST.ACTION,{
+          <code>...</code>
+        });
+        // 扩展页面PHP输出数据（可选）
+        $.extend(ST.PHPDATA,{
+          <code>...</code>
+        });
+        // 扩展页面使用的JS模板（可选）
+        $.extend(ST.JSTMP,{
+          <code>...</code>
+        });
+        // 扩展ST对象
+        $.extend(ST,{
+          // ST初始化后执行的方法
+          todoList: function(){
+            <code>...</code>
+          }
+          // 自定义ST方法，调用 ST.myMethod(myPars);
+          //,myMethod:function(myPars){//do sth.}
+        });
+        // 初始化 ST 框架
+        ST.init();
+        &lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;</pre>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">JTE（前端模板引擎）</h3>
+    <p><a href="demo/JTE.html" target="_blank">See more...</a></p>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">getJSON（ajax数据通信）</h3>
+    <p>通用ajax获取JSON数据的方法。</p>
+    <h4>调用方法</h4>
+    <pre>
+    ST.getJSON(
+      '__URL__',    //服务端URL
+      {},           //发送的数据
+      function(){   //成功后的回调方法
+        //do sth.
+      },
+      function(){   //失败后的回调方法
+        //do sth.
+      },
+      'post',       //HTTP方法（"get"|"post"，默认"post"）
+      'json'        //数据类型（"json"|"jsonp"，默认"json"）
+    );
+    </pre>
+    <h4>数据接口</h4>
+    <pre>
+      {
+        "status":"",        //通信状态
+        "message":"",       //附加信息（或"info":""）
+        "data":"",          //附加数据
+      }
+      /*
+        常用通信状态：
+        success       成功
+        tip_success   成功，使用tipMsg提示附加信息中的内容
+        error         失败
+        tip_error     失败，使用tipMsg提示附加信息中的内容
+      */
+    </pre>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">tipMsg（通用信息提示）</h3>
+    <p><a href="demo/tipMsg.html" target="_blank">See more...</a></p>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">tooltip（工具提示）</h3>
+    <p><a href="demo/tooltip.html" target="_blank">See more...</a></p>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">msgbox（对话框）</h3>
+    <p><a href="demo/msgbox.html" target="_blank">See more...</a></p>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">ddList（模拟原生select）</h3>
+    <p><a href="demo/ddList.html" target="_blank">See more...</a></p>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">Pager（前端分页）</h3>
+    <p><a href="demo/Pager.html" target="_blank">See more...</a></p>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">AutoComplete（自动完成）</h3>
+    <p></p>
+    <ol class="normal">
+      <li>引入<code>ST.AutoComplete.js</code></li>
+      <li><a href="demo/AutoComplete.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">Verify（表单验证）</h3>
+    <p></p>
+    <ol class="normal">
+      <li>引入<code>ST.Verify.js</code></li>
+      <li><a href="demo/Verify.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">Vcode（验证码）</h3>
+    <p></p>
+    <ol class="normal">
+      <li>引入<code>ST.Vcode.js</code></li>
+      <li><a href="demo/Vcode.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">Spinner（数值微调器）</h3>
+    <p></p>
+
+    <div class="block--example">
+      <input class="input-large" id="_spinner" type="text">
+    </div>
+
+    <h4>Browser Support</h4>
+    <p>浏览器支持,已在以下浏览器版本中测试通过。</p>
+    <ul class="browser">
+      <li class="chrome"><span>27</span></li>
+      <li class="firefox"><span>22</span></li>
+      <li class="explorer"><span>7+</span></li>
+    </ul>
+
+    <h4>HTML</h4>
+    <pre>
+    &lt;input id=&quot;_spinner&quot; type=&quot;text&quot;&gt;</pre>
+
+    <h4>CSS（LESS）</h4>
+    <pre>
+    @import "LESS/component/spinner/spinner";</pre>
+
+    <h4>JavaScript</h4>
+    <pre>
+    new ST.Spinner("_spinner");</pre>
+
+    <h4>带选项（参数）使用</h4>
+    <div class="block--example">
+      <input class="input-large" id="_spinner1" type="text" value="dsadads">
+    </div>
+    <pre>
+    new ST.Spinner("_spinner1",{
+      increment: 0.1,
+      prefix: '共',
+      suffix: '元',
+      inputClass:'input-smallest'
+    });</pre>
+
+    <div class="block--example">
+      <input id="_spinner2" type="text">
+      <div class="block-foot">
+        <button class="btn" onclick="ST.spinnerObj['2'].add()">add</button>
+        <button class="btn" onclick="ST.spinnerObj['2'].discount()">discount</button>
+        <button class="btn" onclick="alert(ST.spinnerObj['2'].getNumValue())">getNumValue</button>
+        <button class="btn" onclick="alert(ST.spinnerObj['2'].getValue())">getValue</button>
+        <button class="btn" onclick="ST.spinnerObj['2'].enable()">enable</button>
+        <button class="btn" onclick="ST.spinnerObj['2'].disable()">disable</button>
+      </div>
+    </div>
+    <!--<pre>-->
+    <!--&lt;button class=&quot;btn&quot; onclick=&quot;ST.spinnerObj[&#039;1&#039;].add()&quot;&gt;add&lt;/button&gt;-->
+    <!--&lt;button class=&quot;btn&quot; onclick=&quot;ST.spinnerObj[&#039;1&#039;].discount()&quot;&gt;discount&lt;/button&gt;-->
+    <!--&lt;button class=&quot;btn&quot; onclick=&quot;alert(ST.spinnerObj[&#039;1&#039;].getNumValue())&quot;&gt;getNumValue&lt;/button&gt;-->
+    <!--&lt;button class=&quot;btn&quot; onclick=&quot;alert(ST.spinnerObj[&#039;1&#039;].getValue())&quot;&gt;getValue&lt;/button&gt;-->
+    <!--&lt;button class=&quot;btn&quot; onclick=&quot;ST.spinnerObj[&#039;1&#039;].enable()&quot;&gt;enable&lt;/button&gt;-->
+    <!--&lt;button class=&quot;btn&quot; onclick=&quot;ST.spinnerObj[&#039;1&#039;].disable()&quot;&gt;disable&lt;/button&gt;-->
+
+    <h4>Options</h4>
+    <table class="table table-bordered table-striped table-hovered mt10 mb10">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>_default</td>
+        <td>number</td>
+        <td>0</td>
+        <td>默认值</td>
+      </tr>
+      <tr>
+        <td>min</td>
+        <td>number</td>
+        <td>0</td>
+        <td>最小值</td>
+      </tr>
+      <tr>
+        <td>max</td>
+        <td>number</td>
+        <td>100</td>
+        <td>最大值</td>
+      </tr>
+      <tr>
+        <td>increment</td>
+        <td>number</td>
+        <td>1</td>
+        <td>增量</td>
+      </tr>
+      <tr>
+        <td>prefix</td>
+        <td>string</td>
+        <td>none</td>
+        <td>前缀文本</td>
+      </tr>
+      <tr>
+        <td>suffix</td>
+        <td>string</td>
+        <td>none</td>
+        <td>后缀文本</td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>string</td>
+        <td>input-mini</td>
+        <td>组件宽度，可选值为 <code>input-mini</code>、<code>input-smallest</code>、<code>input-small</code>、<code>input</code>、 <br>
+          <code>input-large</code>、<code>input-largest</code></td>
+      </tr>
+      <tr>
+        <td>template</td>
+        <td>string</td>
+        <td>common_spinner</td>
+        <td>根据名称选择 ST 模板</td>
+      </tr>
+      <tr>
+        <td>inputable</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>是否可输入</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>是否禁用</td>
+      </tr>
+      <tr>
+        <td>keyboard</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>是否支持上下方向键调节</td>
+      </tr>
+      <tr>
+        <td>mousewheel</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>是否支持鼠标上下滚动调节</td>
+      </tr>
+      </tbody>
+    </table>
+    <p>PS：支持鼠标滚动调节需另外引入 <code>jquery.mousewheel.js</code> 文件并将 <code>mousewheel</code> 参数值设置为 <code>true</code> 。</p>
+
+    <h4>Methods</h4>
+    <table class="table table-bordered table-striped table-hovered mt10 mb10">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>.add()</td>
+        <td>增加单元increment</td>
+      </tr>
+      <tr>
+        <td>.discount()</td>
+        <td>减小单元increment</td>
+      </tr>
+      <tr>
+        <td>.getNumValue()</td>
+        <td>获取当前数值</td>
+      </tr>
+      <tr>
+        <td>.getValue()</td>
+        <td>获取当前显示值</td>
+      </tr>
+      <tr>
+        <td>.enable()</td>
+        <td>启用</td>
+      </tr>
+      <tr>
+        <td>.disable()</td>
+        <td>禁用</td>
+      </tr>
+      <tr>
+        <td>.onChange()</td>
+        <td>...</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="divider">***</div>
+
+    <!--<h3 class="module-name">Msgbox</h3>-->
+    <!--<p>旧版弹窗插件。</p>-->
+
+    <!--<div class="block--example">-->
+      <!--<button class="btn" onclick="ST.msgbox({title: '弹窗标题',content: '弹窗内容'},[{text: ST.LRes.ok, fun: function(){}}],500,380,true);">dialog</button>-->
+    <!--</div>-->
+
+    <!--<h4>Browser Support</h4>-->
+    <!--<p>浏览器支持,已在以下浏览器版本中测试通过。</p>-->
+    <!--<ul class="browser">-->
+      <!--<li class="chrome"><span>27</span></li>-->
+      <!--<li class="firefox"><span>22</span></li>-->
+      <!--<li class="explorer"><span>7+</span></li>-->
+    <!--</ul>-->
+
+    <!--<h4>HTML</h4>-->
+    <!--<pre>-->
+    <!--&lt;button class=&quot;btn&quot; id="_dialog" type=&quot;button&quot;&gt;dialog&lt;/button&gt;</pre>-->
+
+    <!--<h4>CSS（LESS）</h4>-->
+    <!--<pre>-->
+    <!--@import "LESS/component/dialog/dialog";</pre>-->
+
+    <!--<h4>JavaScript</h4>-->
+    <!--<pre>-->
+      <!--$(function(){-->
+        <!--$('#_dialog').click(-->
+          <!--ST.msgbox(-->
+            <!--{-->
+              <!--title: '弹窗标题',-->
+              <!--content: '弹窗内容'-->
+            <!--},-->
+            <!--[{-->
+              <!--text: ST.LRes.ok,-->
+              <!--fun: function(){}-->
+            <!--}],-->
+            <!--500,-->
+            <!--380,-->
+            <!--true-->
+          <!--);-->
+        <!--);-->
+      <!--});-->
+<!--</pre>-->
+    <!--<h4>Options</h4>-->
+    <!--<table class="table table-bordered table-striped table-hovered mt10 mb10">-->
+      <!--<thead>-->
+      <!--<tr>-->
+        <!--<th>Name</th>-->
+        <!--<th>Type</th>-->
+        <!--<th>Default</th>-->
+        <!--<th>Description</th>-->
+      <!--</tr>-->
+      <!--</thead>-->
+      <!--<tbody>-->
+      <!--<tr>-->
+        <!--<td>title</td>-->
+        <!--<td>string</td>-->
+        <!--<td>none</td>-->
+        <!--<td>弹窗标题</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>content</td>-->
+        <!--<td>string</td>-->
+        <!--<td>none</td>-->
+        <!--<td>弹窗内容</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>url</td>-->
+        <!--<td>string</td>-->
+        <!--<td>none</td>-->
+        <!--<td>弹窗链接内容</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>haveSpace</td>-->
+        <!--<td>boolean</td>-->
+        <!--<td>none</td>-->
+        <!--<td>是否具有空白</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>hideBottom</td>-->
+        <!--<td>boolean</td>-->
+        <!--<td>false</td>-->
+        <!--<td>隐藏底部按钮</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>width</td>-->
+        <!--<td>number</td>-->
+        <!--<td></td>-->
+        <!--<td>宽度</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>height</td>-->
+        <!--<td>number</td>-->
+        <!--<td></td>-->
+        <!--<td>高度</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>mask</td>-->
+        <!--<td>boolean</td>-->
+        <!--<td>false</td>-->
+        <!--<td>是否有遮罩</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>template</td>-->
+        <!--<td>string</td>-->
+        <!--<td>'common_msgbox'</td>-->
+        <!--<td>根据名称选择 ST 模板</td>-->
+      <!--</tr>-->
+      <!--</tbody>-->
+    <!--</table>-->
+    <!--<p>PS：支持拖拽需引入 <code>jquery.fn.drag.js</code> 插件。</p>-->
+
+    <!--<h4>Methods</h4>-->
+    <!--<table class="table table-bordered table-striped table-hovered mt10 mb10">-->
+      <!--<thead>-->
+      <!--<tr>-->
+        <!--<th>Name</th>-->
+        <!--<th>Description</th>-->
+      <!--</tr>-->
+      <!--</thead>-->
+      <!--<tbody>-->
+      <!--<tr>-->
+        <!--<td>.show()</td>-->
+        <!--<td>显示</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.hide()</td>-->
+        <!--<td>隐藏</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.getIframe()</td>-->
+        <!--<td>获取窗口内iframe</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.setSize()</td>-->
+        <!--<td>设置大小</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.toCenter()</td>-->
+        <!--<td>居中显示</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.runIframeMethod()</td>-->
+        <!--<td>执行iframe内部方法，必须为同域</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.setBtnText()</td>-->
+        <!--<td>设置按钮的文本</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.changeContent()</td>-->
+        <!--<td></td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.autoSize()</td>-->
+        <!--<td></td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.display()</td>-->
+        <!--<td></td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.conceal()</td>-->
+        <!--<td></td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>.onclose()</td>-->
+        <!--<td></td>-->
+      <!--</tr>-->
+      <!--</tbody>-->
+    <!--</table>-->
+
+    <!--<div class="divider">***</div>-->
+
+    <h3 class="module-name">TimePicker（时间选择）</h3>
+    <p></p>
+    <ol class="normal">
+      <li>引入<code>ST.TimePicker.js</code></li>
+      <li><a href="demo/TimePicker.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">Calender（日期选择）</h3>
+    <p></p>
+    <ol class="normal">
+      <li>引入<code>ST.Calender.js</code></li>
+      <li><a href="demo/Calender.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">CityList（区省市县联动，单选）</h3>
+    <p>（基于ddList实现，需服务端提供数据）</p>
+    <h4>数据接口</h4>
+    <pre>
+  {
+    //大区数据（空数据：alist:null）
+    "alist":[
+      {
+        "id":"1",       //大区id
+        "name":"大区1"  //大区名称
+      }
+      //,<code>……</code>
+    ],
+    //省份数据（空数据：plist:null）
+    "plist":{
+      "1":[             //所属大区id
+        {
+          "id":"1",     //省份id
+          "name":"省份1"//省份名称
+        }
+        //,<code>……</code>
+      ]
+      //,<code>……</code>
+    },
+    //城市数据（空数据：clist:null）
+    "clist":{
+      "1":[             //所属省份id
+        {
+          "id":"1",     //城市id
+          "name":"城市1"//城市名称
+        }
+        //,<code>……</code>
+      ]
+      //,<code>……</code>
+    },
+    //区县数据（空数据：xlist:null）
+    "xlist":{
+      "1":[             //所属城市id
+        {
+          "id":"1",     //区县id
+          "name":"区县1"//区县名称
+        }
+        //,<code>……</code>
+      ]
+      //,<code>……</code>
+    }
+}</pre>
+    <h4>用法</h4>
+    <ol class="normal">
+      <li>引入<code>ST.CityList.js</code></li>
+      <li>引入从服务器获取的数据（符合以上数据接口）</li>
+      <li><a href="demo/CityList.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">CitySelect（城市选择插件，多选）</h3>
+    <p>仅支持区省市三级。</p>
+    <h4>数据接口</h4>
+    <p>同<code>CityList</code></p>
+    <h4>用法</h4>
+    <ol class="normal">
+      <li>引入<code>ST.CitySelect.js</code></li>
+      <li>引入从服务器获取的数据（符合以上数据接口）</li>
+      <li><a href="demo/CitySelect.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">DataSelect（数据选择）</h3>
+    <p></p>
+    <h4>数据接口</h4>
+    <pre>
+  {
+    "datanum":"100"             //数据总数
+    "datalist":[                //数据列表（数据项可自定义）
+      {
+        "id":"1",               //id
+        "title":"这是第1条数据"  //名称
+        //,<code>……</code>
+      }
+      //,<code>……</code>
+    ],
+    "selected":[                //已选数据（格式同"datalist"）
+      {
+        "id":"1",               //id
+        "title":"这是第1条数据"  //名称
+        //,<code>……</code>
+      }
+      //,<code>……</code>
+    ]
+}</pre>
+    <h4>用法</h4>
+    <ol class="normal">
+      <li>引入<code>ST.DataSelect.js</code></li>
+      <li>配置服务端获取数据的URL（符合以上数据接口）</li>
+      <li><a href="demo/DataSelect.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">Rating（星级评分）</h3>
+    <p></p>
+    <ol class="normal">
+      <li>引入<code>ST.Rating.js</code></li>
+      <li><a href="demo/Rating.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <!--<h3 class="module-name">CheckAll</h3>-->
+    <!--<p>简单全选、反选功能。</p>-->
+    <!--<ol class="normal">-->
+      <!--<li>引入<code>ST.CheckAll.js</code></li>-->
+      <!--<li><a href="demo/CheckAll.html" target="_blank">See more...</a></li>-->
+    <!--</ol>-->
+
+    <!--<div class="divider">***</div>-->
+
+    <h3 class="module-name">SlideNav（简单树形菜单）</h3>
+    <p></p>
+    <ol class="normal">
+      <li>引入<code>ST.SlideNav.js</code></li>
+      <li><a href="demo/SlideNav.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">Tabs（选项卡）</h3>
+    <p></p>
+    <ol class="normal">
+      <li>引入<code>ST.Tabs.js</code></li>
+      <li><a href="demo/Tabs.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">Upload（上传组件）</h3>
+    <p>（扩展自swfobject.js）</p>
+    <ol class="normal">
+      <li>依次引入<code>swfobject.js</code>和<code>ST.Upload.js</code></li>
+      <li><a href="demo/Upload.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+
+    <h3 class="module-name">ueditor（百度编辑器）</h3>
+    <p>（第三方插件）</p>
+    <ol class="normal">
+      <li>依次引入 <code>ueditor/editor_config.js</code> 和 <code>ueditor/editor_all_min.js</code> </li>
+      <li><a href="demo/ueditor.html" target="_blank">See more...</a></li>
+    </ol>
+
+    <div class="divider">***</div>
+  </div>
+  <!--content-->
+</div>
+<!--container-->
+
+<a class="scrolltop" href="#">scroll Top</a>
+
+
+
+<script src="public/js/doc/jquery.min.js"></script>
+<script src="public/js/doc/jquery.toc.min.js"></script>
+<script src="public/js/doc/jquery.sticky.js"></script>
+<script src="public/js/doc/prettify.js"></script>
+
+
+<script src="public/js/jquery.mousewheel.js"></script>
+<script src="public/js/jquery.fn.drag.js"></script>
+<script src="public/js/ST_dev.js"></script>
+<script src="public/js/ST.Spinner.js"></script>
+
+<script>
+  $(function(){
+    // prettify
+    $('pre').addClass('prettyprint');
+    prettyPrint();
+    // toc
+    $('#toc').toc({
+      'selectors': '.module-name',
+      'container': '.content'
+    });
+    // sticky
+    $('#toc').sticky();
+    // scroll to top
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+        $('.scrolltop').fadeIn();
+      } else {
+        $('.scrolltop').fadeOut();
+      }
+    });
+    $('.scrolltop').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+    });
+  });
+
+  $.extend(ST,{
+    jsTemplates: ['common'],
+    spinnerObj:{},
+    todoList: function(){
+      new ST.Spinner("_spinner");
+      new ST.Spinner("_spinner1", {
+        increment: 0.1,
+        prefix: '共',
+        suffix: '元',
+        width:'input-smallest'
+      });
+      ST.spinnerObj['2'] = new ST.Spinner("_spinner2",{
+        increment: 0.1,
+        prefix: '共',
+        suffix: '元',
+        width:'input-smallest'
+      });
+    }
+  });
+  ST.init();
+</script>
+</body>
+</html>

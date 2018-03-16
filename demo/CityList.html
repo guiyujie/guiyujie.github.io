@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>区省市县联动DEMO</title>
+  <link rel="stylesheet" href="../public/css/ST_admin.css"/>
+  <style type="text/css">
+    pre {
+      background-color: #fff
+    }
+  </style>
+  <script src="../public/js/jquery-min.js"></script>
+  <script src="../public/js/ZeroClipboard/jquery.zclip.min.js"></script>
+  <script src="../public/js/ST.Config.js"></script>
+</head>
+<body class="admin-frame">
+<div id="_demo" class="m50">
+  <table class="table table-listing table-striped">
+    <tbody>
+    <tr>
+      <td class="right span4">区省市县联动  <a class="fn_trigger" data-source="_code0" data-cmd="showCode" href="" title="查看代码">[code]</a></td>
+      <td>
+        <div class="dropdown" id="_area">
+          <a class="dropdown-toggle" href="javascript:;">
+            <span class="dropdown-label" id="_area_lab"></span>
+            <span class="dropdown-arrow"><i class="icon i-chevron-down"></i></span>
+          </a>
+          <input type="hidden" value="" id="_area_val"/>
+        </div>
+        <div class="dropdown" id="_prvs">
+          <a class="dropdown-toggle" href="javascript:;">
+            <span class="dropdown-label" id="_prvs_lab"></span>
+            <span class="dropdown-arrow"><i class="icon i-chevron-down"></i></span>
+          </a>
+          <input type="hidden" value="" id="_prvs_val"/>
+        </div>
+        <div class="dropdown" id="_city">
+          <a class="dropdown-toggle" href="javascript:;">
+            <span class="dropdown-label" id="_city_lab"></span>
+            <span class="dropdown-arrow"><i class="icon i-chevron-down"></i></span>
+          </a>
+          <input type="hidden" value="" id="_city_val"/>
+        </div>
+        <div class="dropdown" id="_distr">
+          <a class="dropdown-toggle" href="javascript:;">
+            <span class="dropdown-label" id="_distr_lab"></span>
+            <span class="dropdown-arrow"><i class="icon i-chevron-down"></i></span>
+          </a>
+          <input type="hidden" value="" id="_distr_val"/>
+        </div>
+
+        <pre id="_code0" data-title="区省市县联动" style="display:none">
+&lt;!--HTML部分--&gt;
+  &lt;div class="dropdown" <code>id="_area"</code>&gt; &lt;!--大区容器--&gt;
+  &lt;a class="dropdown-toggle" href="javascript:;"&gt;
+    &lt;span class="dropdown-label" <code>id="_area_lab"</code>&gt;&lt;/span&gt; &lt;!--大区名称显示--&gt;
+    &lt;span class="dropdown-arrow"&gt;&lt;i class="icon i-chevron-down"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;input type="hidden" value="" <code>id="_area_val"</code>/&gt; &lt;!--大区值INPUT--&gt;
+&lt;/div&gt;
+&lt;div class="dropdown" <code>id="_prvs"</code>&gt; &lt;!--省份容器--&gt;
+  &lt;a class="dropdown-toggle" href="javascript:;"&gt;
+    &lt;span class="dropdown-label" <code>id="_prvs_lab"</code>&gt;&lt;/span&gt; &lt;!--省份名称显示--&gt;
+    &lt;span class="dropdown-arrow"&gt;&lt;i class="icon i-chevron-down"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;input type="hidden" value="" <code>id="_prvs_val"</code>/&gt; &lt;!--省份值INPUT--&gt;
+&lt;/div&gt;
+&lt;div class="dropdown" <code>id="_city"</code>&gt; &lt;!--城市容器--&gt;
+  &lt;a class="dropdown-toggle" href="javascript:;"&gt;
+    &lt;span class="dropdown-label" <code>id="_city_lab"</code>&gt;&lt;/span&gt; &lt;!--城市名称显示--&gt;
+    &lt;span class="dropdown-arrow"&gt;&lt;i class="icon i-chevron-down"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;input type="hidden" value="" <code>id="_city_val"</code>/&gt; &lt;!--城市值INPUT--&gt;
+&lt;/div&gt;
+&lt;div class="dropdown" <code>id="_distr"</code>&gt; &lt;!--区县容器--&gt;
+  &lt;a class="dropdown-toggle" href="javascript:;"&gt;
+    &lt;span class="dropdown-label" <code>id="_distr_lab"</code>&gt;&lt;/span&gt; &lt;!--区县名称显示--&gt;
+    &lt;span class="dropdown-arrow"&gt;&lt;i class="icon i-chevron-down"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;input type="hidden" value="" <code>id="_distr_val"</code>/&gt; &lt;!--区县值INPUT--&gt;
+&lt;/div&gt;
+
+&lt;!--JS部分--&gt;
+&lt;script src="__YOURPATH__/js/ST.CityList.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+//获取服务器数据
+ST.getJSON('__URL__','',function(j){
+  if(!j||!j.data) return;
+  var CityData = j.data;
+  //初始化插件
+  var citylist = new ST.CityList({
+    a: "_area",         //大区容器id（若不需要大区数据，请留空或不配置）
+    p: "_prvs",         //省份容器id（若不需要省份数据，请留空或不配置）
+    c: "_city",         //城市容器id（若不需要城市数据，请留空或不配置）
+    x: "_distr",        //区县容器id（若不需要区县数据，请留空或不配置）
+    aText: "请选择大区", //大区默认提示（仅配置a且nodefault为true时）
+    pText: "请选择省份", //省份默认提示（仅配置p且nodefault为true时）
+    cText: "请选择城市", //城市默认提示（仅配置c且nodefault为true时）
+    xText: "请选择区县", //区县默认提示（仅配置d且nodefault为true时）
+    nodefault: true,    //是否显示默认值（默认为false，若为false则自动选中值INPUT里的值）
+    data: CityData      //数据
+  });
+  //定义接口（可选）
+  citylist.onAreaSelect = function(o){
+    alert('选中了区域：' + o.text + '（id为' + o.value +'）');
+  };
+  citylist.onPvsSelect = function(o){
+    alert('选中了省份：' + o.text + '（id为' + o.value +'）');
+  };
+  citylist.onCitySelect = function(o){
+    alert('选中了城市：' + o.text + '（id为' + o.value +'）');
+  };
+  citylist.onDistrSelect = function(o){
+    alert('选中了区县：' + o.text + '（id为' + o.value +'）');
+  };
+  //调用大区下拉框：citylist.$a
+  //调用省份下拉框：citylist.$p
+  //调用城市下拉框：citylist.$c
+  //调用区县下拉框：citylist.$d
+},'','GET');
+&lt;/script&gt;
+        </pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<script src="../public/js/doc/prettify.js"></script>
+<script src="../public/js/ST_dev.js"></script>
+<script src="../public/js/ST.CityList.js"></script>
+<script src="../public/js/ST.CityData_Sample.js"></script>
+<script src="../public/js/demo/demo.js"></script>
+<script type="text/javascript">
+  ST.jsTemplates.push('common');
+  $.extend(ST, {
+    todoList: function () {
+      var citylist = new ST.CityList({
+        a: "_area",
+        p: "_prvs",
+        c: "_city",
+        x: "_distr",
+        aText: "请选择大区",
+        pText: "请选择省份",
+        cText: "请选择城市",
+        xText: "请选择区县",
+        nodefault: true,
+        data: CityData
+      });
+      //定义接口（可选）
+      citylist.onAreaSelect = function(o){
+        alert('选中了区域：' + o.text + '（id为' + o.value +'）');
+      };
+      citylist.onPvsSelect = function(o){
+        alert('选中了省份：' + o.text + '（id为' + o.value +'）');
+      };
+      citylist.onCitySelect = function(o){
+        alert('选中了城市：' + o.text + '（id为' + o.value +'）');
+      };
+      citylist.onDistrSelect = function(o){
+        alert('选中了省份：' + o.text + '（id为' + o.value +'）');
+      };
+    }
+  });
+  ST.init();
+</script>
+</body>
+</html>
